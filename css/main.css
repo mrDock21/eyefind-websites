@@ -1,0 +1,131 @@
+:root {
+    --header-light-color: #e7e6e9;
+    --header-dark-color: #9da09d;
+
+    --header-border-color:black;
+
+    --background-purple: #7b0444;
+    --background-blue: #539a97;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+
+    padding-left: 10%;
+
+    background: url('./../img/background-detail.png'),
+                linear-gradient(
+                    var(--background-purple), 
+                    var(--background-blue),
+                    var(--background-purple));
+}
+
+body div.border-black {
+    width: 1%;
+    background: linear-gradient(0.25turn,
+                    var(--header-dark-color), 
+                    var(--header-light-color), 
+                    var(--header-dark-color)
+                );
+}
+
+div.encapsulator {
+    width: 88%;
+    height: 100%;
+}
+
+/* Gray header */
+div.encapsulator header {
+    background:
+        /*  Detail*/
+        url('./../img/header-detail.png'),
+        /*  Color */ 
+        linear-gradient(var(--header-light-color), var(--header-dark-color));
+
+    background-repeat: repeat-x;
+    background-size: 10%;
+    height: 80px;
+}
+
+
+div.encapsulator header div.split {
+    height: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+/* Search input width */
+div.encapsulator header div.split div:first-child {
+    width: 60%;
+}
+
+div.encapsulator header div.split div:first-child input {
+    width: 100%;
+}
+
+/*  Email and home buttons */
+div.encapsulator header div#btns-header {
+    display: flex; 
+    flex-direction: row;
+    width: 20%; 
+}
+
+div.encapsulator header div#btns-header .btn-header {
+    display: flex;
+    justify-content: center;
+    width: 25%; 
+    max-height: 30px;
+    background-color: red;
+    margin-left: 10%;
+}
+
+div.btn-header a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--header-light-color) 60%, var(--header-dark-color));
+}
+
+div.btn-header a img {
+    width: 50%; 
+    height: 100%;
+}
+
+/* General classes */
+.split {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.border-black {
+    border-style: solid;
+    border-color: var(--header-border-color);
+    border-width: 2px;
+}
+
+.border-radius-10 {
+    border-radius: 10%;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-large {
+    font-size:large;
+}
+
+.text-dark-blue {
+    color: #00679a;
+}
+
+.text-white {
+    color: #eeee;
+}

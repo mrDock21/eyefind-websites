@@ -1,0 +1,132 @@
+:root {
+    --eyefind-blue-light-color: #99cdff;
+    --eyefind-blue-dark-color: #00679a;
+
+    --eyefind-yellow-color: #febe03;
+
+    --eyefind-blue-color: #5a98c9;
+
+    --shadow-transparency: rgba(0, 0, 0, 0.4);
+
+    --eyefind-font: 'Source Sans Pro', sans-serif;
+}
+
+div.page {
+    width: 100%;
+    height: 100%;
+    background: var(--eyefind-blue-color);
+
+    font-family: var(--eyefind-font);
+}
+div.page nav {
+    height: 100px;
+    background: url('./../img/background.png');
+    background: url('./../img/background.png');
+
+    background-repeat: repeat-x;
+    background-size: 
+        /* This one is the normal looking */
+        contain, 
+        /* This one is streched *looks bad  (hide it below the normal one)*/
+        300% 100% 
+    ;
+    animation: background-anim 16s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes background-anim {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+
+/*  Email text view and buttons */
+div.page section#email-view {
+    background: white;
+    height: auto;
+
+    min-height: 250px;
+    max-height: 350px;
+}
+/*  Email's body view   */
+div.page section#email-view div.m-2.text-bold {
+    max-height: 300px;
+    overflow-y: auto;
+}
+/*  buttons... DIV */
+div.page section#email-view div.px-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: var(--eyefind-blue-light-color);
+    /*  force it to fill height */
+    place-self: stretch;
+    width: 20%;
+}
+div.page section#email-view div.px-2 div {
+    width: 100%;
+    height: 20%;
+
+    max-height: 50px;
+}
+/*  buttons */
+div.page section#email-view div.px-2 .btn {
+    background: linear-gradient(#cceaf4, #a3c5d5);
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #16596c;
+
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -webkit-box-shadow: 2px 3px 4px 1px var(--shadow-transparency);  
+    /* Firefox 3.5 - 3.6 */
+    -moz-box-shadow:    2px 3px 4px 1px var(--shadow-transparency);  
+    /* Opera 10.5, IE 9, */
+    box-shadow:         2px 3px 4px 1px var(--shadow-transparency);  
+}
+
+/*  text... DIV */
+div.page section#email-view div.m-2 {
+    background: white;
+    width: 80%;
+}
+div.page section#email-view div.m-2 p {
+    font-weight: bold;
+    margin-bottom: 20px; /* space between paragraphs */
+}
+
+
+/*  Emails list */
+div.page section#email-view-list {
+    height: 200px;
+}
+
+div.page section#email-view-list div#email-list {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    background: white;
+}
+
+div.page section#email-view-list div#email-list div.p-3{
+    width: 90%;
+}
+div.page section#email-view-list div#email-list div.p-3 div.email-item {
+    display: flex;
+    flex-direction: row;
+}
+div#email-list div.p-3 div.email-item div.email-status-icon {
+    width: 10%;
+}
+div#email-list div.p-3 div.email-item div.email-status-icon img {
+    margin-left: 25%;
+}
+div#email-list div.p-3 div.email-item div.email-sender {
+    width: 30%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+div#email-list div.p-3 div.email-item div.email-sender:hover {
+    color: var(--eyefind-blue-color)
+}
+div#email-list div.p-3 div.email-item div.email-subject {
+    width: 60%;
+}
