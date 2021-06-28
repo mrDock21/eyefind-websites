@@ -6,7 +6,7 @@ class PendantEmail extends React.Component {
             <div className="split email-item">
 
                 <div className="email-status-icon">
-                    <img src="img/yellow-circle.png" 
+                    <img src={ this.getStatusImg() } 
                             alt="Status icon"
                             className="w-50 h-50"/>
                 </div>
@@ -28,8 +28,12 @@ class PendantEmail extends React.Component {
         );
     }
 
-    static getDerivedStateFromError(error) {
-        // Update state so the next render will show the fallback UI.
-        console.log(error);
+    getStatusImg() {
+        var imgUrl = "img/yellow-circle.png";
+
+        if (this.props.email.viewed)
+            imgUrl = "img/green-arrow.png";
+
+        return imgUrl;
     }
 }

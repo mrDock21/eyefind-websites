@@ -22,7 +22,7 @@ var Page = function (_React$Component) {
                 email: "masterCuellariano@eyefind.io",
                 subject: "Lengua perdida?",
                 body: 'Con un lenguaje así, todos los temas tienen un lugar en el mundo cuellariano: “El pelo alborotado de la lluvia / no tiene la intención de acariciarnos” (p. 328), “Oculta entre la bruma / la tarde anaranjada” (p. 301), “Con la saliva que gastan mis enemigos / para injuriarme / construyo un río” (p. 41).\n Hay autores que se ocultan en su obra y la convierten en fortaleza inexpugnable, pero para Margarito su poesía es como su bitácora, todo está allí: familia, viajes, enfermedades, amores, lecturas, sueños, amigos, venturas, aventuras y desventuras: “La claridad se marcha con su oro a otra parte / y deja como herencia el traje de la noche” (p. 68), “Hablan lenguas extrañas los hoteles. Despiden al viajero con / aire de falsa cortesía” (p. 50), “No vendas tu alma a cualquier diablo; prefiere los mercados, las rifas, la subasta” (p. 225).',
-                viewed: false
+                viewed: true
             }, {
                 sender: "Niko bellic",
                 email: "niko@eyefind.io",
@@ -42,6 +42,10 @@ var Page = function (_React$Component) {
 
         _this.handleChange = _this.handleChange.bind(_this);
         _this.handleSubmit = _this.handleSubmit.bind(_this);
+
+        _this.constructTimeout(function () {
+            return _this.receiveFakeEmail();
+        });
         return _this;
     }
 
@@ -120,12 +124,14 @@ var Page = function (_React$Component) {
                         React.createElement(
                             "p",
                             null,
-                            "14 EMAILS"
+                            this.getNumberOfEmails(),
+                            " EMAILS"
                         ),
                         React.createElement(
                             "p",
                             null,
-                            "1 UNREAD"
+                            this.getUnreadEmails(),
+                            " UNREAD"
                         )
                     ),
                     React.createElement(
@@ -147,30 +153,105 @@ var Page = function (_React$Component) {
             return this.state.emails[this.state.currentEmail];
         }
     }, {
+        key: "getNumberOfEmails",
+        value: function getNumberOfEmails() {
+            return this.state.emails.length;
+        }
+    }, {
+        key: "getUnreadEmails",
+        value: function getUnreadEmails() {
+            var count = 0;
+            for (var i = 0, len = this.getNumberOfEmails(); i < len; i++) {
+                if (this.state.emails[i].viewed === false) count++;
+            }
+            return count;
+        }
+
+        /**
+         * Updates URL text
+         */
+
+    }, {
         key: "handleChange",
         value: function handleChange(event) {
             var state = Object.assign({}, this.state);
             state.searchPageUrl = event.target.value;
             this.setState(state);
         }
+
+        /**
+         * Redirects to "GTA-URL" requested
+         */
+
     }, {
         key: "handleSubmit",
         value: function handleSubmit(event) {
             alert('Requested search: ' + this.state.value);
             event.preventDefault();
         }
+
+        /**
+         * Updates UI with current email
+         */
+
     }, {
         key: "onEmailSelected",
         value: function onEmailSelected(index) {
             var state = Object.assign({}, this.state);
+
             state.currentEmail = index;
+            state.emails[index].viewed = true;
+
             this.setState(state);
         }
-    }], [{
-        key: "getDerivedStateFromError",
-        value: function getDerivedStateFromError(error) {
-            // Update state so the next render will show the fallback UI.
-            console.log(error);
+    }, {
+        key: "constructTimeout",
+        value: function constructTimeout(onTimeout) {
+            // await randomly [10-59] seconds
+            var randAwait = 10 + Math.random() * 50;
+            var id = window.setTimeout(onTimeout, Math.round(randAwait * 1000));
+
+            return id;
+        }
+    }, {
+        key: "receiveFakeEmail",
+        value: function receiveFakeEmail() {
+            var _this3 = this;
+
+            var state = Object.assign({}, this.state);
+            var newEmail = this.getRandomEmail();
+
+            var emails = state.emails.concat(newEmail);
+
+            state.emails = emails;
+
+            console.log("[DEBUG]    Received new email!");
+            // update
+            this.setState(state);
+            // start new timer for next email
+            this.constructTimeout(function () {
+                return _this3.receiveFakeEmail();
+            });
+        }
+    }, {
+        key: "getRandomEmail",
+        value: function getRandomEmail() {
+            var senders = ["Niko", "Roman", "Carl Johnson", "Leon Kennedy", "Morgan Freeman", "Sebastián Lapur", "Mario Castañeda", "Carlos Segundo"];
+            var bodies = ["Lorem ipsum dolor sit amet consectetur adipiscing elit magnis sociis, semper commodo eu natoque potenti a risus leo facilisi, enim in vivamus etiam lacus ultricies scelerisque nostra. Fringilla platea dis fermentum cras parturient malesuada mus, vehicula bibendum venenatis donec euismod in hac, luctus dictum vel cubilia consequat eleifend. Habitasse suscipit taciti condimentum donec duis dignissim ultrices, arcu mi mattis erat vulputate porta, dui fermentum aliquam massa magna tincidunt. Nibh facilisis facilisi litora fames tortor luctus nisl cursus eu, scelerisque erat cras semper felis dapibus lacus dictum laoreet, tempor metus per iaculis habitasse nascetur aliquam nullam.\nVulputate nulla venenatis gravida nisl at pharetra duis metus netus dapibus eget et quis, non iaculis fringilla urna lobortis fusce tortor elementum massa sociosqu varius fames. Hac fringilla donec tellus laoreet lectus leo nisi lacinia purus scelerisque mus duis, quam enim placerat tincidunt facilisis id curae velit mattis magnis pulvinar. Torquent proin hac luctus sodales nunc egestas vehicula cubilia ligula enim aliquet cras auctor, purus est dis litora ad parturient nam sed nascetur sem quis. Penatibus bibendum nam quisque luctus est sociosqu taciti habitasse, fringilla nunc maecenas sem nisl dignissim augue dapibus egestas, tortor facilisis duis mus curabitur viverra nascetur.", "Nam aliquam nulla tortor id auctor dictumst lectus, nec quam porta aliquet sagittis augue integer imperdiet, justo vivamus aptent in scelerisque conubia. Sociis cubilia morbi ultricies arcu orci nostra sed pulvinar per vel, phasellus nam feugiat dictumst hendrerit convallis facilisi ut at habitant, nisl felis posuere vestibulum commodo tristique cursus curabitur consequat. Nisi habitasse ornare fermentum sagittis dui natoque nisl congue aptent malesuada, nulla commodo curae iaculis pellentesque placerat morbi egestas.\n Rhoncus non facilisi curae montes semper potenti nibh, urna nisi at congue mattis ligula, sed mauris viverra placerat cras iaculis. Donec mus sed ligula placerat neque curae tellus potenti tempor, consequat vel ad eget dictum auctor venenatis facilisi mattis, eu netus lobortis etiam volutpat varius proin nullam. Massa arcu montes ut leo enim id fusce imperdiet aliquet, himenaeos hac nunc suscipit feugiat curae ligula eros, quis ultrices eleifend eget turpis eu dis ac.", "Rutrum posuere consequat iaculis ut vehicula scelerisque quam tellus diam, rhoncus elementum fusce non sollicitudin orci molestie sodales mi sagittis, maecenas suscipit ultrices ridiculus egestas dapibus bibendum massa. In justo consequat cum ullamcorper ante class, interdum varius praesent sed urna nullam, porttitor sapien lacinia erat lacus. Rhoncus ad mi conubia quis integer elementum, laoreet proin viverra arcu litora sagittis platea, nulla praesent ut curae parturient. Mattis ridiculus eleifend fermentum id eros ultricies lectus sociis nullam, mollis nascetur nibh dapibus tincidunt conubia risus velit phasellus blandit, nisi tempus convallis euismod nam hendrerit ut metus.\nRhoncus odio orci quam mattis cursus mus per congue a, duis euismod velit platea faucibus tempus vulputate. Neque sollicitudin penatibus metus turpis ligula vivamus curae tristique venenatis, odio inceptos conubia egestas eleifend tincidunt nostra faucibus pulvinar, porta ut ornare eros aliquet tempus molestie donec. Pellentesque mi diam posuere tempor suspendisse suscipit tortor enim, tellus netus rutrum habitant hac cubilia feugiat turpis, scelerisque morbi sapien nec venenatis montes himenaeos. Potenti aliquet malesuada libero feugiat diam ac hac quam varius natoque porta dis, nullam facilisis conubia senectus viverra fames convallis sociosqu nulla quis inceptos.\nAenean etiam mauris volutpat rhoncus natoque eleifend metus nostra cubilia congue interdum suspendisse imperdiet potenti enim quisque, bibendum mi suscipit eros nascetur dignissim nulla urna felis tincidunt per sem fusce condimentum. Rhoncus vitae aliquet accumsan est pellentesque lobortis tristique, nibh phasellus luctus pretium tempor posuere velit nascetur, cursus ornare nisi pulvinar nullam vivamus. Tempus vel hac mauris arcu vulputate nullam curabitur hendrerit sociosqu faucibus, per sollicitudin egestas pulvinar potenti cras facilisis mus metus, rhoncus quam ultrices euismod tellus phasellus eros duis dui.", "Ac semper fermentum dapibus eros eu faucibus hac commodo malesuada, litora purus aenean platea penatibus auctor taciti augue euismod, integer eget arcu quisque ultrices maecenas rutrum diam. Habitasse dapibus phasellus conubia rhoncus quam netus convallis platea magnis cras, eleifend montes elementum pretium facilisi nulla nec in proin curabitur, risus enim maecenas velit nostra diam eget justo hendrerit. Varius mi quam diam congue orci penatibus augue metus per feugiat semper bibendum sollicitudin est, suspendisse platea aptent ultricies fringilla ultrices pellentesque litora venenatis eu dignissim imperdiet ornare. Vestibulum velit volutpat sem auctor quam proin, mattis aenean lectus nulla malesuada porta commodo, cras magna dis posuere himenaeos.\nTellus id ornare magna molestie sociosqu suspendisse nostra netus mollis cubilia ultrices vehicula, proin tortor dis at quis dictumst purus penatibus gravida libero integer, dapibus eleifend luctus fermentum rhoncus sodales elementum a aliquam pretium conubia. Diam velit rutrum a convallis dictum nulla quis litora, aptent varius consequat eu nec auctor sagittis, duis faucibus elementum luctus molestie dui neque. Orci tempus morbi maecenas libero, etiam nec rhoncus suscipit primis, sapien enim ut. A viverra nec laoreet faucibus euismod dictum suspendisse curae fermentum urna facilisis hendrerit, magna augue libero nunc condimentum ultricies himenaeos dictumst justo phasellus."];
+            var emails = ["lorem@eyefind.info", "dapibus53@eyefind.info", "commodoMalesuada@eyefind.info", "namConsectetur31@eyefind.info", "rutrumAs@eyefind.info", "litoraPurus@eyefind.info", "semper821@eyefind.info"];
+            var subjects = ["Lorem ipsum dolor sit amet", "Auctor dictumst lectus, nec quam porta aliquet", "Ah shit! Here we go again...", "Nam aliquam nulla tortor id", "Ac semper fermentum dapibus eros", "Vehicula scelerisque quam tellus diam", "Lengua perdida?"];
+            var randSender = Math.round(Math.random() * 6);
+            var randBody = Math.round(Math.random() * 4);
+            var randEmail = Math.round(Math.random() * 6);
+            var randSubject = Math.round(Math.random() * 6);
+            var newEmail = {
+                sender: senders[randSender],
+                email: emails[randEmail],
+                subject: subjects[randSubject],
+                body: bodies[randBody],
+                viewed: false
+            };
+            return newEmail;
         }
     }]);
 

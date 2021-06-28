@@ -28,7 +28,7 @@ var PendantEmail = function (_React$Component) {
                 React.createElement(
                     "div",
                     { className: "email-status-icon" },
-                    React.createElement("img", { src: "img/yellow-circle.png",
+                    React.createElement("img", { src: this.getStatusImg(),
                         alt: "Status icon",
                         className: "w-50 h-50" })
                 ),
@@ -59,11 +59,14 @@ var PendantEmail = function (_React$Component) {
                 )
             );
         }
-    }], [{
-        key: "getDerivedStateFromError",
-        value: function getDerivedStateFromError(error) {
-            // Update state so the next render will show the fallback UI.
-            console.log(error);
+    }, {
+        key: "getStatusImg",
+        value: function getStatusImg() {
+            var imgUrl = "img/yellow-circle.png";
+
+            if (this.props.email.viewed) imgUrl = "img/green-arrow.png";
+
+            return imgUrl;
         }
     }]);
 
