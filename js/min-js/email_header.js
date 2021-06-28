@@ -24,19 +24,18 @@ var EmailHeader = function (_React$Component) {
                 // Email header
                 React.createElement(
                     "nav",
-                    { className: "navbar bg-primary split" },
+                    { className: "navbar bg-primary split px-2" },
                     React.createElement(
                         "a",
                         { href: "#",
-                            className: "navbar-brand w-auto",
-                            style: { marginLeft: "5%" } },
+                            className: "navbar-brand w-auto" },
                         React.createElement("img", { height: "60",
                             alt: "Eyefind logo",
                             src: "https://vignette.wikia.nocookie.net/gtawiki/images/b/bc/Eyefind.info-GTA4-logo.PNG/revision/latest?cb=20100527053722" })
                     ),
                     React.createElement(
                         "div",
-                        { className: "w-75 text-large" },
+                        { className: "text-large" },
                         React.createElement(
                             "div",
                             { className: "split" },

@@ -18,12 +18,12 @@ div.page {
 
     font-family: var(--eyefind-font);
 }
+/*  EMAIL HEADER    */
 div.page nav {
-    height: 100px;
     background: url('./../img/background.png');
     background: url('./../img/background.png');
 
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     background-size: 
         /* This one is the normal looking */
         contain, 
@@ -37,8 +37,12 @@ div.page nav {
     0% {background-position: 0%}
     100% {background-position: 100%}
 }
+div.page nav div {
+    width: 75%;
+}
 
-/*  Email text view and buttons */
+
+/*  EMAIL TEXT VIEW AND BUTTONS */
 div.page section#email-view {
     background: white;
     height: auto;
@@ -94,7 +98,7 @@ div.page section#email-view div.m-2 p {
 }
 
 
-/*  Emails list */
+/*  EMAILS LIST */
 div.page section#email-view-list {
     height: 200px;
 }
@@ -105,13 +109,19 @@ div.page section#email-view-list div#email-list {
     height: 80%;
     background: white;
 }
-
+/*  list container */
 div.page section#email-view-list div#email-list div.p-3{
     width: 90%;
+    overflow-y: auto;
 }
+/*  email item  */
 div.page section#email-view-list div#email-list div.p-3 div.email-item {
     display: flex;
     flex-direction: row;
+
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.3);
 }
 div#email-list div.p-3 div.email-item div.email-status-icon {
     width: 10%;
@@ -119,14 +129,66 @@ div#email-list div.p-3 div.email-item div.email-status-icon {
 div#email-list div.p-3 div.email-item div.email-status-icon img {
     margin-left: 25%;
 }
-div#email-list div.p-3 div.email-item div.email-sender {
-    width: 30%;
+div#email-list div.p-3 div.email-item div.email-data {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+div#email-list div.p-3 div.email-item div.email-data div.email-sender {
+    width: 40%;
     text-decoration: underline;
     cursor: pointer;
 }
-div#email-list div.p-3 div.email-item div.email-sender:hover {
+div#email-list div.p-3 div.email-item div.email-data div.email-sender:hover {
     color: var(--eyefind-blue-color)
 }
-div#email-list div.p-3 div.email-item div.email-subject {
+div#email-list div.p-3 div.email-item div.email-data div.email-subject {
     width: 60%;
+}
+
+/*  Tablet and below    */
+@media screen and (max-width: 46.8rem) {
+    /*  EMAIL HEADER */
+    div.page nav div {
+        width: 100%;
+    }
+    /*  EMAIL VIEW */
+    div.page section#email-view {
+        justify-content: space-between;
+    }
+    /*  buttons... DIV */
+    div.page section#email-view div.px-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background: var(--eyefind-blue-light-color);
+        /*  force it to fill height */
+        place-self: stretch;
+        width: 100%;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    div.page section#email-view div.px-2 div {
+        width: 40%;
+    }
+    /*  text... DIV */
+    div.page section#email-view div.m-2.text-bold {
+        width: 97%;
+    }
+
+    /*  EMAILS LIST */
+    /*      data container  */
+    div#email-list div.p-3 div.email-item div.email-status-icon {
+        width: 20%;
+    }
+    div#email-list div.p-3 div.email-item div.email-data {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    div#email-list div.p-3 div.email-item div.email-data div.email-sender,
+    div#email-list div.p-3 div.email-item div.email-data div.email-subject {
+        width: 100%;
+    }
 }

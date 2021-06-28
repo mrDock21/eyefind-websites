@@ -75,9 +75,14 @@ div.encapsulator header div#btns-header .btn-header {
     display: flex;
     justify-content: center;
     width: 25%; 
-    max-height: 30px;
     background-color: red;
     margin-left: 10%;
+    
+    min-width: 2rem;
+    min-height: 1.5rem;
+    
+    max-width: 50px;
+    max-height: 30px;
 }
 
 div.btn-header a {
@@ -128,4 +133,26 @@ div.btn-header a img {
 
 .text-white {
     color: #eeee;
+}
+
+
+/*  Tablet and below    */
+@media screen and (max-width: 46.8rem) {
+    body {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    
+    body div.border-black {
+        width: 0;
+    }
+    
+    div.encapsulator {
+        width: 98%;
+    }
+
+    /*  GRAY HEADER */
+    div.encapsulator header div#btns-header {
+        width: 35%;
+    }
 }

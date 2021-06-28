@@ -24,7 +24,7 @@ var EmailView = function (_React$Component) {
                 //  Email view
                 React.createElement(
                     "section",
-                    { className: "split mx-5 d-flex align-items-start",
+                    { className: "split mx-1 mx-md-5 d-flex align-items-start flex-column flex-md-row",
                         id: "email-view" },
                     React.createElement(
                         "div",
@@ -36,29 +36,11 @@ var EmailView = function (_React$Component) {
                         { className: "px-2" },
                         React.createElement(
                             "div",
-                            { className: "d-flex align-items-end" },
-                            React.createElement(
-                                "p",
-                                { className: "m-0 w-100 text-center" },
-                                "Respond"
-                            )
-                        ),
-                        React.createElement(
-                            "div",
                             null,
                             React.createElement(
                                 "button",
                                 { className: "btn w-100 h-100" },
                                 "Respond"
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "d-flex align-items-end" },
-                            React.createElement(
-                                "p",
-                                { className: "m-0 w-100 text-center" },
-                                "Delete"
                             )
                         ),
                         React.createElement(

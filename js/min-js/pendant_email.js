@@ -34,23 +34,27 @@ var PendantEmail = function (_React$Component) {
                 ),
                 React.createElement(
                     "div",
-                    { className: "email-sender p-2" },
+                    { className: "email-data" },
                     React.createElement(
-                        "p",
-                        { className: "mb-0",
-                            onClick: function onClick() {
-                                return _this2.props.onClick();
-                            } },
-                        this.props.email.sender
-                    )
-                ),
-                React.createElement(
-                    "div",
-                    { className: "email-subject p-2" },
+                        "div",
+                        { className: "email-sender p-2" },
+                        React.createElement(
+                            "p",
+                            { className: "mb-0",
+                                onClick: function onClick() {
+                                    return _this2.props.onClick();
+                                } },
+                            this.props.email.sender
+                        )
+                    ),
                     React.createElement(
-                        "p",
-                        { className: "mb-0" },
-                        this.props.email.subject
+                        "div",
+                        { className: "email-subject p-2" },
+                        React.createElement(
+                            "p",
+                            { className: "mb-0" },
+                            this.props.email.subject
+                        )
                     )
                 )
             );

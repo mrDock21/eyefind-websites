@@ -79,7 +79,7 @@ class Page extends React.Component {
                 />
                 <EmailView text={ this.getCurrentEmail().body }/>
                 
-                <section className="mx-5" id="email-view-list">
+                <section className="mx-1 mx-md-5" id="email-view-list">
                     <div className="d-flex justify-content-between text-bold"> 
                         <p>14 EMAILS</p>
                         <p>1 UNREAD</p>

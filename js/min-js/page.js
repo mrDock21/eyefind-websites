@@ -113,7 +113,7 @@ var Page = function (_React$Component) {
                 React.createElement(EmailView, { text: this.getCurrentEmail().body }),
                 React.createElement(
                     "section",
-                    { className: "mx-5", id: "email-view-list" },
+                    { className: "mx-1 mx-md-5", id: "email-view-list" },
                     React.createElement(
                         "div",
                         { className: "d-flex justify-content-between text-bold" },
