@@ -29,10 +29,10 @@ class PendantEmail extends React.Component {
     }
 
     getStatusImg() {
-        var imgUrl = "img/yellow-circle.png";
+        var imgUrl = "./../img/yellow-circle.png";
 
         if (this.props.email.viewed)
-            imgUrl = "img/green-arrow.png";
+            imgUrl = "./../img/green-arrow.png";
 
         return imgUrl;
     }

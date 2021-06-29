@@ -3,27 +3,19 @@
     --eyefind-blue-dark-color: #00679a;
 
     --eyefind-yellow-color: #febe03;
-
-    --eyefind-blue-color: #5a98c9;
-
-    --shadow-transparency: rgba(0, 0, 0, 0.4);
-
-    --eyefind-font: 'Source Sans Pro', sans-serif;
 }
 
 div.page {
     width: 100%;
     height: 100%;
-    background: var(--eyefind-blue-color);
-
-    font-family: var(--eyefind-font);
-}
-/*  EMAIL HEADER    */
+    background: white;
+  }
 div.page nav {
+    height: 100px;
     background: url('./../img/background.png');
     background: url('./../img/background.png');
 
-    background-repeat: repeat;
+    background-repeat: repeat-x;
     background-size: 
         /* This one is the normal looking */
         contain, 
@@ -33,162 +25,46 @@ div.page nav {
     animation: background-anim 16s linear infinite;
     animation-direction: alternate;
 }
+
 @keyframes background-anim {
     0% {background-position: 0%}
     100% {background-position: 100%}
 }
-div.page nav div {
-    width: 75%;
-}
 
-
-/*  EMAIL TEXT VIEW AND BUTTONS */
-div.page section#email-view {
-    background: white;
-    height: auto;
-
-    min-height: 250px;
-    max-height: 350px;
-}
-/*  Email's body view   */
-div.page section#email-view div.m-2.text-bold {
-    max-height: 300px;
-    overflow-y: auto;
-}
-/*  buttons... DIV */
-div.page section#email-view div.px-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+div.page div div div div#search-email-panel .se-panel {
     background: var(--eyefind-blue-light-color);
-    /*  force it to fill height */
-    place-self: stretch;
-    width: 20%;
 }
-div.page section#email-view div.px-2 div {
-    width: 100%;
-    height: 20%;
-
-    max-height: 50px;
+div.page div div div div#search-email-panel .se-panel div.label-background {
+    background: #00649a;
 }
-/*  buttons */
-div.page section#email-view div.px-2 .btn {
-    background: linear-gradient(#cceaf4, #a3c5d5);
-
-    border-width: 2px;
-    border-style: solid;
-    border-color: #16596c;
-
-    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -webkit-box-shadow: 2px 3px 4px 1px var(--shadow-transparency);  
-    /* Firefox 3.5 - 3.6 */
-    -moz-box-shadow:    2px 3px 4px 1px var(--shadow-transparency);  
-    /* Opera 10.5, IE 9, */
-    box-shadow:         2px 3px 4px 1px var(--shadow-transparency);  
+div.page div div div div#search-email-panel .se-panel div form div.input-group input {
+    background: rgba(0, 0, 0, 0);
+    color: var(--eyefind-yellow-color);
+    border-width: 0px 0px 1px 0px;
+}
+div.page div div div div#search-email-panel .se-panel div form div.input-group input::placeholder {
+    color: white;
 }
 
-/*  text... DIV */
-div.page section#email-view div.m-2 {
-    background: white;
-    width: 80%;
+/*  Email panel and button */
+div.page div div div div#search-email-panel div#email-panel {
+    background: #5a98c9;
 }
-div.page section#email-view div.m-2 p {
-    font-weight: bold;
-    margin-bottom: 20px; /* space between paragraphs */
+div.page div div div div#search-email-panel div#email-panel div.card {
+    background: #5a98c9;
+    color: var(--eyefind-yellow-color);
 }
-
-
-/*  EMAILS LIST */
-div.page section#email-view-list {
-    height: 200px;
+div.page div div div div#search-email-panel div#email-panel div.card .card-footer {
+    padding: 0;
 }
-
-div.page section#email-view-list div#email-list {
-    display: flex;
-    flex-direction: row;
-    height: 80%;
-    background: white;
+/*  Email button */
+div.page div div div div#search-email-panel div#email-panel div#check-email-btn {
+    height: 100%;
 }
-/*  list container */
-div.page section#email-view-list div#email-list div.p-3{
-    width: 90%;
-    overflow-y: auto;
+div.page div div div div#search-email-panel div#email-panel div#check-email-btn a {
+    background: var(--eyefind-blue-dark-color);
 }
-/*  email item  */
-div.page section#email-view-list div#email-list div.p-3 div.email-item {
-    display: flex;
-    flex-direction: row;
-
-    border-bottom-style: solid;
-    border-width: 2px;
-    border-color: rgba(0, 0, 0, 0.3);
-}
-div#email-list div.p-3 div.email-item div.email-status-icon {
-    width: 10%;
-}
-div#email-list div.p-3 div.email-item div.email-status-icon img {
-    margin-left: 25%;
-}
-div#email-list div.p-3 div.email-item div.email-data {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-}
-div#email-list div.p-3 div.email-item div.email-data div.email-sender {
-    width: 40%;
-    text-decoration: underline;
-    cursor: pointer;
-}
-div#email-list div.p-3 div.email-item div.email-data div.email-sender:hover {
-    color: var(--eyefind-blue-color)
-}
-div#email-list div.p-3 div.email-item div.email-data div.email-subject {
-    width: 60%;
-}
-
-/*  Tablet and below    */
-@media screen and (max-width: 46.8rem) {
-    /*  EMAIL HEADER */
-    div.page nav div {
-        width: 100%;
-    }
-    /*  EMAIL VIEW */
-    div.page section#email-view {
-        justify-content: space-between;
-    }
-    /*  buttons... DIV */
-    div.page section#email-view div.px-2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        background: var(--eyefind-blue-light-color);
-        /*  force it to fill height */
-        place-self: stretch;
-        width: 100%;
-
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    div.page section#email-view div.px-2 div {
-        width: 40%;
-    }
-    /*  text... DIV */
-    div.page section#email-view div.m-2.text-bold {
-        width: 97%;
-    }
-
-    /*  EMAILS LIST */
-    /*      data container  */
-    div#email-list div.p-3 div.email-item div.email-status-icon {
-        width: 20%;
-    }
-    div#email-list div.p-3 div.email-item div.email-data {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-    }
-    div#email-list div.p-3 div.email-item div.email-data div.email-sender,
-    div#email-list div.p-3 div.email-item div.email-data div.email-subject {
-        width: 100%;
-    }
-}
+div.page div div div div#search-email-panel div#email-panel div#check-email-btn a:hover {
+    
+    background: red;
+}  

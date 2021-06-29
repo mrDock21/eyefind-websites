@@ -63,12 +63,12 @@ class Page extends React.Component {
                         <div id="btns-header">
                             <div className="border-black border-radius-10 btn-header">
                                 <a id="email-btn" href="#">
-                                    <img src="img/msg-img.png"/>
+                                    <img src="./../img/msg-img.png"/>
                                 </a>
                             </div>
                             <div className="border-black border-radius-10 btn-header">
                                 <a id="home-btn" href="#">
-                                    <img src="img/home-img.png"/>
+                                    <img src="./../img/home-img.png"/>
                                 </a>
                             </div>
                         </div>

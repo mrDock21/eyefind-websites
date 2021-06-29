@@ -95,7 +95,7 @@ var Page = function (_React$Component) {
                                 React.createElement(
                                     "a",
                                     { id: "email-btn", href: "#" },
-                                    React.createElement("img", { src: "img/msg-img.png" })
+                                    React.createElement("img", { src: "./../img/msg-img.png" })
                                 )
                             ),
                             React.createElement(
@@ -104,7 +104,7 @@ var Page = function (_React$Component) {
                                 React.createElement(
                                     "a",
                                     { id: "home-btn", href: "#" },
-                                    React.createElement("img", { src: "img/home-img.png" })
+                                    React.createElement("img", { src: "./../img/home-img.png" })
                                 )
                             )
                         )

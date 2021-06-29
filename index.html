@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eyefind email</title>
-
-    <!--Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Document</title>
 
 
     <!--Eyefind css-->
@@ -26,23 +21,234 @@
     <!--    Border on the left  -->
     <div class="border-black"></div>
 
-    <div class="encapsulator" id="main_container">
-        <!-- Page component is rendered here   -->
+    <div class="encapsulator">
+        <header>
+            <div class="split space-between">
+                <div>
+                    <input type="text" name="page-search" 
+                           class="border-black" 
+                           placeholder="eyefind.com"
+                           value="www.eyefind.info">
+                </div>
+                <div id="btns-header">
+                    <div class="border-black border-radius-10 btn-header">
+                        <a id="email-btn" href="#">
+                            <img src="img/msg-img.png">
+                        </a>
+                    </div>
+                    <div class="border-black border-radius-10 btn-header">
+                        <a id="home-btn" href="#">
+                            <img src="img/home-img.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page">
+            <nav class="navbar navbar-light bg-primary ">
+                <a href="#" class="navbar-brand" style="margin-left: 5%;">
+                    <img height="60" alt="" src="https://vignette.wikia.nocookie.net/gtawiki/images/b/bc/Eyefind.info-GTA4-logo.PNG/revision/latest?cb=20100527053722">
+                </a>
+            </nav>
+            <p class="h3-md text-info mx-5">
+                Welcome Niko Bellic to eyefind.info!
+            </p>
+            <div class="container mt-3">
+                <!-- MAIN GRID -->
+                <div class="row">
+                    <!-- Content row -->
+                    <div class="col-md-12">
+    
+                        <!--    Search and Email panel    -->
+                        <div class="row" id="search-email-panel">
+                            <div class="col-md-6 pl-0 pr-0 pl-md-3"> <!--    Search panel    -->
+                                <div class="d-md-flex flex-column se-panel h-100">
+    
+                                    <!--    Search form     -->
+                                    <div class="container mb-2 mt-2 label-background">
+                                        <form class="form-inline">
+                                            <div class="input-group w-90 mx-auto">
+                                                <div class="input-group-prepend">
+                                                    <button type="button" class="btn my-auto">
+                                                        <img class="img-fluid" width="25px" height="25px" src="https://www.nicepng.com/png/full/88-881641_research-search-icon-png-yellow.png">
+                                                    </button>
+                                                </div>
+                                                <input class="form-control text-uppercase my-2" type="text" placeholder="Lucky search">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!--    Categories Label     -->
+                                    <div class="container mb-3 mt-1 label-background">
+                                        <div class="text-white text-uppercase text-center font-weight-bold my-2">
+                                            Explore eyefind.info services
+                                        </div>
+                                    </div>
+                                    <!--    Search categories     -->
+                                    <div class="container mb-3 d-flex flex-row flex-wrap text-left pl-md-5">
+                                        <div class="w-50 my-2"> 
+                                            <a href="#" class="list-group-item-action "> 
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_police-car/classica_police-car_flat-circle-white-on-yellow_512x512.png"> 
+                                                AUTOS 
+                                            </a> 
+                                        </div>
+                                        <div class="w-50 my-2">
+                                            <a href="#" class="list-group-item-action "> 
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_music-cleft/classica_music-cleft_flat-circle-white-on-yellow_256x256.png">
+                                                RING TONES 
+                                            </a>
+                                        </div>
+                                        <div class="w-50 mb-1">
+                                            <a href="#" class="list-group-item-action ">
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_hot-tea-cup/classica_hot-tea-cup_flat-circle-white-on-yellow_512x512.png">
+                                                EATING OUT 
+                                            </a>
+                                        </div>
+                                        <div class="w-50 mb-1">
+                                            <a href="#" class="list-group-item-action "> 
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_at-sign/classica_at-sign_flat-circle-white-on-yellow_512x512.png">
+                                                SHARING 
+                                            </a>
+                                        </div>
+                                        <div class="w-50 mb-1">
+                                            <a href="#" class="list-group-item-action "> 
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_crown-2/classica_crown-2_flat-circle-white-on-yellow_256x256.png">
+                                                MONEY 
+                                            </a>
+                                        </div>
+                                        <div class="w-50 mb-1">
+                                            <a href="#" class="list-group-item-action ">                                        
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_shopping-cart-3/classica_shopping-cart-3_flat-circle-white-on-yellow_256x256.png">
+                                                SHOPPING 
+                                            </a>
+                                        </div>
+                                        <div class="w-50">
+                                            <a href="#" class="list-group-item-action ">                                        
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_pencil-1/classica_pencil-1_flat-circle-white-on-yellow_256x256.png">
+                                                NEWS
+                                            </a>
+                                        </div>
+                                        <div class="w-50">
+                                            <a href="#" class="list-group-item-action ">
+                                                <img height="50px" src="http://iconsetc.com/icons-watermarks/flat-circle-white-on-yellow/classica/classica_sun-glasses/classica_sun-glasses_flat-circle-white-on-yellow_256x256.png">                                        
+                                                TRAVEL 
+                                            </a>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3 d-flex flex-column px-0" id="email-panel"> 
+                                
+                                <!--Email panel-->
+                                <div class="container d-flex justify-content-center">
+                                    <div>
+                                        <img alt="" class=" mt-3" height="75px" src="https://vignette.wikia.nocookie.net/gtawiki/images/b/bc/Eyefind.info-GTA4-logo.PNG/revision/latest?cb=20100527053722">
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <div class="card border-0 rounded-0">
+                                        <img class="card-img rounded-0" src="img/letter.png">
+                                        <div class="card-img-overlay">
+                                            <div class="display-1 text-center" 
+                                                style="position: relative; top:30%;">
+                                                    10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="check-email-btn" class="d-flex justify-content-center">
+                                        <a  href="./pages/eyefind_emails.html"
+                                            class="btn rounded-0 w-100 pt-3 text-center text-uppercase text-white">
+                                            Check email
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3"> <!--    AD Block    -->
+                                <div class="card">
+                                    <img alt="" class="card-img-top" src="https://aviacionyturismo.com/wp-content/uploads/2017/12/banner-300x250.gif">
+                                </div>
+                            </div>
+    
+                        </div> <!-- /Search and Email panel -->
+                        
+                        <!--    Big adds row    -->
+                        <div class="row mt-4">
+                            
+                            <div class="col-md-9 pr-md-0">
+                                <img alt="" class="img-fluid" src="img/big-add-1.png">
+                            </div>
+                            <div class="col-md-3">
+                                <!--    AD 1    -->
+                                <div class="card">
+                                    <img alt="" class="card-img-top" src="https://aviacionyturismo.com/wp-content/uploads/2017/12/banner-300x250.gif">
+                                </div>
+                            </div>
+                        </div>
+                        <!--    Label row   -->
+                        <div class="row mt-3">
+                            <div class="col-md-9 bg-warning">
+                                Top visited Eyefind's websites!
+                            </div>
+                        </div>
+                        <!--    Visited pages cards     -->
+                        <div class="row mt-3">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img alt="" class="card-img-top" src="https://lasfloreseduc.files.wordpress.com/2019/02/580b57fcd9996e24bc43c548.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            Youtube
+                                        </h4>
+                                        <a href="#" class="card-link">Visit me!</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mt-3 mt-md-0">
+                                <div class="card">
+                                    <img alt="" class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Rockstar_North_Logo.svg/512px-Rockstar_North_Logo.svg.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            Rockstar Games
+                                        </h4>
+                                        <a href="#" class="card-link">Visit me!</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mt-3 mt-md-0">
+                                <div class="card">
+                                    <img alt="" class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ubisoft_logo.svg/1200px-Ubisoft_logo.svg.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            Ubisoft
+                                        </h4>
+                                        <a href="#" class="card-link">Visit me!</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3">
+                                <!--    AD 1    -->
+                                <div class="card">
+                                    <img alt="" class="card-img-top" src="https://aviacionyturismo.com/wp-content/uploads/2017/12/banner-300x250.gif">
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div> <!-- /Content row -->
+                    
+                </div> <!--/Main -->
+                
+            </div>
+    
+        </div>
+
     </div>
 
     <!--    Border on the right  -->
     <div class="border-black"></div>
-
-    <!-- Cargar React. -->
-    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    
-    <!-- Cargamos nuestro componente de React. -->
-    <script src="js/min-js/format_text.js"></script>
-    <script src="js/min-js/email_header.js"></script>
-    <script src="js/min-js/email_view.js"></script>
-    <script src="js/min-js/pendant_email.js"></script>
-    <script src="js/min-js/page.js"></script>
 </body>
 </html>
