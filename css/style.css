@@ -3,6 +3,7 @@
     --eyefind-blue-dark-color: #00679a;
 
     --eyefind-yellow-color: #febe03;
+    --eyefind-yellow-dark-color: #daa404;
 }
 
 div.page {
@@ -15,7 +16,7 @@ div.page nav {
     background: url('./../img/background.png');
     background: url('./../img/background.png');
 
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     background-size: 
         /* This one is the normal looking */
         contain, 
@@ -46,20 +47,32 @@ div.page div div div div#search-email-panel .se-panel div form div.input-group i
     color: white;
 }
 
-/*  Email panel and button */
-div.page div div div div#search-email-panel div#email-panel {
-    background: #5a98c9;
-}
-div.page div div div div#search-email-panel div#email-panel div.card {
-    background: #5a98c9;
-    color: var(--eyefind-yellow-color);
-}
-div.page div div div div#search-email-panel div#email-panel div.card .card-footer {
-    padding: 0;
-}
-/*  Email button */
-div.page div div div div#search-email-panel div#email-panel div#check-email-btn {
+/*  EMAIL PANEL & BUTTON */
+div.page div div div div#search-email-panel div#email-panel div.d-flex.flex-column {
+    background: 
+        url('./../img/letter.png'),
+        #5a98c9;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
     height: 100%;
+    min-height: 100%;
+}
+/*  email number    */
+div.page div div div div#search-email-panel div#email-panel div.display-1 {
+    color: var(--eyefind-yellow-dark-color);
+
+    animation: color-anim 0.5s ease-out infinite;
+    animation-direction: alternate;
+}
+@keyframes color-anim {
+    0% { color: var(--eyefind-yellow-dark-color) }
+    100% { color: var(--eyefind-yellow-color) }
+}
+/*  email button */
+div.page div div div div#search-email-panel div#email-panel div#check-email-btn {
+    height: 20%;
 }
 div.page div div div div#search-email-panel div#email-panel div#check-email-btn a {
     background: var(--eyefind-blue-dark-color);
@@ -68,3 +81,19 @@ div.page div div div div#search-email-panel div#email-panel div#check-email-btn 
     
     background: red;
 }  
+
+/*  Tablet and below    */
+@media screen and (max-width: 47.9rem) {
+    /*  EMAIL PANEL & BUTTON */
+    /*  resize image */
+    div.page div div div div#search-email-panel div#email-panel 
+    div.container.d-flex.justify-content-center {
+        width: 60%;
+        margin-bottom: 10%;
+    }
+    /*  adjust emails number */
+    div.page div div div div#search-email-panel div#email-panel 
+    div.display-1 {
+        margin-bottom: 10%;
+    }
+}

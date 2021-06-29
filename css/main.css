@@ -123,6 +123,10 @@ div.btn-header a img {
     font-weight: bold;
 }
 
+.text-bolder {
+    font-weight: bolder;
+}
+
 .text-large {
     font-size:large;
 }
