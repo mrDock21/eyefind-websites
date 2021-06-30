@@ -184,7 +184,27 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- CAROUSEL ROW HERE!!!! -->
+
+                        <!-- Carousel TV -->
+                        <div class="row mt-4">
+                            <div class="col-md-9 pr-md-0 d-flex flex-column">
+                                <div class="mb-2">
+                                    <p class="w-100 h-100 text-center text-white h5 text-uppercase"
+                                       style="background: #5a98c9;">
+                                        Eyefind.info hot tv topics
+                                    </p>
+                                </div>
+                                <div id="tv_carousel_container">
+                                    <!--    React Js here   -->
+                                </div>
+                            </div>
+                            <div class="col-md-3 pr-md-0">
+                                <!--    AD 1    -->
+                                <div class="card">
+                                    <img alt="" class="card-img-top" src="https://aviacionyturismo.com/wp-content/uploads/2017/12/banner-300x250.gif">
+                                </div>
+                            </div>
+                        </div>
 
                         <!--    Label row   -->
                         <div class="row mt-3">
@@ -266,5 +286,13 @@
 
     <!--    Border on the right  -->
     <div class="border-black"></div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- Cargamos nuestro componente de React. -->
+    <script src="./js/min-js/tv_carousel.js"></script>
 </body>
 </html>
