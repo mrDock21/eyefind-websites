@@ -122,6 +122,23 @@ div.page div#tv_carousel_container .carousel-btn-active {
     background-color: azure;
 }
 
+div.page div#tv_carousel_container img.invisible-ad {
+    position: relative;
+    top: -100%;
+
+    opacity: 0;
+}
+div.page div#tv_carousel_container img.carousel-visible-ad {
+    position: relative;
+    top: -100%;
+
+    animation: carousel-anim 1s forwards;
+}
+@keyframes carousel-anim {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
 /*  Tablet and below    */
 @media screen and (max-width: 47.9rem) {
     /*  EMAIL PANEL & BUTTON */
