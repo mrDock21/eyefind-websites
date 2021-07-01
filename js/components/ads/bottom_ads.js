@@ -11,26 +11,31 @@ class BottomAds extends React.Component {
                 "img/ad_small/_10.png", "img/ad_small/_11.png", "img/ad_small/_12.png",
                 "img/ad_small/_13.png", "img/ad_small/_14.png", "img/ad_small/_15.png"
             ),
-            indexes: this.randomNum(0, 14)
+            indexes: this.randomNum()
         }
     }
 
-    randomNum (min, max) { 
+    /**
+     * Generate 4 random numbers which will represent the image index
+     * on the image array
+     * TODO:
+     *  return unique index, not duplicates
+     * 
+     * @returns array with 4 index
+     */
+    randomNum () { 
         var n = []; 
         for(var i = 0; i < 4; i++){ 
-            n.push(Math.floor(Math.random() * max) + min); 
+            n.push(Math.floor(Math.random() * 14) + 0); 
         } 
         return n; 
     } 
 
-    componentDidMount() {
-        console.log(this.state);
-    }
-
     render() {
+        // set all bottom cards
         const cards = this.state.indexes.map((i) => {
             return (
-                <AdCard image={this.state.images[i]} key={i}/>
+                <AdCard image={this.state.images[i]} key={i} boot="col-md-3"/>
             );
         });
 

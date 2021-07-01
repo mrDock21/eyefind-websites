@@ -18,32 +18,38 @@ var BottomAds = function (_React$Component) {
 
         _this.state = {
             images: new Array("img/ad_small/_1.png", "img/ad_small/_2.png", "img/ad_small/_3.png", "img/ad_small/_4.png", "img/ad_small/_5.png", "img/ad_small/_6.png", "img/ad_small/_7.png", "img/ad_small/_8.png", "img/ad_small/_9.png", "img/ad_small/_10.png", "img/ad_small/_11.png", "img/ad_small/_12.png", "img/ad_small/_13.png", "img/ad_small/_14.png", "img/ad_small/_15.png"),
-            indexes: _this.randomNum(0, 14)
+            indexes: _this.randomNum()
         };
         return _this;
     }
 
+    /**
+     * Generate 4 random numbers which will represent the image index
+     * on the image array
+     * TODO:
+     *  return unique index, not duplicates
+     * 
+     * @returns array with 4 index
+     */
+
+
     _createClass(BottomAds, [{
         key: "randomNum",
-        value: function randomNum(min, max) {
+        value: function randomNum() {
             var n = [];
             for (var i = 0; i < 4; i++) {
-                n.push(Math.floor(Math.random() * max) + min);
+                n.push(Math.floor(Math.random() * 14) + 0);
             }
             return n;
-        }
-    }, {
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            console.log(this.state);
         }
     }, {
         key: "render",
         value: function render() {
             var _this2 = this;
 
+            // set all bottom cards
             var cards = this.state.indexes.map(function (i) {
-                return React.createElement(AdCard, { image: _this2.state.images[i], key: i });
+                return React.createElement(AdCard, { image: _this2.state.images[i], key: i, boot: "col-md-3" });
             });
 
             return React.createElement(
