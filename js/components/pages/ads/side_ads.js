@@ -1,9 +1,9 @@
 
-const SideAd = ({images}) => {
+const SideAd = ({images, page}) => {
     const index = Math.floor(Math.random() * (images.length - 1)) + 0;
 
     return (
-        <AdCard image={images[index]} key={index} classAttributes=""/>
+        <AdCard image={images[index]} key={index} classAttributes="" page={page ? page : "#"}  />
     );
 }
 
@@ -17,4 +17,4 @@ ReactDOM.render(<SideAd images={AD_NEWS} />, domContainer);
 
 //top add
 domContainer = document.querySelector('#ad-top-side');
-ReactDOM.render(<SideAd images={AD_ROMANCE} />, domContainer);
+ReactDOM.render(<SideAd images={AD_ROMANCE} page="./pages/eyefind_love-meet.html" />, domContainer);

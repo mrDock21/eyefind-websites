@@ -3,7 +3,9 @@ class AdCard extends React.Component {
         return(
             <div className={this.props.classAttributes}>
                 <div className="card">
-                    <img href="#" alt="" className="card-img-top" src={this.props.image} />
+                    <a href={this.props.page ? this.props.page : "#"}>
+                        <img href="#" alt="" className="card-img-top" src={this.props.image} />
+                    </a>
                 </div>
             </div>
         );

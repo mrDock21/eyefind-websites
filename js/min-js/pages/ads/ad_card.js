@@ -24,7 +24,11 @@ var AdCard = function (_React$Component) {
                 React.createElement(
                     "div",
                     { className: "card" },
-                    React.createElement("img", { href: "#", alt: "", className: "card-img-top", src: this.props.image })
+                    React.createElement(
+                        "a",
+                        { href: this.props.page ? this.props.page : "#" },
+                        React.createElement("img", { href: "#", alt: "", className: "card-img-top", src: this.props.image })
+                    )
                 )
             );
         }
