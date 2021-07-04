@@ -26,9 +26,7 @@ var BottomAds = function (_React$Component) {
     /**
      * Generate 4 random numbers which will represent the image index
      * on the image array
-     * TODO:
-     *  return unique index, not duplicates
-     * 
+     *
      * @returns array with 4 index
      */
 
@@ -36,11 +34,12 @@ var BottomAds = function (_React$Component) {
     _createClass(BottomAds, [{
         key: "randomNum",
         value: function randomNum() {
-            var n = [];
-            for (var i = 0; i < 4; i++) {
-                n.push(Math.floor(Math.random() * (IMAGES.length - 1)) + 0);
+            var set = new Set();
+
+            while (set.size < 4) {
+                set.add(Math.floor(Math.random() * (IMAGES.length - 1)) + 0);
             }
-            return n;
+            return Array.from(set);
         }
     }, {
         key: "render",
