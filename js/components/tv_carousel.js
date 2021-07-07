@@ -6,28 +6,27 @@ class TvCarousel extends React.Component {
 
         var page0 = [
             // page 1
-            "./img/ad_tv/tv_1.png",
-            "./img/ad_tv/_2.png",
-            "./img/ad_tv/_3.png",
+            "./img/ad_tv/ad_tv_1.png",
+            "./img/ad_tv/ad_tv_2.png",
+            "./img/ad_tv/ad_tv_3.png",
         ];
         var page1 = [
             // page 2
-            "./img/ad_tv/_4.jpg",
-            "./img/ad_tv/_5.png",
-            "./img/ad_tv/_6.jpg",
+            "./img/ad_tv/ad_tv_4.jpg",
+            "./img/ad_tv/ad_tv_5.png",
+            "./img/ad_tv/ad_tv_6.jpg",
         ];
         var page2 = [
             // page 3
-            "./img/ad_tv/_7.png",
-            "./img/ad_tv/_8.png",
-            "./img/ad_tv/_9.png",
+            "./img/ad_tv/ad_tv_7.png",
+            "./img/ad_tv/ad_tv_8.png",
+            "./img/ad_tv/ad_tv_9.png",
         ];
         var page3 = [
             // page 4
-            // page 1
-            "./img/ad_tv/_10.jpg",
-            "./img/ad_tv/_11.jpg",
-            "./img/ad_tv/_12.png"
+            "./img/ad_tv/ad_tv_10.jpg",
+            "./img/ad_tv/ad_tv_11.jpg",
+            "./img/ad_tv/ad_tv_12.png"
         ];
 
         this.state = {
