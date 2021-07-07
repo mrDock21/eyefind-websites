@@ -1,5 +1,5 @@
-var IMAGES = new Array("./img/ad_small/_1.png", "./img/ad_small/_2.png", "./img/ad_small/_3.png", "./img/ad_small/_4.png", "./img/ad_small/_5.png", "./img/ad_small/_6.png", "./img/ad_small/_7.png", "./img/ad_small/_8.png", "./img/ad_small/_9.png", "./img/ad_small/_10.png", "./img/ad_small/_11.png", "./img/ad_small/_12.png", "./img/ad_small/_13.png", "./img/ad_small/_14.png", "./img/ad_small/_15.png");
+var IMAGES = new Array("./img/ad_small/ad_small_1.png", "./img/ad_small/ad_small_2.png", "./img/ad_small/ad_small_3.png", "./img/ad_small/ad_small_4.png", "./img/ad_small/ad_small_5.png", "./img/ad_small/ad_small_6.png", "./img/ad_small/ad_small_7.png", "./img/ad_small/ad_small_8.png", "./img/ad_small/ad_small_9.png", "./img/ad_small/ad_small_10.png", "./img/ad_small/ad_small_11.png", "./img/ad_small/ad_small_12.png", "./img/ad_small/ad_small_13.png", "./img/ad_small/ad_small_14.png", "./img/ad_small/ad_small_15.png");
 
-var AD_ROMANCE = new Array("./img/ad_small/_16.png");
+var AD_ROMANCE = new Array("./img/ad_small/ad_small_16.png");
 
-var AD_NEWS = new Array("./img/ad_small/_17.png");
+var AD_NEWS = new Array("./img/ad_small/ad_small_17.png");
