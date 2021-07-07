@@ -6,7 +6,7 @@ class TvCarousel extends React.Component {
 
         var page0 = [
             // page 1
-            "./img/ad_tv/_1.png",
+            "./img/ad_tv/tv_1.png",
             "./img/ad_tv/_2.png",
             "./img/ad_tv/_3.png",
         ];

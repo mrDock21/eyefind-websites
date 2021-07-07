@@ -18,7 +18,7 @@ var TvCarousel = function (_React$Component) {
 
         var page0 = [
         // page 1
-        "./img/ad_tv/_1.png", "./img/ad_tv/_2.png", "./img/ad_tv/_3.png"];
+        "./img/ad_tv/tv_1.png", "./img/ad_tv/_2.png", "./img/ad_tv/_3.png"];
         var page1 = [
         // page 2
         "./img/ad_tv/_4.jpg", "./img/ad_tv/_5.png", "./img/ad_tv/_6.jpg"];
