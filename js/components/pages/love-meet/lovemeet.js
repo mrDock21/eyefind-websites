@@ -68,10 +68,9 @@ class LoveMeet extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
 
-                            <div className="row justify-content-around">
-                                <div className="card w-40 col-md-4">
+                            <div className="row">
+                                <div className="card col-md-4 lovemeet-card">
                                     <div className="card-header">
-                                        <img className="card-img-top" src="./../img/find_love.png" alt="Card image cap" />
                                         <img className="card-img-top" src="./../img/find_love.png" alt="Card image cap" />
                                     </div>
                                     <div className="card-body">
@@ -83,9 +82,9 @@ class LoveMeet extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="card  w-75  col-md-4">
+                                <div className="card mt-1 mt-md-0 offset-md-1 col-md-7 lovemeet-card">
                                     <div className="card-header">
-                                        <img className="card-img-top" src="./../img/true_love.png" alt="Card image cap" />
+                                        <img className="card-img-top w-50" src="./../img/true_love.png" alt="Card image cap" />
                                     </div>
                                     <div className="card-body">
                                         <img className="card-img-top" src="./../img/true_love.png" alt="Card image cap" />

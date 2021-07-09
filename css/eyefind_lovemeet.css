@@ -6,14 +6,23 @@
     --eyefind-font: 'Source Sans Pro', sans-serif;
 }
 
-.card {
-    background-color: rgba(206,204,207,255)!important;
+.lovemeet-card {
+    background-color: rgba(206,204,207,255);
 }
 
-.card-header {
-    background-color: rgba(206,204,207,255)!important;
-    width: 80%;
-    border: 0!important;
+
+div.page div.lovemeet-card {
+    border: 0;
+}
+
+div.page div.lovemeet-card div.card-header {
+    background-color: rgba(206,204,207,255);
+    width: 100%;
+    border: 0;
+}
+
+div.page div.lovemeet-card div.card-body {
+    background-color: rgba(206,204,207,255) !important;
 }
 
 .card-title {

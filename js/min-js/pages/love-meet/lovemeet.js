@@ -114,14 +114,13 @@ var LoveMeet = function (_React$Component) {
                             { className: 'col-md-12' },
                             React.createElement(
                                 'div',
-                                { className: 'row justify-content-around' },
+                                { className: 'row' },
                                 React.createElement(
                                     'div',
-                                    { className: 'card w-40 col-md-4' },
+                                    { className: 'card col-md-4 lovemeet-card' },
                                     React.createElement(
                                         'div',
                                         { className: 'card-header' },
-                                        React.createElement('img', { className: 'card-img-top', src: './../img/find_love.png', alt: 'Card image cap' }),
                                         React.createElement('img', { className: 'card-img-top', src: './../img/find_love.png', alt: 'Card image cap' })
                                     ),
                                     React.createElement(
@@ -141,11 +140,11 @@ var LoveMeet = function (_React$Component) {
                                 ),
                                 React.createElement(
                                     'div',
-                                    { className: 'card  w-75  col-md-4' },
+                                    { className: 'card mt-1 mt-md-0 offset-md-1 col-md-7 lovemeet-card' },
                                     React.createElement(
                                         'div',
                                         { className: 'card-header' },
-                                        React.createElement('img', { className: 'card-img-top', src: './../img/true_love.png', alt: 'Card image cap' })
+                                        React.createElement('img', { className: 'card-img-top w-50', src: './../img/true_love.png', alt: 'Card image cap' })
                                     ),
                                     React.createElement(
                                         'div',
