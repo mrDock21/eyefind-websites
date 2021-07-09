@@ -102,6 +102,100 @@ var LoveMeet = function (_React$Component) {
                     'div',
                     null,
                     React.createElement('img', { src: '../img/banner/lovemeet.png', className: 'img-fluid mx-auto d-block', alt: 'Responsive image' })
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'container mt-3' },
+                    React.createElement(
+                        'div',
+                        { className: 'row' },
+                        React.createElement(
+                            'div',
+                            { className: 'col-md-12' },
+                            React.createElement(
+                                'div',
+                                { className: 'row justify-content-around' },
+                                React.createElement(
+                                    'div',
+                                    { className: 'card col-md-4' },
+                                    React.createElement(
+                                        'div',
+                                        { className: 'card-header' },
+                                        React.createElement('img', { className: 'card-img-top', src: './../img/find_love.png', alt: 'Card image cap' })
+                                    ),
+                                    React.createElement(
+                                        'div',
+                                        { className: 'card-body' },
+                                        React.createElement(
+                                            'h5',
+                                            { className: 'card-title' },
+                                            'DON\'T BE SHY!'
+                                        ),
+                                        React.createElement(
+                                            'p',
+                                            { className: 'card-text' },
+                                            'You can search for Singles in your area. Just select your fancies below. Mr Fackler, `LoveMeet` Founder.'
+                                        )
+                                    )
+                                )
+                            ),
+                            React.createElement(
+                                'div',
+                                { className: 'row justify-content-around' },
+                                React.createElement(
+                                    'div',
+                                    { className: 'col-md-4' },
+                                    '.col-md-4'
+                                ),
+                                React.createElement(
+                                    'div',
+                                    { className: 'col-md-4 offset-md-1' },
+                                    '.col-md-4 .offset-md-4'
+                                )
+                            ),
+                            React.createElement(
+                                'div',
+                                { className: 'row' },
+                                React.createElement(
+                                    'div',
+                                    { className: 'col-md-3 offset-md-3' },
+                                    '.col-md-3 .offset-md-3'
+                                ),
+                                React.createElement(
+                                    'div',
+                                    { className: 'col-md-3 offset-md-3' },
+                                    '.col-md-3 .offset-md-3'
+                                )
+                            ),
+                            React.createElement(
+                                'div',
+                                { className: 'row' },
+                                React.createElement(
+                                    'div',
+                                    { className: 'col-md-6 offset-md-3' },
+                                    '.col-md-6 .offset-md-3'
+                                )
+                            ),
+                            React.createElement(
+                                'div',
+                                { className: 'row mt-3' },
+                                React.createElement(
+                                    'div',
+                                    { className: 'col-md-12' },
+                                    React.createElement(
+                                        'p',
+                                        { className: 'w-100 h-100 text-center text-bold h5 text-uppercase' },
+                                        'IN PARTNERSHIP WITH'
+                                    )
+                                )
+                            ),
+                            React.createElement(
+                                'div',
+                                { className: 'row mt-3' },
+                                React.createElement('div', { id: 'bottom-ads-container' })
+                            )
+                        )
+                    )
                 )
             );
         }

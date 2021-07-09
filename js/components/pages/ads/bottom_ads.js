@@ -7,6 +7,8 @@ class BottomAds extends React.Component {
             images: IMAGES,
             indexes: this.randomNum()
         }
+
+        console.log(this.state.images);
     }
 
     /**

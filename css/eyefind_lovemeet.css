@@ -1,0 +1,12 @@
+:root {
+
+
+    --shadow-transparency: rgba(0, 0, 0, 0.4);
+
+    --eyefind-font: 'Source Sans Pro', sans-serif;
+}
+
+.card {
+    background-color: rgb(188, 188, 202)!important;
+}
+
