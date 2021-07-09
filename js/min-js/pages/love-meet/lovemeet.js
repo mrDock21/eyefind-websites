@@ -117,10 +117,11 @@ var LoveMeet = function (_React$Component) {
                                 { className: 'row justify-content-around' },
                                 React.createElement(
                                     'div',
-                                    { className: 'card col-md-4' },
+                                    { className: 'card w-40 col-md-4' },
                                     React.createElement(
                                         'div',
                                         { className: 'card-header' },
+                                        React.createElement('img', { className: 'card-img-top', src: './../img/find_love.png', alt: 'Card image cap' }),
                                         React.createElement('img', { className: 'card-img-top', src: './../img/find_love.png', alt: 'Card image cap' })
                                     ),
                                     React.createElement(
@@ -137,43 +138,25 @@ var LoveMeet = function (_React$Component) {
                                             'You can search for Singles in your area. Just select your fancies below. Mr Fackler, `LoveMeet` Founder.'
                                         )
                                     )
-                                )
-                            ),
-                            React.createElement(
-                                'div',
-                                { className: 'row justify-content-around' },
-                                React.createElement(
-                                    'div',
-                                    { className: 'col-md-4' },
-                                    '.col-md-4'
                                 ),
                                 React.createElement(
                                     'div',
-                                    { className: 'col-md-4 offset-md-1' },
-                                    '.col-md-4 .offset-md-4'
-                                )
-                            ),
-                            React.createElement(
-                                'div',
-                                { className: 'row' },
-                                React.createElement(
-                                    'div',
-                                    { className: 'col-md-3 offset-md-3' },
-                                    '.col-md-3 .offset-md-3'
-                                ),
-                                React.createElement(
-                                    'div',
-                                    { className: 'col-md-3 offset-md-3' },
-                                    '.col-md-3 .offset-md-3'
-                                )
-                            ),
-                            React.createElement(
-                                'div',
-                                { className: 'row' },
-                                React.createElement(
-                                    'div',
-                                    { className: 'col-md-6 offset-md-3' },
-                                    '.col-md-6 .offset-md-3'
+                                    { className: 'card  w-75  col-md-4' },
+                                    React.createElement(
+                                        'div',
+                                        { className: 'card-header' },
+                                        React.createElement('img', { className: 'card-img-top', src: './../img/true_love.png', alt: 'Card image cap' })
+                                    ),
+                                    React.createElement(
+                                        'div',
+                                        { className: 'card-body' },
+                                        React.createElement('img', { className: 'card-img-top', src: './../img/true_love.png', alt: 'Card image cap' }),
+                                        React.createElement(
+                                            'p',
+                                            { className: 'card-text' },
+                                            'This is a random text...'
+                                        )
+                                    )
                                 )
                             ),
                             React.createElement(

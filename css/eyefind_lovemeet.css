@@ -7,6 +7,15 @@
 }
 
 .card {
-    background-color: rgb(188, 188, 202)!important;
+    background-color: rgba(206,204,207,255)!important;
 }
 
+.card-header {
+    background-color: rgba(206,204,207,255)!important;
+    width: 80%;
+    border: 0!important;
+}
+
+.card-title {
+    color: fuchsia;
+}

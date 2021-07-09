@@ -65,14 +65,13 @@ class LoveMeet extends React.Component {
                 </div>
 
                 <div className="container mt-3">
-                    {/** MAIN GRID */}
                     <div className="row">
-                        {/** Content row  */}
                         <div className="col-md-12">
 
                             <div className="row justify-content-around">
-                                <div className="card col-md-4">
+                                <div className="card w-40 col-md-4">
                                     <div className="card-header">
+                                        <img className="card-img-top" src="./../img/find_love.png" alt="Card image cap" />
                                         <img className="card-img-top" src="./../img/find_love.png" alt="Card image cap" />
                                     </div>
                                     <div className="card-body">
@@ -83,19 +82,18 @@ class LoveMeet extends React.Component {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div className="row justify-content-around">
-                                <div className="col-md-4">.col-md-4</div>
-                                <div className="col-md-4 offset-md-1">.col-md-4 .offset-md-4</div>
-                            </div>
-
-                            <div className="row">
-                                <div className="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
-                                <div className="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
-                            </div>
-                                <div className="row">
-                                <div className="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+                                <div className="card  w-75  col-md-4">
+                                    <div className="card-header">
+                                        <img className="card-img-top" src="./../img/true_love.png" alt="Card image cap" />
+                                    </div>
+                                    <div className="card-body">
+                                        <img className="card-img-top" src="./../img/true_love.png" alt="Card image cap" />
+                                        <p className="card-text">
+                                            This is a random text...
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="row mt-3">
