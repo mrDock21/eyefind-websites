@@ -61,7 +61,7 @@ class LoveMeet extends React.Component {
                 
                 {/** BANNER */}
                 <div>
-                    <img src="../img/banner/lovemeet.png" className="img-fluid mx-auto d-block" alt="Responsive image" />
+                    <img src="../img/lovemeet/banner/lovemeet.png" className="img-fluid mx-auto d-block" alt="Responsive image" />
                 </div>
 
                 <div className="container mt-3">
@@ -69,31 +69,42 @@ class LoveMeet extends React.Component {
                         <div className="col-md-12">
 
                             <div className="row">
-                                <div className="card col-md-4 lovemeet-card">
+                                <div className="card px-md-1 col-md-5 offset-md-1 lovemeet-card">
                                     <div className="card-header">
-                                        <img className="card-img-top" src="./../img/find_love.png" alt="Card image cap" />
+                                        <img className="card-img-top  w-50" src="./../img/lovemeet/find_love.png" alt="Find love" />
                                     </div>
                                     <div className="card-body">
-                                        <h5 className="card-title">DON'T BE SHY!</h5>
-                                        <p className="card-text">You can search for Singles in your area. 
-                                            Just select your fancies below. 
-                                            Mr Fackler, `LoveMeet` Founder. 
+                                        <h3 className="card-title">DON'T BE SHY!</h3>
+                                        <p className="card-text">
+                                            You can search for Singles in your area. <br/>
+                                            Just select your fancies below.          <br/>
+                                            Mr Fackler, `LoveMeet` Founder.          <br/>
                                         </p>
+
+                                        {/** Buttons */}
+                                        <div className="row">
+                                            <img className="w-50" src="./../img/lovemeet/male_btn.png" alt="Male"/>
+                                            <img className="w-50" src="./../img/lovemeet/female_btn.png" alt="Female"/>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="card mt-1 mt-md-0 offset-md-1 col-md-7 lovemeet-card">
+                                <div className="card pl-md-1  mt-1 mt-md-0 col-md-6 lovemeet-card">
                                     <div className="card-header">
-                                        <img className="card-img-top w-50" src="./../img/true_love.png" alt="Card image cap" />
+                                        <img className="card-img-top w-50" src="./../img/lovemeet/true_love.png" alt="Card image cap" />
                                     </div>
                                     <div className="card-body">
-                                        <img className="card-img-top" src="./../img/true_love.png" alt="Card image cap" />
+                                        <img className="card-img-top" src="./../img/lovemeet/female/female_1.png" alt="Card image cap" />
                                         <p className="card-text">
-                                            This is a random text...
+                                            No pre-nups <br/>
+                                            From Rusia Without Love
                                         </p>
                                     </div>
                                 </div>
                             </div>
+
+                            
+                            <hr className="middle-line"/>
 
                             <div className="row mt-3">
                                 <div className="col-md-12">

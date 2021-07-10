@@ -1,6 +1,4 @@
 :root {
-
-
     --shadow-transparency: rgba(0, 0, 0, 0.4);
 
     --eyefind-font: 'Source Sans Pro', sans-serif;
@@ -25,6 +23,24 @@ div.page div.lovemeet-card div.card-body {
     background-color: rgba(206,204,207,255) !important;
 }
 
-.card-title {
+div.page div.lovemeet-card div.card-header div.card-img-top {
+    width: 50%;
+}
+
+div.page div.lovemeet-card div.card-body h3.card-title {
     color: fuchsia;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+div.page div.lovemeet-card div.card-body p.card-text {
+    color: gray;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+div.page hr.middle-line {
+    border: 5px solid rgb(156, 25, 97);
+    margin-top: 50px;
 }

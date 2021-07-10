@@ -101,7 +101,7 @@ var LoveMeet = function (_React$Component) {
                 React.createElement(
                     'div',
                     null,
-                    React.createElement('img', { src: '../img/banner/lovemeet.png', className: 'img-fluid mx-auto d-block', alt: 'Responsive image' })
+                    React.createElement('img', { src: '../img/lovemeet/banner/lovemeet.png', className: 'img-fluid mx-auto d-block', alt: 'Responsive image' })
                 ),
                 React.createElement(
                     'div',
@@ -117,47 +117,61 @@ var LoveMeet = function (_React$Component) {
                                 { className: 'row' },
                                 React.createElement(
                                     'div',
-                                    { className: 'card col-md-4 lovemeet-card' },
+                                    { className: 'card px-md-1 col-md-5 offset-md-1 lovemeet-card' },
                                     React.createElement(
                                         'div',
                                         { className: 'card-header' },
-                                        React.createElement('img', { className: 'card-img-top', src: './../img/find_love.png', alt: 'Card image cap' })
+                                        React.createElement('img', { className: 'card-img-top  w-50', src: './../img/lovemeet/find_love.png', alt: 'Find love' })
                                     ),
                                     React.createElement(
                                         'div',
                                         { className: 'card-body' },
                                         React.createElement(
-                                            'h5',
+                                            'h3',
                                             { className: 'card-title' },
                                             'DON\'T BE SHY!'
                                         ),
                                         React.createElement(
                                             'p',
                                             { className: 'card-text' },
-                                            'You can search for Singles in your area. Just select your fancies below. Mr Fackler, `LoveMeet` Founder.'
+                                            'You can search for Singles in your area. ',
+                                            React.createElement('br', null),
+                                            'Just select your fancies below.          ',
+                                            React.createElement('br', null),
+                                            'Mr Fackler, `LoveMeet` Founder.          ',
+                                            React.createElement('br', null)
+                                        ),
+                                        React.createElement(
+                                            'div',
+                                            { className: 'row' },
+                                            React.createElement('img', { className: 'w-50', src: './../img/lovemeet/male_btn.png', alt: 'Male' }),
+                                            React.createElement('img', { className: 'w-50', src: './../img/lovemeet/female_btn.png', alt: 'Female' })
                                         )
                                     )
                                 ),
                                 React.createElement(
                                     'div',
-                                    { className: 'card mt-1 mt-md-0 offset-md-1 col-md-7 lovemeet-card' },
+                                    { className: 'card pl-md-1  mt-1 mt-md-0 col-md-6 lovemeet-card' },
                                     React.createElement(
                                         'div',
                                         { className: 'card-header' },
-                                        React.createElement('img', { className: 'card-img-top w-50', src: './../img/true_love.png', alt: 'Card image cap' })
+                                        React.createElement('img', { className: 'card-img-top w-50', src: './../img/lovemeet/true_love.png', alt: 'Card image cap' })
                                     ),
                                     React.createElement(
                                         'div',
                                         { className: 'card-body' },
-                                        React.createElement('img', { className: 'card-img-top', src: './../img/true_love.png', alt: 'Card image cap' }),
+                                        React.createElement('img', { className: 'card-img-top', src: './../img/lovemeet/female/female_1.png', alt: 'Card image cap' }),
                                         React.createElement(
                                             'p',
                                             { className: 'card-text' },
-                                            'This is a random text...'
+                                            'No pre-nups ',
+                                            React.createElement('br', null),
+                                            'From Rusia Without Love'
                                         )
                                     )
                                 )
                             ),
+                            React.createElement('hr', { className: 'middle-line' }),
                             React.createElement(
                                 'div',
                                 { className: 'row mt-3' },
