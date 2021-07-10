@@ -31,7 +31,8 @@ class LoveMeet extends React.Component {
     render() {
         return (
             <div className="page">
-
+                
+                {/** GRAY HEADER */}
                 <header>
                     <div className="split space-between">
                         <div>
@@ -65,11 +66,12 @@ class LoveMeet extends React.Component {
                 </div>
 
                 <div className="container mt-3">
-                    <div className="row">
+                    <div className="row mb-md-3">
                         <div className="col-md-12">
 
-                            <div className="row">
-                                <div className="card px-md-1 col-md-5 offset-md-1 lovemeet-card">
+                            <div className="row" id="find-date-panel">
+                                {/** CHOOSE GENDER BUTTONS */}
+                                <div className="card col-md-5 lovemeet-card">
                                     <div className="card-header">
                                         <img className="card-img-top  w-50" src="./../img/lovemeet/find_love.png" alt="Find love" />
                                     </div>
@@ -89,7 +91,8 @@ class LoveMeet extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="card pl-md-1  mt-1 mt-md-0 col-md-6 lovemeet-card">
+                                {/** "Random" (not yet) person's info */}
+                                <div className="card mt-1 mt-md-0 col-md-7 lovemeet-card">
                                     <div className="card-header">
                                         <img className="card-img-top w-50" src="./../img/lovemeet/true_love.png" alt="Card image cap" />
                                     </div>
@@ -103,22 +106,31 @@ class LoveMeet extends React.Component {
                                 </div>
                             </div>
 
-                            
+                            {/** PINK LINE */}                            
                             <hr className="middle-line"/>
-
                             <div className="row mt-3">
                                 <div className="col-md-12">
-                                    <p  className="w-100 h-100 text-center text-bold h5 text-uppercase">
+                                    <p  className="w-100 h-100 text-center text-bold">
                                         IN PARTNERSHIP WITH
                                     </p>
                                 </div>
                             </div>
 
+                            {/** ADS */}
                             <div className="row mt-3">
                                 <div id="bottom-ads-container">
                                     
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    {/** FOOTER */}
+                    <div className="row" id="footer">
+                        <div className="col-md-12 d-flex justify-content-center align-items-center">
+                            <a href="#find-date-panel">
+                                love-meet.net
+                            </a>
                         </div>
                     </div>
                 </div>

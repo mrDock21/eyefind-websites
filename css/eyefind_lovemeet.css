@@ -1,13 +1,24 @@
 :root {
     --shadow-transparency: rgba(0, 0, 0, 0.4);
 
-    --eyefind-font: 'Source Sans Pro', sans-serif;
+    --lovemeet-font: 'Source Sans Pro', sans-serif;
+    --lovemeet-pink: fuchsia;
+    --lovement-pink-dark: rgb(156, 25, 97);
+    --lovement-pink-light: rgb(156, 25, 97, 0.3);
 }
 
 .lovemeet-card {
     background-color: rgba(206,204,207,255);
 }
 
+p {
+    font-size: 1.5em;
+    font-family: var(--lovemeet-font);
+}
+
+.text-bold {
+    font-weight: bold;
+}
 
 div.page div.lovemeet-card {
     border: 0;
@@ -20,7 +31,7 @@ div.page div.lovemeet-card div.card-header {
 }
 
 div.page div.lovemeet-card div.card-body {
-    background-color: rgba(206,204,207,255) !important;
+    background-color: rgba(206,204,207,255);
 }
 
 div.page div.lovemeet-card div.card-header div.card-img-top {
@@ -28,19 +39,30 @@ div.page div.lovemeet-card div.card-header div.card-img-top {
 }
 
 div.page div.lovemeet-card div.card-body h3.card-title {
-    color: fuchsia;
+    color: var(--lovemeet-pink);
     font-weight: bold;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--lovemeet-font);
 }
 
 div.page div.lovemeet-card div.card-body p.card-text {
     color: gray;
     font-weight: bold;
-    font-size: 1.5em;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 div.page hr.middle-line {
-    border: 5px solid rgb(156, 25, 97);
+    border: 5px solid var(--lovement-pink-dark);
     margin-top: 50px;
+}
+
+div#footer div {
+    min-height: 6rem;
+    background: var(--lovement-pink-light)
+}
+
+div#footer div a {
+    color: black;
+}
+
+div#footer div a:hover {
+    font-weight: bold;
 }

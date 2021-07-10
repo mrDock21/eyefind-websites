@@ -108,16 +108,16 @@ var LoveMeet = function (_React$Component) {
                     { className: 'container mt-3' },
                     React.createElement(
                         'div',
-                        { className: 'row' },
+                        { className: 'row mb-md-3' },
                         React.createElement(
                             'div',
                             { className: 'col-md-12' },
                             React.createElement(
                                 'div',
-                                { className: 'row' },
+                                { className: 'row', id: 'find-date-panel' },
                                 React.createElement(
                                     'div',
-                                    { className: 'card px-md-1 col-md-5 offset-md-1 lovemeet-card' },
+                                    { className: 'card col-md-5 lovemeet-card' },
                                     React.createElement(
                                         'div',
                                         { className: 'card-header' },
@@ -151,7 +151,7 @@ var LoveMeet = function (_React$Component) {
                                 ),
                                 React.createElement(
                                     'div',
-                                    { className: 'card pl-md-1  mt-1 mt-md-0 col-md-6 lovemeet-card' },
+                                    { className: 'card mt-1 mt-md-0 col-md-7 lovemeet-card' },
                                     React.createElement(
                                         'div',
                                         { className: 'card-header' },
@@ -180,7 +180,7 @@ var LoveMeet = function (_React$Component) {
                                     { className: 'col-md-12' },
                                     React.createElement(
                                         'p',
-                                        { className: 'w-100 h-100 text-center text-bold h5 text-uppercase' },
+                                        { className: 'w-100 h-100 text-center text-bold' },
                                         'IN PARTNERSHIP WITH'
                                     )
                                 )
@@ -189,6 +189,19 @@ var LoveMeet = function (_React$Component) {
                                 'div',
                                 { className: 'row mt-3' },
                                 React.createElement('div', { id: 'bottom-ads-container' })
+                            )
+                        )
+                    ),
+                    React.createElement(
+                        'div',
+                        { className: 'row', id: 'footer' },
+                        React.createElement(
+                            'div',
+                            { className: 'col-md-12 d-flex justify-content-center align-items-center' },
+                            React.createElement(
+                                'a',
+                                { href: '#find-date-panel' },
+                                'love-meet.net'
                             )
                         )
                     )
