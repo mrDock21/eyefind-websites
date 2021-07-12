@@ -20,8 +20,6 @@ var BottomAds = function (_React$Component) {
             images: IMAGES,
             indexes: _this.randomNum()
         };
-
-        console.log(_this.state.images);
         return _this;
     }
 

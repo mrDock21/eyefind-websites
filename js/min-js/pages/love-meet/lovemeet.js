@@ -144,8 +144,8 @@ var LoveMeet = function (_React$Component) {
                                         React.createElement(
                                             'div',
                                             { className: 'row' },
-                                            React.createElement('img', { className: 'w-50', src: './../img/lovemeet/male_btn.png', alt: 'Male' }),
-                                            React.createElement('img', { className: 'w-50', src: './../img/lovemeet/female_btn.png', alt: 'Female' })
+                                            React.createElement('input', { type: 'image', className: 'w-50', src: './../img/lovemeet/male_btn.png', alt: 'Male' }),
+                                            React.createElement('input', { type: 'image', className: 'w-50', src: './../img/lovemeet/female_btn.png', alt: 'Female' })
                                         )
                                     )
                                 ),
@@ -169,6 +169,29 @@ var LoveMeet = function (_React$Component) {
                                             'From Rusia Without Love'
                                         )
                                     )
+                                )
+                            ),
+                            React.createElement(
+                                'p',
+                                null,
+                                React.createElement(
+                                    'a',
+                                    { 'class': 'btn btn-primary', 'data-bs-toggle': 'collapse', href: '#collapseExample', role: 'button', 'aria-expanded': 'false', 'aria-controls': 'collapseExample' },
+                                    'Link with href'
+                                ),
+                                React.createElement(
+                                    'button',
+                                    { 'class': 'btn btn-primary', type: 'button', 'data-bs-toggle': 'collapse', 'data-bs-target': '#collapseExample', 'aria-expanded': 'false', 'aria-controls': 'collapseExample' },
+                                    'Button with data-bs-target'
+                                )
+                            ),
+                            React.createElement(
+                                'div',
+                                { 'class': 'collapse', id: 'collapseExample' },
+                                React.createElement(
+                                    'div',
+                                    { 'class': 'card card-body' },
+                                    'Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.'
                                 )
                             ),
                             React.createElement('hr', { className: 'middle-line' }),

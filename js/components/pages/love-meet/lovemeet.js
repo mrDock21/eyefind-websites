@@ -85,8 +85,8 @@ class LoveMeet extends React.Component {
 
                                         {/** Buttons */}
                                         <div className="row">
-                                            <img className="w-50" src="./../img/lovemeet/male_btn.png" alt="Male"/>
-                                            <img className="w-50" src="./../img/lovemeet/female_btn.png" alt="Female"/>
+                                            <input type="image" className="w-50" src="./../img/lovemeet/male_btn.png" alt="Male"/>
+                                            <input type="image" className="w-50" src="./../img/lovemeet/female_btn.png" alt="Female"/>
                                         </div>
                                     </div>
                                 </div>
@@ -103,6 +103,20 @@ class LoveMeet extends React.Component {
                                             From Rusia Without Love
                                         </p>
                                     </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Link with href
+                                </a>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Button with data-bs-target
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                                 </div>
                             </div>
 
