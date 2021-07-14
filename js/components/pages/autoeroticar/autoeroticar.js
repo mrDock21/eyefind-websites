@@ -38,7 +38,7 @@ class AutoEroticar extends React.Component {
         const parentContainer = document.getElementById("car3d-scene");
         const scene = new THREE.Scene();
         const screenWidth = parentContainer.clientWidth * 0.75;
-        const screenHeight = 200;
+        const screenHeight = parentContainer.clientHeight;
         let camSettings = { 
             FOV: 75, 
             AspectRatio:  screenWidth / screenHeight,
@@ -53,6 +53,7 @@ class AutoEroticar extends React.Component {
         const renderer = new THREE.WebGLRenderer({ alpha: true });
         renderer.setClearColor( 0x000000, 0 ); // the default
         renderer.setSize( screenWidth, screenHeight );
+        renderer.domElement.className += " w-100 h-100";
         parentContainer.appendChild( renderer.domElement );
 
         const geometry = new THREE.BoxGeometry();
@@ -62,12 +63,54 @@ class AutoEroticar extends React.Component {
         scene.add( cube );
 
         camera.position.z = 5;
+        camera.position.y = 1;
+        camera.rotation.x = THREE.MathUtils.degToRad(-5);
+
+        // quick light
+        const light = new THREE.PointLight( 0xff0000, 1, 100 );
+        light.position.set( 0, 3, 0 );
+        scene.add( light );
+        /*
+        const light2 = new THREE.PointLight( 0xff0000, 1, 100 );
+        light2.position.set( 0, -3, 0 );
+        scene.add( light2 );*/
+
+        // ambient
+        // soft white light
+        const ambient = new THREE.AmbientLight( 0xFFFFFF ); 
+        scene.add( ambient );
+
+        // Instantiate a loader
+        const loader = new THREE.GLTFLoader();
+        let model = new THREE.Object3D();
+
+        loader.load( './../assets/car_gltf.glb', function ( gltf ) {
+            // get the car
+            model = gltf.scene.children[2];
+            scene.add( model );
+
+            for (var i = 0; i < gltf.scene.children.length; i++){
+                console.log(`Model [${i}]=>${gltf.scene.children[i].name}`);
+            }
+
+            model.position.set(0, 0, 0);
+            model.scale.set(model.scale.x * 1.45, model.scale.y * 1.45, model.scale.z * 1.45);
+
+        }, undefined, function ( error ) {
+
+            console.error( error );
+
+        } );
 
         const animate = function () {
             requestAnimationFrame( animate );
 
             cube.rotation.x += 0.01;
             cube.rotation.y += 0.01;
+
+            //model.rotation.x += 0.01;
+            //model.rotation.y += 0.01;
+            model.rotation.z += 0.01;
 
             renderer.render( scene, camera );
         };
@@ -1007,6 +1050,7 @@ class AutoEroticar extends React.Component {
                 {/* Footer  */}
                 <div className="container">
                     <p>Footer</p>
+                    <p>"Ferrari 458 Italia" (https://skfb.ly/o6JVZ) by DatJones is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>
                 </div>
             </div>
         );
