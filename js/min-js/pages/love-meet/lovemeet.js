@@ -17,20 +17,32 @@ var LoveMeet = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (LoveMeet.__proto__ || Object.getPrototypeOf(LoveMeet)).call(this, props));
 
         _this.state = {
-            searchPageUrl: 'mail.eyefind.info'
+            searchPageUrl: 'www.love-meet.net'
         };
 
         _this.handleChange = _this.handleChange.bind(_this);
         _this.handleSubmit = _this.handleSubmit.bind(_this);
+        console.log(props);
         return _this;
     }
 
-    /**
-     * Updates URL text
-     */
-
-
     _createClass(LoveMeet, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var myCollapse = document.getElementById('main-page');
+            var bsCollapse = new bootstrap.Collapse(myCollapse, {
+                toggle: true
+            });
+            console.log(bsCollapse);
+
+            bsCollapse.toggle();
+        }
+
+        /**
+         * Updates URL text
+         */
+
+    }, {
         key: 'handleChange',
         value: function handleChange(event) {
             var state = Object.assign({}, this.state);
@@ -47,6 +59,12 @@ var LoveMeet = function (_React$Component) {
         value: function handleSubmit(event) {
             alert('Requested search: ' + this.state.value);
             event.preventDefault();
+        }
+    }, {
+        key: 'collapsePage',
+        value: function collapsePage() {
+            var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'));
+            console.log(collapseElementList);
         }
     }, {
         key: 'render',
@@ -108,7 +126,7 @@ var LoveMeet = function (_React$Component) {
                     { className: 'container mt-3' },
                     React.createElement(
                         'div',
-                        { className: 'row mb-md-3' },
+                        { className: 'collapse row mb-md-3', id: 'main-page' },
                         React.createElement(
                             'div',
                             { className: 'col-md-12' },
@@ -145,7 +163,7 @@ var LoveMeet = function (_React$Component) {
                                             'div',
                                             { className: 'row' },
                                             React.createElement('input', { type: 'image', className: 'w-50', src: './../img/lovemeet/male_btn.png', alt: 'Male' }),
-                                            React.createElement('input', { type: 'image', className: 'w-50', src: './../img/lovemeet/female_btn.png', alt: 'Female' })
+                                            React.createElement('input', { href: '#', type: 'image', className: 'w-50', src: './../img/lovemeet/female_btn.png', alt: 'Female' })
                                         )
                                     )
                                 ),
@@ -176,21 +194,21 @@ var LoveMeet = function (_React$Component) {
                                 null,
                                 React.createElement(
                                     'a',
-                                    { 'class': 'btn btn-primary', 'data-bs-toggle': 'collapse', href: '#collapseExample', role: 'button', 'aria-expanded': 'false', 'aria-controls': 'collapseExample' },
+                                    { className: 'btn btn-primary', 'data-bs-toggle': 'collapse', href: '#main-page', role: 'button', 'aria-expanded': 'false', 'aria-controls': 'main-page' },
                                     'Link with href'
                                 ),
                                 React.createElement(
                                     'button',
-                                    { 'class': 'btn btn-primary', type: 'button', 'data-bs-toggle': 'collapse', 'data-bs-target': '#collapseExample', 'aria-expanded': 'false', 'aria-controls': 'collapseExample' },
+                                    { className: 'btn btn-primary', 'data-bs-toggle': 'collapse', 'data-bs-target': '#profile-page', 'aria-expanded': 'false', 'aria-controls': 'profile-page' },
                                     'Button with data-bs-target'
                                 )
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'collapse', id: 'collapseExample' },
+                                { className: 'collapse', id: 'collapseExample' },
                                 React.createElement(
                                     'div',
-                                    { 'class': 'card card-body' },
+                                    { className: 'card card-body' },
                                     'Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.'
                                 )
                             ),
@@ -212,22 +230,24 @@ var LoveMeet = function (_React$Component) {
                                 'div',
                                 { className: 'row mt-3' },
                                 React.createElement('div', { id: 'bottom-ads-container' })
+                            ),
+                            React.createElement('hr', { className: 'middle-line' }),
+                            React.createElement(
+                                'div',
+                                { className: 'row', id: 'footer' },
+                                React.createElement(
+                                    'div',
+                                    { className: 'col-md-12 d-flex justify-content-center align-items-center' },
+                                    React.createElement(
+                                        'a',
+                                        { href: '#find-date-panel' },
+                                        'love-meet.net'
+                                    )
+                                )
                             )
                         )
                     ),
-                    React.createElement(
-                        'div',
-                        { className: 'row', id: 'footer' },
-                        React.createElement(
-                            'div',
-                            { className: 'col-md-12 d-flex justify-content-center align-items-center' },
-                            React.createElement(
-                                'a',
-                                { href: '#find-date-panel' },
-                                'love-meet.net'
-                            )
-                        )
-                    )
+                    React.createElement('div', { className: 'row mb-md-3', id: 'profiles-page' })
                 )
             );
         }

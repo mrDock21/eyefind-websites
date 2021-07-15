@@ -1,4 +1,5 @@
-export var MALES = [{
+var MALES = [{
+    ID: "0",
     image: "./../img/lovemeet/male/Colonel Cuddles_42.png",
     nickname: "Colonel Cuddles",
     age: "42",
@@ -10,73 +11,209 @@ export var MALES = [{
     likes: "In my spare time I like to take part in re-enactments of famous battles from the War Between the States, we allow women to take part dressed as wives and nurses now too! We charge a small fee to take part and I've always said if the army was like that - we could put an end to war! Which would be a tragedy.",
     dislikes: "I'm not too fond of people who don't get their facts straight about our nation's proud history, it's just laziness. I mean, would George Washington have gotten anywhere if he'd been all like \"Whatever mister, where's the gift shop?\" - He sure wouldn't!"
 }, {
+    ID: "1",
     image: "./../img/lovemeet/male/FrenchTom.png",
     nickname: "FrenchTom",
-    age: "?"
+    age: "?",
+    location: "Broker",
+    job: "Hustler",
+    sexuality: "Gay",
+    build: "Hot",
+    about: "Sweetie, I'll tell you all about me when and if we go on a date. If I reply to you, you are going to love what you see, trust me. Chances are though, you're a fat desperate old guy who can only afford to eat at Burger Shot. Guess what? If that's you, French Tom is going to say bon voyage. I like money and I like defined muscles.",
+    likes: "Celebrities. Being fabulous. Getting pampered. Singing along to Burlesque musicals. The usual stuff. I've heard a lot of people talking about this whole \"work\" thing. It really doesn't sound like my scene. I'm not going to lie. I want a free ride. I figure that going out with you is probably going to be hard work so why don't you pay me a salary to do it. It'll be worth your while :)",
+    dislikes: "People who are financially challenged, members of the fat liberation movement, or aesthetically inferior. That's poor people, fat people, and ugly people in American. You get the picture. If you want to get with me you better have the looks and the dollars to back it up!!!"
 }, {
+    ID: "2",
     image: "./../img/lovemeet/male/HumpPleaseRupert_39.png",
     nickname: "HumpPleaseRupert",
-    age: "39"
+    age: "39",
+    location: "Dukes",
+    job: "Entrepreneur",
+    sexuality: "Straight",
+    build: "Large",
+    about: "I like to treat a lady right. Everybody is beautiful in their own way. I can see that. Every woman is a delicate flower that should be held up and put on display in front of the world.",
+    likes: "Girls who aren't afraid to let go and let their most basic instincts take over. Girls who will go wild and reach the height of their sexual vitality. Flexibility, openness, low self esteem, the desire to get back at boyfriends / husbands / fathers.",
+    dislikes: "Shy women. Women who are closed off to the world and to new experiences. Women who freak out when a man takes out his video camera. Women who don't believe a man when he says 'No, this won't go on the internet, trust me.'"
 }, {
+    ID: "3",
     image: "./../img/lovemeet/male/MALCOMseX_21.png",
     nickname: "MALCOMseX",
-    age: "21"
+    age: "21",
+    location: "Bohan",
+    job: "Librarian",
+    sexuality: "Straight",
+    build: "Athletic",
+    about: "I've had a hard upbringing but that don't mean I don't got no education. I got my smarts on the streets and in books, not in the class room. I done some bad things but I love my momma and I ain't never disrespected no women.",
+    likes: "A woman who dresses right and knows what a man wants. I like basketball and the smell of a woman's excitement on my sheets. I like it when a woman enjoys herself - that's what I'm here for.",
+    dislikes: "Anyone who believes that a man born into an oppressor's chains will never amount to not ng. Anyone who subscribes to the lies fed to us by the ruling class. People who ain't gangsta. Bitches who don't put out."
 }, {
+    ID: "4",
     image: "./../img/lovemeet/male/NikoLiberty_30.png",
     nickname: "NikoLiberty",
-    age: "30"
+    age: "30",
+    location: "Liberty City",
+    job: "Import / Export",
+    sexuality: "Straight",
+    build: "Athletic",
+    about: "For the last 10 years I've been looking for someone to make me feel whole again. I've travelled all over Europe and now I'm in America, but I still haven't found them.",
+    likes: "I am a simple guy. I care for my family and those who are close to me. I want to be successful here in this city. I am not greedy. I do not pretend that anything other than hard work will get me ahead in life. I look for a woman who can tell me when I am going in the wrong direction and will help me make the right choices.",
+    dislikes: "I do not like to be lied to. I try to treat people honestly and expect the same in return."
 }, {
+    ID: "5",
     image: "./../img/lovemeet/male/NoBigWillie_26.png",
     nickname: "NoBigWillie",
-    age: "26"
+    age: "26",
+    location: "Algonquin",
+    job: "PR",
+    sexuality: "Gay",
+    build: "Slim",
+    about: "I like to look good and I like it when I'm told I do. If you're going to spend time getting your look right then you should encourage people to tell you that. LOVE ME.",
+    likes: "Cool bars and hot clubs. The freedom to do what I like all day and the security of a man's arms around me at night. An English accent, an Italian cook and a Latino dancer (one at a time or all at once). The gym.",
+    dislikes: "Not calling me back. Bad dress sense. Bad shoes. Stupid hair. Lame music. Flabby bods. Empty nightclubs, unless they're empty because they're too cool to let people in. If that's the case then it's ok."
 }, {
+    ID: "6",
     image: "./../img/lovemeet/male/Oscar Wild_24.png",
     nickname: "Oscar Wild",
-    age: "24"
+    age: "24",
+    location: "Algonquin",
+    job: "Grad Student",
+    sexuality: "Straight!",
+    build: "I've been told I have nice eyes and a great ass.",
+    about: "I'm a Media Studies grad-student, doing my thesis on the positive, values message of the 1980s 'buddy movie'. I'm looking for a woman who isn't too girly, enjoys watching gladiator movies, preferably with short hair and maybe even a brother I can go fishing with.",
+    likes: "I like to party when I'm not studying, just go to a club on my own and cut loose, really have some me time, surrounded by two or three hundred other men doing the same thing. I like actors who can stand up for their own heterosexuality without being thought of as some gay, paranoid, midget cult member.",
+    dislikes: "People who can't leave a subject well enough alone. Pushy women who want things from you that you might just be too tired to give them because you've been at the library all day and besides you're not a damn robot!"
 }, {
+    ID: "7",
     image: "./../img/lovemeet/male/The Nickmeister_21.png",
     nickname: "The Nickmeister",
-    age: "21"
+    age: "21",
+    location: "Broker",
+    job: "Student",
+    sexuality: "Yes please! Wooool",
+    build: "I don't work out or nothin",
+    about: "My philosophy is: the internet was totally designed for hilarious pictures of me and my buddies cutting loose!!! I drink ten cans of Sprunk a day man, I love that shit!",
+    likes: "Beer and partying! Alll-right! I love my dog man, I can really talk to him, he's called Hamish, 'cause my buddies were like, Call him Hamish dude! and I was like, That's hilarious man.",
+    dislikes: "Getting to a keg and there's only foam left... I still dig foam though! Wooo! Yeah! I saw a puppy with like, three legs once man, that sucked. My stupid brother man, he's like this total art-fag who's always calling me dumb. Chicks dig guys who can drink beer! Yeah!"
 }, {
+    ID: "8",
     image: "./../img/lovemeet/male/Troy Harder_37.png",
     nickname: "Troy Harder",
-    age: "37"
+    age: "37",
+    location: "Algonquin",
+    job: "Political fundraiser",
+    sexuality: "Straight, like in the bible.",
+    build: "All American pecs",
+    about: "I'm a political guy and I'm looking for a woman who shares my ideals. I believe every American deserves the freedom to get into their SUV, drive to their office with its state of the art metal detectors and work sixty hours a week for a boss they've never seen, knowing all the while that a well-funded military is keeping their 46-inch TV safe from crack addicts.",
+    likes: "Acronyms. Successful corporations you can trust to succeed. Male judges. Action movie stars-turned-directors who enjoy a beer and aren't afraid to speak out about their religious convictions. Expensive cars and cheap gas.",
+    dislikes: "Women who want to take away my freedom with abortions and leg hair. Hybrid cars. Poor people who refuse to help themselves. Gun control. Fat filmmakers who hate freedom. The big gay media conspiracy."
 }];
 
-export var FEMALES = [{
+var FEMALES = [{
+    ID: "0",
     image: "./../img/lovemeet/female/From Russia Without Love_22.png",
     nickname: "From Russia Without Love",
-    age: "22"
+    age: "22",
+    location: "Algonquin",
+    job: "Job?",
+    sexuality: "An asset",
+    build: "Perfect",
+    about: "I came to this country from Russia looking for a man who wants to om Russia Without Love make a commitment. I'm the 'til death do us part type' I want to find an older guy, a much older guy, with little or no next of kin.",
+    likes: "I like mature men who don't get along with their kids. I like people who'll just look at my chest and not ask any questions. I also like heart conditions, Alzheimer's and wheelchairs with shoddy brakes.",
+    dislikes: "I dislike having to explain where I've been. I dislike that Mollis is so easily available here. I dislike funerals, once you've been to one: you've been to them all."
 }, {
+    ID: "1",
     image: "./../img/lovemeet/female/Gogetter_25.png",
     nickname: "Gogetter",
-    age: "25"
+    age: "25",
+    location: "Alderney",
+    job: "Recruiter",
+    sexuality: "Straight",
+    build: "Slim",
+    about: "I know what I'm worth. I won't have no man try to get me cheap 'cause that would be wrong for him and wrong for me. If you get an amazing car cheap then you won't love it as much. You have to work to keep me. If you do that you'll get a beautiful woman who has class and likes a good time.",
+    likes: "Hot cars, hot bars, the best restaurants and a great man to share them with. I like to be respected and treated like the goddess I am. I like it when a man gives a present and doesn't expect anything in return. I like it when heads turn and your wallet comes out.",
+    dislikes: "Anything cheap. The mentality that spending less gets you more. People who don't respect a woman and her right to be looked after. Men who don't think that every moment a woman spends with him is a gift that should be celebrated and cherished."
 }, {
+    ID: "2",
     image: "./../img/lovemeet/female/Jennifun_31.png",
     nickname: "Jennifun",
-    age: "31"
+    age: "31",
+    location: "Bohan",
+    job: "Admin Assistant",
+    sexuality: "I prefer cuddling",
+    build: "Huggable",
+    about: "I'm really fun and friendly! And I'm open-minded too; I work right next to a gay guy. I work for a health insurance company, which is really, like, rewarding because I feel like I've helped people to get better, people who can afford to.",
+    likes: "My best friend Tracey! She is just so funny, she thought up my username cos my name is Jenni-fer but she made it Jenni-Fun! She's wild! I like just relaxing and eating take-out in front of a brand new episode of Waning With The Stars. I'm looking for a guy to go to the movies with, or stay home with.",
+    dislikes: "I don't like how you can't get free refills anywhere in the mall anymore, I mean, I have to walk all the way back down to Burger Shot? Jeez. And I hate it when the A/C gives out in my mom's car and it smells like Pickles, her dog."
 }, {
+    ID: "3",
     image: "./../img/lovemeet/female/LawChick_32.png",
     nickname: "LawChick",
-    age: "32"
+    age: "32",
+    location: "South Algonquin",
+    job: "Lawyer",
+    sexuality: "Hetero",
+    build: "Accommodating",
+    about: "SBF looking for LTR. I'm a career woman. I'm married to my job and looking after my clients so I need a man who doesn't mind coming second to that. That's not saying that I wouldn't be dedicated to a relationship. I've got so much love to give. Sometimes I just feel like I'm bursting I've got so much to give. Looking for friendship... for fun... for forever...",
+    likes: "The green energy movement. Rights for the disadvantaged. Sunsets. Chocolate. Delivering soup to the homeless. The needy. Commitment. Love. Completeness. Organic food. Free trade coffee. Spooning. Communication. I want a man I can look after, a man I can help get the things our society has deprived him of.",
+    dislikes: "How much I've been given. I've had such a privileged life: I've been given so much that I feel guilty. I just want to give something back. I try to do that with my job and my charities. I hate conspicuous consumption and all that yuppie-scumbag shit. The three strikes law. Judges who don't give unlucky defendants a break. Republicans. Cheaters. Liars. Hypocrites. Etc. Etc. Etc."
 }, {
+    ID: "4",
     image: "./../img/lovemeet/female/Lickingood_31.png",
     nickname: "Lickingood",
-    age: "31"
+    age: "31",
+    location: "Algonquin",
+    job: "Analyst",
+    sexuality: "Straight",
+    build: "Athletic",
+    about: "I've worked hard to get where I am and don't have time to mess around. When I'm in the office I like to get my head down and to squeeze the most possible out of every moment. When I'm out and having fun, I like to do the same. I believe that, like anything in life, a relationship gets better as you work at it.",
+    likes: "Hard work and hard play. The outdoors: softball in the park, basketball, golf. Hitting the beach. A man who doesn't get intimidated by a woman who knows what she wants (and how to get it) in the workplace and the bedroom.",
+    dislikes: "Time wasting. Waiting to be served food when you can order it over the counter. People making themselves stupid with drugs and alcohol so they don't enjoy experience."
 }, {
+    ID: "5",
     image: "./../img/lovemeet/female/Miss Understood_27.png",
     nickname: "Miss Understood",
-    age: "27"
+    age: "27",
+    location: "Dukes",
+    job: "Exotic Dancer/ Adult Film Star",
+    sexuality: "Flexible",
+    build: "I haven't met a pole I couldn't handle",
+    about: "I'm looking for a guy who can see past my physical assets, which I know won't be easy. I just want to get close to another person without any kind of lubricant being involved, I've been around the pole and back again and now I'm ready for love.",
+    likes: "I like things that challenge me mentally, the harder the better. On the weekend I like taking off my PVC underwear and just relaxing, away from any crude euphemisms. I also enjoy gardening, I just find that getting down on my knees and really going at it til I'm all dirty and sweaty is so satisfying.",
+    dislikes: "I don't like being taken the wrong way. I hate how people just assume everything I do is about sex. I want people to think about what goes on inside me and not what I do for a living."
 }, {
+    ID: "6",
     image: "./../img/lovemeet/female/Mittens_cats.png",
     nickname: "Mittens",
-    age: "Only 3 cat years!"
+    age: "Only 3 cat years!",
+    location: "Broker",
+    job: "Pediatric Nurse",
+    sexuality: "Straight",
+    build: "Slim",
+    about: "I have three adorable cats called Tiddles, Riddles and Piddles (Piddles has some bladder control problems that are like, not his fault). My favorite hobby is to take a day off and take totally funny pictures of the little sweetums to post on my blog. I'm looking for a guy who likes cats.",
+    likes: "I like cats, duh! I like drawing three little paw prints on greetings cards so it looks like they signed it too! I like dressing them up as the founding fathers and having our own little purrfect thanksgiving dinner. I like really violent sex.",
+    dislikes: "Dog people. Listening to the kids in my ward tell me boring stories about their imaginary friends, or their stupid toys or about how they're going to heaven and they'll see me again - yeah, right - not if I see you first kiddo!"
 }, {
+    ID: "7",
     image: "./../img/lovemeet/female/SoboHoe_23.png",
     nickname: "SoboHoe",
-    age: "23"
+    age: "23",
+    location: "Bohan",
+    job: "Nurse",
+    sexuality: "Free Spirit",
+    build: "Best body you ever going to see.",
+    about: "At the moment, Carmen is a nurse. But she's so much more special than that. She going to be an actress or a model or some shit. Definitely a celebrity. Who knows how it's going to happen, but Carmen's gonna be big time. If you a hot chico then Carmen the girl for you.",
+    likes: "Carmen likes looking good. She work hard at her appearance - it weren't cheap to get this ass or these teeth. She's been spending money on herself for you, so you should spend the money on her when you going out. She likes all men as long as they treat her like a princess. She don't mind getting her fingers greasy at Cluckin' Bell or watching greased up girls at the strip club.",
+    dislikes: "Carmen don't like to be controlled so don't you try to tie her down. When she was a little girl her Daddy was the only man in her life, now that she's a big girl Carmen has all the men she likes. She don't like stuck up places or stuck up people tho."
 }, {
+    ID: "8",
     image: "./../img/lovemeet/female/Undercover Lover_34.png",
     nickname: "Undercover Lover",
-    age: "34"
+    age: "34",
+    location: "Undisclosed",
+    job: "Undisclosed",
+    sexuality: "Straight",
+    build: "Undisclosed",
+    about: "My love-life has really gone down-hill since I entered the Witness Protection Program, I thought it might be fun at first, you know, like an episode of '72' or something....but it's really kinda dull",
+    likes: "I used to enjoy ****** and ***** but now since I moved to ***** they don't have any ******* and I mostly have to ***** **** **** with my ******. So if that sounds good to you, then get in touch and maybe we can find something to not talk about together.",
+    dislikes: "When guys from the FIB promise you that something will be just like being in a sexy Vinewood spy movie where tons of guys will want to hook up with you, and then it turns out that it blows."
 }];

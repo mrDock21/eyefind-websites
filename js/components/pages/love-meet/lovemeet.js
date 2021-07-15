@@ -4,11 +4,22 @@ class LoveMeet extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            searchPageUrl: 'mail.eyefind.info'
+            searchPageUrl: 'www.love-meet.net'
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log(props);
+    }
+
+    componentDidMount() {
+        var myCollapse = document.getElementById('main-page')
+        var bsCollapse = new bootstrap.Collapse(myCollapse, {
+            toggle: true
+        })
+        console.log(bsCollapse);
+
+        bsCollapse.toggle();
     }
 
     /**
@@ -26,6 +37,11 @@ class LoveMeet extends React.Component {
     handleSubmit(event) {
         alert('Requested search: ' + this.state.value);
         event.preventDefault();
+    }
+
+    collapsePage() {
+        var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+        console.log(collapseElementList);
     }
 
     render() {
@@ -66,7 +82,9 @@ class LoveMeet extends React.Component {
                 </div>
 
                 <div className="container mt-3">
-                    <div className="row mb-md-3">
+
+                    {/** MAIN CONTENT */}
+                    <div className="collapse row mb-md-3" id="main-page">
                         <div className="col-md-12">
 
                             <div className="row" id="find-date-panel">
@@ -86,7 +104,7 @@ class LoveMeet extends React.Component {
                                         {/** Buttons */}
                                         <div className="row">
                                             <input type="image" className="w-50" src="./../img/lovemeet/male_btn.png" alt="Male"/>
-                                            <input type="image" className="w-50" src="./../img/lovemeet/female_btn.png" alt="Female"/>
+                                            <input href="#" type="image" className="w-50" src="./../img/lovemeet/female_btn.png" alt="Female"/>
                                         </div>
                                     </div>
                                 </div>
@@ -107,15 +125,15 @@ class LoveMeet extends React.Component {
                             </div>
 
                             <p>
-                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <a className="btn btn-primary" data-bs-toggle="collapse" href="#main-page" role="button" aria-expanded="false" aria-controls="main-page">
                                 Link with href
                                 </a>
-                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                <button className="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#profile-page" aria-expanded="false" aria-controls="profile-page">
                                 Button with data-bs-target
                                 </button>
                             </p>
-                            <div class="collapse" id="collapseExample">
-                                <div class="card card-body">
+                            <div className="collapse" id="collapseExample">
+                                <div className="card card-body">
                                 Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                                 </div>
                             </div>
@@ -136,19 +154,27 @@ class LoveMeet extends React.Component {
                                     
                                 </div>
                             </div>
+
+                            {/** PINK LINE */}                            
+                            <hr className="middle-line"/>
+
+                            {/** FOOTER */}
+                            <div className="row" id="footer">
+                                <div className="col-md-12 d-flex justify-content-center align-items-center">
+                                    <a href="#find-date-panel">
+                                        love-meet.net
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/** FOOTER */}
-                    <div className="row" id="footer">
-                        <div className="col-md-12 d-flex justify-content-center align-items-center">
-                            <a href="#find-date-panel">
-                                love-meet.net
-                            </a>
-                        </div>
+                    { /** PROFILES PAGE */}
+                    <div className="row mb-md-3" id="profiles-page">
+
                     </div>
+                    
                 </div>
-                
             </div>
         );
     }

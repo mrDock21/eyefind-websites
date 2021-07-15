@@ -1,5 +1,6 @@
-export const MALES = [
+const MALES = [
     {
+        ID: "0",
         image: "./../img/lovemeet/male/Colonel Cuddles_42.png",
         nickname: "Colonel Cuddles",
         age: "42",
@@ -12,6 +13,7 @@ export const MALES = [
         dislikes: "I'm not too fond of people who don't get their facts straight about our nation's proud history, it's just laziness. I mean, would George Washington have gotten anywhere if he'd been all like \"Whatever mister, where's the gift shop?\" - He sure wouldn't!"
     },
     {
+        ID: "1",
         image: "./../img/lovemeet/male/FrenchTom.png",
         nickname: "FrenchTom",
         age: "?",
@@ -24,6 +26,7 @@ export const MALES = [
         dislikes: "People who are financially challenged, members of the fat liberation movement, or aesthetically inferior. That's poor people, fat people, and ugly people in American. You get the picture. If you want to get with me you better have the looks and the dollars to back it up!!!",
     },
     {
+        ID: "2",
         image: "./../img/lovemeet/male/HumpPleaseRupert_39.png",
         nickname: "HumpPleaseRupert",
         age: "39",
@@ -36,6 +39,7 @@ export const MALES = [
         dislikes: "Shy women. Women who are closed off to the world and to new experiences. Women who freak out when a man takes out his video camera. Women who don't believe a man when he says 'No, this won't go on the internet, trust me.'"
     },
     {
+        ID: "3",
         image: "./../img/lovemeet/male/MALCOMseX_21.png",
         nickname: "MALCOMseX",
         age: "21",
@@ -48,6 +52,7 @@ export const MALES = [
         dislikes: "Anyone who believes that a man born into an oppressor's chains will never amount to not ng. Anyone who subscribes to the lies fed to us by the ruling class. People who ain't gangsta. Bitches who don't put out."
     },
     {
+        ID: "4",
         image: "./../img/lovemeet/male/NikoLiberty_30.png",
         nickname: "NikoLiberty",
         age: "30",
@@ -60,6 +65,7 @@ export const MALES = [
         dislikes: "I do not like to be lied to. I try to treat people honestly and expect the same in return."
     },
     {
+        ID: "5",
         image: "./../img/lovemeet/male/NoBigWillie_26.png",
         nickname: "NoBigWillie",
         age: "26",
@@ -72,6 +78,7 @@ export const MALES = [
         dislikes: "Not calling me back. Bad dress sense. Bad shoes. Stupid hair. Lame music. Flabby bods. Empty nightclubs, unless they're empty because they're too cool to let people in. If that's the case then it's ok."
     },
     {
+        ID: "6",
         image: "./../img/lovemeet/male/Oscar Wild_24.png",
         nickname: "Oscar Wild",
         age: "24",
@@ -84,6 +91,7 @@ export const MALES = [
         dislikes: "People who can't leave a subject well enough alone. Pushy women who want things from you that you might just be too tired to give them because you've been at the library all day and besides you're not a damn robot!"
     },
     {
+        ID: "7",
         image: "./../img/lovemeet/male/The Nickmeister_21.png",
         nickname: "The Nickmeister",
         age: "21",
@@ -96,6 +104,7 @@ export const MALES = [
         dislikes: "Getting to a keg and there's only foam left... I still dig foam though! Wooo! Yeah! I saw a puppy with like, three legs once man, that sucked. My stupid brother man, he's like this total art-fag who's always calling me dumb. Chicks dig guys who can drink beer! Yeah!"
     },
     {
+        ID: "8",
         image: "./../img/lovemeet/male/Troy Harder_37.png",
         nickname: "Troy Harder",
         age: "37",
@@ -109,8 +118,9 @@ export const MALES = [
     },
 ]
 
-export const FEMALES = [
+const FEMALES = [
     {
+        ID: "0",
         image: "./../img/lovemeet/female/From Russia Without Love_22.png",
         nickname: "From Russia Without Love",
         age: "22",
@@ -123,6 +133,7 @@ export const FEMALES = [
         dislikes: "I dislike having to explain where I've been. I dislike that Mollis is so easily available here. I dislike funerals, once you've been to one: you've been to them all."
     },
     {
+        ID: "1",
         image: "./../img/lovemeet/female/Gogetter_25.png",
         nickname: "Gogetter",
         age: "25",
@@ -135,6 +146,7 @@ export const FEMALES = [
         dislikes: "Anything cheap. The mentality that spending less gets you more. People who don't respect a woman and her right to be looked after. Men who don't think that every moment a woman spends with him is a gift that should be celebrated and cherished."
     },
     {
+        ID: "2",
         image: "./../img/lovemeet/female/Jennifun_31.png",
         nickname: "Jennifun",
         age: "31",
@@ -147,6 +159,7 @@ export const FEMALES = [
         dislikes: "I don't like how you can't get free refills anywhere in the mall anymore, I mean, I have to walk all the way back down to Burger Shot? Jeez. And I hate it when the A/C gives out in my mom's car and it smells like Pickles, her dog."
     },
     {
+        ID: "3",
         image: "./../img/lovemeet/female/LawChick_32.png",
         nickname: "LawChick",
         age: "32",
@@ -159,6 +172,7 @@ export const FEMALES = [
         dislikes: "How much I've been given. I've had such a privileged life: I've been given so much that I feel guilty. I just want to give something back. I try to do that with my job and my charities. I hate conspicuous consumption and all that yuppie-scumbag shit. The three strikes law. Judges who don't give unlucky defendants a break. Republicans. Cheaters. Liars. Hypocrites. Etc. Etc. Etc."
     },
     {
+        ID: "4",
         image: "./../img/lovemeet/female/Lickingood_31.png",
         nickname: "Lickingood",
         age: "31",
@@ -171,6 +185,7 @@ export const FEMALES = [
         dislikes: "Time wasting. Waiting to be served food when you can order it over the counter. People making themselves stupid with drugs and alcohol so they don't enjoy experience."
     },
     {
+        ID: "5",
         image: "./../img/lovemeet/female/Miss Understood_27.png",
         nickname: "Miss Understood",
         age: "27",
@@ -183,6 +198,7 @@ export const FEMALES = [
         dislikes: "I don't like being taken the wrong way. I hate how people just assume everything I do is about sex. I want people to think about what goes on inside me and not what I do for a living."
     },
     {
+        ID: "6",
         image: "./../img/lovemeet/female/Mittens_cats.png",
         nickname: "Mittens",
         age: "Only 3 cat years!",
@@ -195,6 +211,7 @@ export const FEMALES = [
         dislikes: "Dog people. Listening to the kids in my ward tell me boring stories about their imaginary friends, or their stupid toys or about how they're going to heaven and they'll see me again - yeah, right - not if I see you first kiddo!"
     },
     {
+        ID: "7",
         image: "./../img/lovemeet/female/SoboHoe_23.png",
         nickname: "SoboHoe",
         age: "23",
@@ -207,6 +224,7 @@ export const FEMALES = [
         dislikes: "Carmen don't like to be controlled so don't you try to tie her down. When she was a little girl her Daddy was the only man in her life, now that she's a big girl Carmen has all the men she likes. She don't like stuck up places or stuck up people tho."
     },
     {
+        ID: "8",
         image: "./../img/lovemeet/female/Undercover Lover_34.png",
         nickname: "Undercover Lover",
         age: "34",
