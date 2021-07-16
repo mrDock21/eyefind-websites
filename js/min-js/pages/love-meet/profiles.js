@@ -20,7 +20,7 @@ var Profile = function Profile(_ref) {
             { className: "col" },
             React.createElement(
                 "div",
-                { className: "card lovemeet-card mt-4 mx-5" },
+                { className: "card lovemeet-card mt-4" },
                 React.createElement(
                     "div",
                     { className: "card-body" },
@@ -166,7 +166,7 @@ var Profiles = function (_React$Component) {
 
             return React.createElement(
                 "div",
-                { className: "row row-cols-1 row-cols-md-3 g-4 mx-5" },
+                { className: "row row-cols-1 row-cols-md-3 g-4" },
                 profiles,
                 React.createElement("div", { className: "mt-5" })
             );

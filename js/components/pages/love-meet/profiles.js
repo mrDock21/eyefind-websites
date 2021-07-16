@@ -4,7 +4,7 @@ const Profile = ({profile, updatePage}) => {
     return (
         <div className="row row-cols-1">
             <div className="col">
-                <div className="card lovemeet-card mt-4 mx-5">
+                <div className="card lovemeet-card mt-4">
                     <div className="card-body">
                         <div className="row">
                             
@@ -87,7 +87,7 @@ class Profiles extends React.Component {
         });
 
         return (
-            <div className="row row-cols-1 row-cols-md-3 g-4 mx-5">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
                 {profiles}
 
                 {/** Empty space */}
