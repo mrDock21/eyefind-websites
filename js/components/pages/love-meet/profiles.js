@@ -3,7 +3,7 @@
 const ProfileCard = (info) => {
     return (
         <div className="col">
-            <div className="card lovemeet-card">
+            <div className="card lovemeet-card mt-4">
                 <div className="card-header">
                     <img src={info.profile.image} className="card-img-top pt-2" alt={info.profile.nickname} />
                 </div>
@@ -20,8 +20,11 @@ const ProfileCard = (info) => {
 class Profiles extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            males: MALES
+            males: props.type==='male' ? 
+                MALES.sort(() => Math.random() - 0.5) : 
+                FEMALES.sort(() => Math.random() - 0.5)
         }
     }
 
@@ -35,11 +38,14 @@ class Profiles extends React.Component {
         return (
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {profiles}
+
+                 {/** FOOTER */}
+                 <div className="row" id="footer">
+                    <div className="col-md-12">
+                        
+                    </div>
+                </div>
             </div>
         );
     }
 }
-
-
-let domContainer = document.querySelector('#profiles-page');
-ReactDOM.render(<Profiles />, domContainer);

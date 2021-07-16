@@ -14,7 +14,7 @@ var ProfileCard = function ProfileCard(info) {
         { className: "col" },
         React.createElement(
             "div",
-            { className: "card lovemeet-card" },
+            { className: "card lovemeet-card mt-4" },
             React.createElement(
                 "div",
                 { className: "card-header" },
@@ -52,7 +52,11 @@ var Profiles = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Profiles.__proto__ || Object.getPrototypeOf(Profiles)).call(this, props));
 
         _this.state = {
-            males: MALES
+            males: props.type === 'male' ? MALES.sort(function () {
+                return Math.random() - 0.5;
+            }) : FEMALES.sort(function () {
+                return Math.random() - 0.5;
+            })
         };
         return _this;
     }
@@ -67,13 +71,15 @@ var Profiles = function (_React$Component) {
             return React.createElement(
                 "div",
                 { className: "row row-cols-1 row-cols-md-3 g-4" },
-                profiles
+                profiles,
+                React.createElement(
+                    "div",
+                    { className: "row", id: "footer" },
+                    React.createElement("div", { className: "col-md-12" })
+                )
             );
         }
     }]);
 
     return Profiles;
 }(React.Component);
-
-var domContainer = document.querySelector('#profiles-page');
-ReactDOM.render(React.createElement(Profiles, null), domContainer);
