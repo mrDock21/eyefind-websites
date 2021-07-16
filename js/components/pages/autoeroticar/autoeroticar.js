@@ -4,7 +4,13 @@ class AutoEroticar extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            searchPageUrl: 'www.autoeroticar.net'
+            searchPageUrl: 'www.autoeroticar.net',
+            camX: -2.25,
+            camY: 0.55,
+            camZ: 5,
+            rotX: -6,
+            camera: null,
+            carRotZ: 65
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -38,7 +44,9 @@ class AutoEroticar extends React.Component {
         const parentContainer = document.getElementById("car3d-scene");
         const scene = new THREE.Scene();
         const screenWidth = parentContainer.clientWidth * 0.75;
-        const screenHeight = parentContainer.clientHeight;
+        const screenHeight = 400;
+        const state = {...this.state};
+
         let camSettings = { 
             FOV: 75, 
             AspectRatio:  screenWidth / screenHeight,
@@ -62,39 +70,40 @@ class AutoEroticar extends React.Component {
         
         scene.add( cube );
 
-        camera.position.z = 5;
-        camera.position.y = 1;
-        camera.rotation.x = THREE.MathUtils.degToRad(-5);
+        camera.position.z = state.camZ;
+        camera.position.y = state.camY;
+        camera.position.x = state.camX;
+        camera.rotation.x = THREE.MathUtils.degToRad(state.rotX);
+        state.camera = camera;
 
         // quick light
         const light = new THREE.PointLight( 0xff0000, 1, 100 );
         light.position.set( 0, 3, 0 );
         scene.add( light );
-        /*
-        const light2 = new THREE.PointLight( 0xff0000, 1, 100 );
-        light2.position.set( 0, -3, 0 );
-        scene.add( light2 );*/
-
-        // ambient
-        // soft white light
+        // ambient  soft white light
         const ambient = new THREE.AmbientLight( 0xFFFFFF ); 
         scene.add( ambient );
 
         // Instantiate a loader
         const loader = new THREE.GLTFLoader();
-        let model = new THREE.Object3D();
+        var car3dModel = new THREE.Object3D();
 
         loader.load( './../assets/car_gltf.glb', function ( gltf ) {
             // get the car
-            model = gltf.scene.children[2];
-            scene.add( model );
+            car3dModel = gltf.scene.children[2];
+            state.carRotZ = 0;
+            scene.add( car3dModel );
 
             for (var i = 0; i < gltf.scene.children.length; i++){
                 console.log(`Model [${i}]=>${gltf.scene.children[i].name}`);
             }
 
-            model.position.set(0, 0, 0);
-            model.scale.set(model.scale.x * 1.45, model.scale.y * 1.45, model.scale.z * 1.45);
+            car3dModel.position.set(0, 0, 0);
+            car3dModel.scale.set(
+                car3dModel.scale.x * 1.45, 
+                car3dModel.scale.y * 1.45, 
+                car3dModel.scale.z * 1.45
+            );
 
         }, undefined, function ( error ) {
 
@@ -102,6 +111,8 @@ class AutoEroticar extends React.Component {
 
         } );
 
+
+        var _this = this;
         const animate = function () {
             requestAnimationFrame( animate );
 
@@ -110,12 +121,50 @@ class AutoEroticar extends React.Component {
 
             //model.rotation.x += 0.01;
             //model.rotation.y += 0.01;
-            model.rotation.z += 0.01;
+            car3dModel.rotation.z += 0.01;
+                //THREE.MathUtils.degToRad(_this.state.carRotZ);
 
-            renderer.render( scene, camera );
+            renderer.render( scene, _this.state.camera );
         };
 
+        this.setState(state);
         animate();
+    }
+
+    onCamX(event) {
+        const state = {...this.state};
+        state.camera.position.x = state.camX = event.target.value;
+
+        this.setState(state);
+    }
+
+    onCamY(event) {
+        const state = {...this.state};
+        state.camera.position.y = state.camY = event.target.value;
+
+        this.setState(state);
+    }
+
+    onCamZ(event) {
+        const state = {...this.state};
+        state.camera.position.z = state.camZ = event.target.value;
+
+        this.setState(state);
+    }
+
+    onCamRotX(event) {
+        const state = {...this.state};
+        state.rotX = event.target.value;
+        state.camera.rotation.x = THREE.MathUtils.degToRad(state.rotX);
+
+        this.setState(state);
+    }
+
+    onCarRot(event) {
+        const state = {...this.state};
+        state.carRotZ = event.target.value;
+
+        this.setState(state);
     }
 
     render() {
@@ -175,23 +224,25 @@ class AutoEroticar extends React.Component {
                 {/** Main content */}
                 <div className="container pl-5" id="page-presentation">
                     <div className="row mt-5">
-                        <h2 className="text-red">
-                            TIRED OF HOLDING YOUR BREATHE WAITING EOR THE RIGHT CAR TO COME ALONG?
-                        </h2>
+                        <h1 className="text-red">
+                            TIRED OF HOLDING YOUR BREATH WAITING FOR THE RIGHT CAR TO COME ALONG?
+                        </h1>
                         <h5 className="font-weight-bold">
                             Welcome to AutoEroticar - you've made the right choice.
                         </h5>
                         <p>AutoEroticar vehicles aren't for just anyone. Our customers want the best of everything and need a ride with thrust, power, potency, style and class. Performance is everything</p>
                     </div>
 
-                    <div className="row">
-                        <div className="col-md-4">
-                            <p>Feel free to cruise around the site and check out our taut bodies, run your eyes over our perfect curves and high-maintenance finish - We know you'll be begging to buy</p>
-                            <p>We assure customers that our automobiles have only the highest quality rim jobs, lube Jobs and waxes - there is absolutely no junk in our trunks</p>
-                            <p>We aim to satisty all your urges. You'll be going frorn 0 to Sexy in no time at all...</p>
-                        </div>
-                        <div className="col-md-8" id="car3d-scene">
-                            {/* Card 3d model is positioned here */}
+                    <div className="row" id="presentation-3dcar">
+                        <div className="col-12">
+                            <div id="car3d-scene">
+                                {/* Card 3d model is positioned here */}
+                            </div>
+                            <div id="car3d-text">
+                                <p>Feel free to cruise around the site and check out our taut bodies, run your eyes over our perfect curves and high-maintenance finish - We know you'll be begging to buy</p>
+                                <p>We assure customers that our automobiles have only the highest quality rim jobs, lube Jobs and waxes - there is absolutely no junk in our trunks</p>
+                                <p>We aim to satisty all your urges. You'll be going frorn 0 to Sexy in no time at all...</p>    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -245,7 +296,38 @@ class AutoEroticar extends React.Component {
                 {/* Footer  */}
                 <div className="container">
                     <p>Footer</p>
-                    <p>"Ferrari 458 Italia" (https://skfb.ly/o6JVZ) by DatJones is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>
+                    <a href="https://skfb.ly/o6JVZ">
+                        <p>"Ferrari 458 Italia"</p>
+                    </a> 
+                    <p>
+                        by DatJones is licensed under
+                        <a href="http://creativecommons.org/licenses/by/4.0/">
+                            Creative Commons Attribution
+                        </a>
+                    </p>
+                </div>
+
+                <div className="container">
+                    <p>CamX</p>
+                    <input id="" type="range" min="-10" max="10" step="0.05"
+                            value={this.state.camX} onChange={(e) => this.onCamX(e)}
+                    />
+                    <p>CamY</p>
+                    <input id="" type="range" min="0" max="10" step="0.05"
+                            value={this.state.camY} onChange={(e) => this.onCamY(e)}
+                    />
+                    <p>CamZ</p>
+                    <input id="" type="range" min="-5" max="5" step="0.05"
+                            value={this.state.camZ} onChange={(e) => this.onCamZ(e)}
+                    />
+                    <p>RotX</p>
+                    <input id="" type="range" min="-30" max="30" step="1"
+                            value={this.state.rotX} onChange={(e) => this.onCamRotX(e)}
+                    />
+                    <p>Rot Car</p>
+                    <input id="" type="range" min="-180" max="180" step="1"
+                            value={this.state.carRotZ} onChange={(e) => this.onCarRot(e)}
+                    />
                 </div>
             </div>
         );
