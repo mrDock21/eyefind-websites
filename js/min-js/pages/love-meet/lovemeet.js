@@ -162,9 +162,15 @@ var LoveMeet = function (_React$Component) {
             alert('Requested search: ' + this.state.value);
             event.preventDefault();
         }
+
+        /**
+         * Updates current page re-rendering the content
+         */
+
     }, {
         key: "updatePage",
         value: function updatePage(page) {
+
             this.setState({
                 currentPage: page
             });
@@ -182,11 +188,18 @@ var LoveMeet = function (_React$Component) {
                             return _this2.updatePage(page);
                         } });
                 case 'male':
-                    return React.createElement(Profiles, { type: "male" });
+                    return React.createElement(Profiles, { type: "male", updatePage: function updatePage(page) {
+                            return _this2.updatePage(page);
+                        } });
                 case 'female':
-                    return React.createElement(Profiles, { type: "female" });
+                    return React.createElement(Profiles, { type: "female", updatePage: function updatePage(page) {
+                            return _this2.updatePage(page);
+                        } });
                 default:
-                    return React.createElement("div", null);
+                    return React.createElement(Profile, { profile: this.state.currentPage,
+                        updatePage: function updatePage(page) {
+                            return _this2.updatePage(page);
+                        } });
             }
         }
     }, {

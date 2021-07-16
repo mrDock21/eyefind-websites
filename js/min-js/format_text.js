@@ -23,11 +23,12 @@ var FormatText = function (_React$Component) {
             var text = this.props.text;
             var delimiter = this.props.delimiter;
             var strings = text.split(delimiter);
+            var className = this.props.className;
 
             var rendereredText = strings.map(function (str, i) {
                 return React.createElement(
                     'p',
-                    { key: i },
+                    { key: i, className: className },
                     str
                 );
             });

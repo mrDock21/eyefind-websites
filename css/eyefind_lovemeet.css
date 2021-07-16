@@ -51,6 +51,14 @@ div.page div.lovemeet-card div.card-body p.card-text {
     font-weight: bold;
 }
 
+div.page div.lovemeet-card div.card-body p.card-description {
+    color: black;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0;
+    text-align: left;
+}
+
 div.page div.lovemeet-card div.card-body button {
     background-color: rgba(211,133,183,1);
     border: none;

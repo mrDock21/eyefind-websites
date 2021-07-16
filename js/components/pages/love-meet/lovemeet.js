@@ -107,25 +107,29 @@ class LoveMeet extends React.Component {
         event.preventDefault();
     }
 
-
+    /**
+     * Updates current page re-rendering the content
+     */
     updatePage(page) {
+        
         this.setState({
             currentPage: page
         })
         
         this.render();
     }
-
+    
     getComponent() {
         switch(this.state.currentPage){
             case 'main':
                 return <MainPage updatePage={(page) => this.updatePage(page)} />;
             case 'male':
-                return <Profiles type='male'/>;
+                return <Profiles type='male'   updatePage={(page) => this.updatePage(page)} />;
             case 'female':
-                return <Profiles type='female'/>;
+                return <Profiles type='female' updatePage={(page) => this.updatePage(page)} />;
             default:
-                return <div></div>;
+                return <Profile profile={this.state.currentPage} 
+                                updatePage={(page) => this.updatePage(page)} />;
         }
     }
 
