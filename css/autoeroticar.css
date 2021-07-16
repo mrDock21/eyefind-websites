@@ -28,6 +28,7 @@ div.page {
 /*  HEADER SECTION  */
 div.page div#logo-header {
     background: var(--gray-dark-color);
+    max-width: none;
 }
 
 div.page div#logo-header div.row:first-child {
@@ -64,16 +65,28 @@ div.page div#logo-header button.btn.active {
 /*  PRESENTATION SECTION    */
 div.page div#page-presentation {
     padding-left: 4rem;
+    font-size: 1rem;
 }
 
-div.page div#page-presentation h2.text-red {
-    animation: h2-anim 3.5s infinite;
+div.page div#page-presentation h1.text-red {
+    animation: h1-anim 3.5s infinite;
     animation-direction: alternate;
 }
 
-@keyframes h2-anim {
+@keyframes h1-anim {
     0% { color: var(--red-color); }
     100% { color: var(--red-light-color); }
+}
+
+/*  Car 3d  */
+div.page div.row#presentation-3dcar div.col-12 {
+    position: relative;
+    padding-right: 0;
+}
+div.page div.row#presentation-3dcar div.col-12 div#car3d-text {
+    position: absolute;
+    top: 0px;
+    width: 35%;
 }
 
 /*  TRADEMARKS SECTION   */
@@ -101,10 +114,6 @@ div.page div#trademarks-display div.d-flex.flex-row.col-right {
     padding-left: 0;
 }
 
-div.page div#trademarks-display div.trademark-logo:hover path.svg-trademark {
-    fill: url('#SelectedGradient');
-}
-
 /*  General Classes */
 .text-red {
     color: var(--red-color);
@@ -112,4 +121,46 @@ div.page div#trademarks-display div.trademark-logo:hover path.svg-trademark {
 
 .w-20 {
     width: 20%;
+}
+
+/*  Tablet and below    */
+@media screen and (max-width: 46.8rem) {
+    /*  PRESENTATION SECTION    */
+    div.page div#page-presentation {
+        padding-left: 1rem;
+        font-size: 1rem;
+    }
+    /*  Car 3d  */
+    div.page div.row#presentation-3dcar div.col-12 {
+        position: relative;
+        padding-right: 1rem;
+    }
+    div.page div.row#presentation-3dcar div.col-12 div#car3d-text {
+        position: relative;
+        width: 100%;
+    }
+
+    /*  TRADEMARKS SECTION */
+    div.page div#trademarks-display div.d-flex.flex-row.col-left {
+        padding-right: 1rem;
+    }
+    
+    div.page div#trademarks-display div.d-flex.flex-row.col-right {
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 34.6rem) {
+    /*  HEADER BUTTONS  */
+    div.page div#logo-header button.btn {
+        width: 25%;
+    }
+}
+
+/*  larger screens  2560px and above  */
+@media screen and (min-width: 160em) {
+    /*  PRESENTATION SECTION    */
+    div.page div#page-presentation {
+        font-size: 1.5rem;
+    }
 }
