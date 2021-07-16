@@ -10,12 +10,12 @@
       {
           fill:url('#MyGradient');
       }
-      div.trademark-logo:hover .svg-trademark { 
-          fill: red;
+      .trademark-logo:hover .svg-trademark { 
+          fill:url('#SelectedGradient');
       }       
   </style>
   <path class="svg-trademark"
-        fill="url('#MyGradient')" stroke="black" stroke-width="1"
+        stroke="black" stroke-width="1"
         d="M 93.00,57.70
            C 93.00,57.70 175.00,58.82 175.00,58.86
              175.09,58.82 236.01,109.03 236.00,109.12
@@ -58,9 +58,14 @@
              149.91,141.45 173.64,118.18 173.55,118.09 Z" />
   <defs>
     <linearGradient id="MyGradient" gradientTransform="rotate(75)">
-      <stop offset="35%" stop-color="#f1f1f3" />
-      <stop offset="65%" stop-color="#959799" />
-      <stop offset="99%" stop-color="#f1f1f3" />
+        <stop offset="35%" stop-color="#f1f1f3" />
+        <stop offset="65%" stop-color="#959799" />
+        <stop offset="99%" stop-color="#f1f1f3" />
+    </linearGradient>
+    <linearGradient id="SelectedGradient" gradientTransform="rotate(75)">
+        <stop offset="35%" stop-color="#ffb425" />
+        <stop offset="65%" stop-color="#fffbaf" />
+        <stop offset="99%" stop-color="#ffb425" />
     </linearGradient>
   </defs>
 </svg>

@@ -101,10 +101,6 @@ div.page div#trademarks-display div.d-flex.flex-row.col-right {
     padding-left: 0;
 }
 
-div.page div#trademarks-display div.trademark-logo:hover path.svg-trademark {
-    fill: url('#SelectedGradient');
-}
-
 /*  General Classes */
 .text-red {
     color: var(--red-color);
