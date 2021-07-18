@@ -41,5 +41,6 @@ class BottomAds extends React.Component {
 }
 
 let domContainer = document.querySelector('#bottom-ads-container');
-{/** REMOVE THE ? LATER :D */}
-ReactDOM?.render(<BottomAds />, domContainer);
+{/** REMOVE THIS LATER :D */}
+if (domContainer)
+    ReactDOM.render(<BottomAds />, domContainer);

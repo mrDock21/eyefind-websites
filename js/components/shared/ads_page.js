@@ -1,3 +1,11 @@
+/**
+ *  Following content must be used on all normal pages
+ *  due to image source reference.
+ * 
+ *  route reference:
+ *      ./pages
+ */
+
 const IMAGES = new Array(
     "./../img/ad_small/ad_small_1.png", "./../img/ad_small/ad_small_2.png", "./../img/ad_small/ad_small_3.png",
     "./../img/ad_small/ad_small_4.png", "./../img/ad_small/ad_small_5.png", "./../img/ad_small/ad_small_6.png",

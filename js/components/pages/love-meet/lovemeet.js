@@ -56,8 +56,8 @@ const MainPage = ({updatePage}) => {
 
                     {/** ADS */}
                     <div className="row mt-3">
-                        <div id="bottom-ads-container">
-                            
+                        <div>
+                            <BottomAds />
                         </div>
                     </div>
 

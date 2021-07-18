@@ -64,4 +64,4 @@ var BottomAds = function (_React$Component) {
 
 var domContainer = document.querySelector('#bottom-ads-container');
 {/** REMOVE THIS LATER :D */}
-if (domContainer != null) ReactDOM.render(React.createElement(BottomAds, null), domContainer);
+if (domContainer) ReactDOM.render(React.createElement(BottomAds, null), domContainer);

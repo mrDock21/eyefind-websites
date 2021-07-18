@@ -17,4 +17,4 @@ ReactDOM.render(<SideAd images={AD_NEWS} />, domContainer);
 
 //top add
 domContainer = document.querySelector('#ad-top-side');
-ReactDOM.render(<SideAd images={AD_ROMANCE} page="./pages/eyefind_love-meet.html" />, domContainer);
+ReactDOM.render(<SideAd images={AD_ROMANCE} page="./pages/lovemeet.html" />, domContainer);

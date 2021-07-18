@@ -100,7 +100,11 @@ var MainPage = function MainPage(_ref) {
                 React.createElement(
                     "div",
                     { className: "row mt-3" },
-                    React.createElement("div", { id: "bottom-ads-container" })
+                    React.createElement(
+                        "div",
+                        null,
+                        React.createElement(BottomAds, null)
+                    )
                 ),
                 React.createElement("hr", { className: "middle-line" }),
                 React.createElement(
