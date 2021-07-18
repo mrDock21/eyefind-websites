@@ -168,7 +168,7 @@ class LoveMeet extends React.Component {
                 
                 {/** BANNER */}
                 <div>
-                    <img src="../img/lovemeet/banner/lovemeet.png" className="img-fluid mx-auto d-block" alt="Responsive image" />
+                    <img src="../img/lovemeet/banner/lovemeet.png" className="img-fluid w-100 d-block" alt="Responsive image" />
                 </div>
 
                 {/** PAGE CONTENT */}

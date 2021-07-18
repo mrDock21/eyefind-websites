@@ -15,7 +15,3 @@ ReactDOM.render(React.createElement(SideAd, { images: IMAGES }), domContainer);
 // middle ad
 domContainer = document.querySelector('#ad-middle-side');
 ReactDOM.render(React.createElement(SideAd, { images: AD_NEWS }), domContainer);
-
-//top add
-domContainer = document.querySelector('#ad-top-side');
-ReactDOM.render(React.createElement(SideAd, { images: AD_ROMANCE, page: "./pages/lovemeet.html" }), domContainer);

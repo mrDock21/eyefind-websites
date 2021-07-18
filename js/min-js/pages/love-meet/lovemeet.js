@@ -261,7 +261,7 @@ var LoveMeet = function (_React$Component) {
                 React.createElement(
                     "div",
                     null,
-                    React.createElement("img", { src: "../img/lovemeet/banner/lovemeet.png", className: "img-fluid mx-auto d-block", alt: "Responsive image" })
+                    React.createElement("img", { src: "../img/lovemeet/banner/lovemeet.png", className: "img-fluid w-100 d-block", alt: "Responsive image" })
                 ),
                 React.createElement(
                     "div",

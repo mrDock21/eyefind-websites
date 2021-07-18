@@ -4,6 +4,8 @@
 
     --eyefind-yellow-color: #febe03;
     --eyefind-yellow-dark-color: #daa404;
+    --lovemeet-pink: rgba(213,134,181,1);
+    --lovemeet-pink-dark: rgba(167,62,121,1);
 }
 
 div.page {
@@ -78,9 +80,28 @@ div.page div div div div#search-email-panel div#email-panel div#check-email-btn 
     background: var(--eyefind-blue-dark-color);
 }
 div.page div div div div#search-email-panel div#email-panel div#check-email-btn a:hover {
-    
     background: red;
 }
+
+/*  LOVEMEET PANEL */
+div.page div div div div#search-email-panel div#lovemeet-panel div.d-flex.flex-column {
+    background-color: var(--lovemeet-pink);
+
+    height: 100%;
+    min-height: 100%;
+}
+
+/*  lovemeet button */
+div.page div div div div#search-email-panel div#lovemeet-panel div#lovemeet-btn {
+    height: 20%;
+}
+div.page div div div div#search-email-panel div#lovemeet-panel div#lovemeet-btn a {
+    background: var(--lovemeet-pink-dark);
+}
+div.page div div div div#search-email-panel div#lovemeet-panel div#lovemeet-btn a:hover {
+    background: rgba(181,126,158,1);
+}
+
 /*  TV CAROUSEL */
 div.page div#tv_carousel_container {
     width: 100%;
