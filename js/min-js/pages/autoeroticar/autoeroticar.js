@@ -18,12 +18,13 @@ var AutoEroticar = function (_React$Component) {
 
         _this2.state = {
             searchPageUrl: 'www.autoeroticar.net',
-            camX: -2.25,
-            camY: 0.55,
+            camX: -1.75,
+            camY: 1.6,
             camZ: 5,
-            rotX: -6,
+            rotX: -12,
+            camZoom: 0.02,
             camera: null,
-            carRotZ: 65
+            carRotZ: -41
         };
 
         _this2.handleChange = _this2.handleChange.bind(_this2);
@@ -60,6 +61,39 @@ var AutoEroticar = function (_React$Component) {
             event.preventDefault();
         }
     }, {
+        key: 'buildLight',
+        value: function buildLight(gui, hexInitialColorStr, name) {
+            // create light with given color
+            var light = new THREE.PointLight(parseInt(hexInitialColorStr), 2, 100);
+            // make position debug GUI for it
+            var lightFolder = gui.addFolder('Light ' + name + ' position');
+            lightFolder.add(light.position, "x", -10, 10, 0.01);
+            lightFolder.add(light.position, "y", -10, 10, 0.01);
+            lightFolder.add(light.position, "z", -10, 10, 0.01);
+
+            // make color debug GUI
+            var ConfColor = function ConfColor() {
+                this.color = "#ffffff";
+            };
+            var conf = new ConfColor();
+
+            var colorCntrl = lightFolder.addColor(conf, 'color');
+
+            colorCntrl.onChange(function (colorValue) {
+                //the return value by the chooser is like as: #ffff so
+                //remove the # and replace by 0x
+                colorValue = colorValue.replace('#', '0x');
+                // create a Color
+                var colorObject = new THREE.Color(parseInt(colorValue));
+                //set the color in the object
+                light.color = colorObject;
+            });
+            lightFolder.open();
+            // initial position
+            //light.position.set( 0, 0, 0 );
+            return light;
+        }
+    }, {
         key: 'create3dScene',
         value: function create3dScene() {
             var parentContainer = document.getElementById("car3d-scene");
@@ -67,74 +101,87 @@ var AutoEroticar = function (_React$Component) {
             var screenWidth = parentContainer.clientWidth * 0.75;
             var screenHeight = 400;
             var state = Object.assign({}, this.state);
-
-            var camSettings = {
-                FOV: 75,
-                AspectRatio: screenWidth / screenHeight,
-                NearPlane: 0.1,
-                FarPlane: 1000
-            };
-            var camera = new THREE.PerspectiveCamera(camSettings.FOV, camSettings.AspectRatio, camSettings.NearPlane, camSettings.FarPlane);
-
-            // generate Canvas and append it to parent
-            var renderer = new THREE.WebGLRenderer({ alpha: true });
-            renderer.setClearColor(0x000000, 0); // the default
-            renderer.setSize(screenWidth, screenHeight);
-            renderer.domElement.className += " w-100 h-100";
-            parentContainer.appendChild(renderer.domElement);
-
-            var geometry = new THREE.BoxGeometry();
-            var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-            var cube = new THREE.Mesh(geometry, material);
-
-            scene.add(cube);
-
+            // debug GUI
+            var gui = new dat.GUI();
+            // orthographic camera
+            var camera = new THREE.OrthographicCamera(-5, 5, 3, -3, 1, 1000);
+            camera.zoom = this.state.camZoom;
             camera.position.z = state.camZ;
             camera.position.y = state.camY;
             camera.position.x = state.camX;
             camera.rotation.x = THREE.MathUtils.degToRad(state.rotX);
             state.camera = camera;
 
-            // quick light
-            var light = new THREE.PointLight(0xff0000, 1, 100);
-            light.position.set(0, 3, 0);
-            scene.add(light);
-            // ambient  soft white light
-            var ambient = new THREE.AmbientLight(0xFFFFFF);
-            scene.add(ambient);
+            // generate Canvas and append it to parent
+            var renderer = new THREE.WebGLRenderer({ alpha: true });
+            // transparent background
+            renderer.setClearColor(0x000000, 0);
+            renderer.setSize(screenWidth, screenHeight);
+            // add bootstrap classes and append it to DOM
+            renderer.domElement.className += " w-100 h-100";
+            parentContainer.appendChild(renderer.domElement);
 
+            // scene lighting
+            // values got with dat.GUI's help
+            var light1 = this.buildLight(gui, "0xc6c633", "Back"),
+                light2 = this.buildLight(gui, "0xffd2a5", "Front"),
+                light3 = this.buildLight(gui, "0x606060", "Extra");
+            light1.position.set(-2.96, 7.41, -10);
+            light2.position.set(2.11, 4.98, 9.61);
+            light3.position.set(2.33, 4.1, -10);
+
+            scene.add(light1);
+            scene.add(light2);
+            scene.add(light3);
+
+            // ambient  soft white light
+            //const ambient = new THREE.AmbientLight( 0xFFFFFF ); 
+            //scene.add( ambient );
+
+            // load 3d car model
             // Instantiate a loader
             var loader = new THREE.GLTFLoader();
-            var car3dModel = new THREE.Object3D();
+            var car3dModel = new THREE.Object3D(),
+                carReflection;
 
-            loader.load('./../assets/car_gltf.glb', function (gltf) {
+            loader.load('./../assets/car_gltf_v2.glb', function (gltf) {
                 // get the car
-                car3dModel = gltf.scene.children[2];
+                car3dModel = gltf.scene.children[0];
                 state.carRotZ = 0;
                 scene.add(car3dModel);
 
-                for (var i = 0; i < gltf.scene.children.length; i++) {
-                    console.log('Model [' + i + ']=>' + gltf.scene.children[i].name);
-                }
-
                 car3dModel.position.set(0, 0, 0);
-                car3dModel.scale.set(car3dModel.scale.x * 1.45, car3dModel.scale.y * 1.45, car3dModel.scale.z * 1.45);
-            }, undefined, function (error) {
+                car3dModel.rotation.z = THREE.MathUtils.degToRad(-41);
 
-                console.error(error);
+                carReflection = car3dModel.clone();
+                carReflection.position.set(0, -0.21, 0);
+                carReflection.rotation.set(car3dModel.rotation.x, car3dModel.rotation.y, car3dModel.rotation.z);
+                carReflection.rotation.y = THREE.MathUtils.degToRad(180);
+
+                var newMaterial = new THREE.MeshStandardMaterial({ color: 0x000000 });
+                newMaterial.opacity = 0.1;
+                carReflection.traverse(function (o) {
+                    if (o.isMesh) o.material = newMaterial;
+                });
+
+                // make position debug GUI for reflection
+                var carFolder = gui.addFolder('Car reflection');
+                carFolder.add(carReflection.position, "y", -10, 10, 0.01);
+                scene.add(carReflection);
+            }, undefined, function (error) {
+                return console.error(error);
             });
 
             var _this = this;
             var animate = function animate() {
                 requestAnimationFrame(animate);
+                // rotate car
+                car3dModel.rotation.z += -0.01;
 
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-
-                //model.rotation.x += 0.01;
-                //model.rotation.y += 0.01;
-                car3dModel.rotation.z += 0.01;
-                //THREE.MathUtils.degToRad(_this.state.carRotZ);
+                if (carReflection != null) {
+                    carReflection.rotation.set(car3dModel.rotation.x, car3dModel.rotation.y, -car3dModel.rotation.z);
+                    carReflection.rotation.y = THREE.MathUtils.degToRad(180);
+                }
 
                 renderer.render(scene, _this.state.camera);
             };
@@ -180,6 +227,15 @@ var AutoEroticar = function (_React$Component) {
         value: function onCarRot(event) {
             var state = Object.assign({}, this.state);
             state.carRotZ = event.target.value;
+
+            this.setState(state);
+        }
+    }, {
+        key: 'onCamZoom',
+        value: function onCamZoom(event) {
+            var state = Object.assign({}, this.state);
+            state.camera.zoom = state.camZoom = event.target.value;
+            state.camera.setViewOffset(-1 * state.camZoom, 1 * state.camZoom, 1 * state.camZoom, -1 * state.camZoom);
 
             this.setState(state);
         }
@@ -417,6 +473,16 @@ var AutoEroticar = function (_React$Component) {
                 React.createElement(
                     'div',
                     { className: 'container' },
+                    React.createElement(
+                        'p',
+                        null,
+                        'Camera Zoom'
+                    ),
+                    React.createElement('input', { id: '', type: 'range', min: '0', max: '1', step: '0.05',
+                        value: this.state.camZoom, onChange: function onChange(e) {
+                            return _this3.onCamZoom(e);
+                        }
+                    }),
                     React.createElement(
                         'p',
                         null,

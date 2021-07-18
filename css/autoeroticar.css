@@ -150,6 +150,14 @@ div.page div#trademarks-display div.d-flex.flex-row.col-right {
     }
 }
 
+@media screen and (max-width: 62.5rem) {
+    /*  Car 3d  */
+    div.page div.row#presentation-3dcar div.col-12 div#car3d-text {
+        position: relative;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 34.6rem) {
     /*  HEADER BUTTONS  */
     div.page div#logo-header button.btn {
@@ -158,9 +166,9 @@ div.page div#trademarks-display div.d-flex.flex-row.col-right {
 }
 
 /*  larger screens  2560px and above  */
-@media screen and (min-width: 160em) {
+@media screen and (min-width: 75.063rem) {
     /*  PRESENTATION SECTION    */
     div.page div#page-presentation {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
