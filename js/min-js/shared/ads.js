@@ -11,3 +11,21 @@ var IMAGES = new Array("./img/ad_small/ad_small_1.png", "./img/ad_small/ad_small
 var AD_ROMANCE = new Array("./img/ad_small/ad_small_16.png");
 
 var AD_NEWS = new Array("./img/ad_small/ad_small_17.png");
+
+var NEWS = [{
+    name: "Need legal help ?",
+    path: "./img/ad_large/ad_large_1.jpg",
+    page: "#"
+}, {
+    name: "Weazel News",
+    path: "./img/ad_large/ad_large_2.jpg",
+    page: "#"
+}, {
+    name: "Auto Eroticar",
+    path: "./img/ad_large/ad_large_3.jpg",
+    page: "./pages/autoeroticar.html"
+}, {
+    name: "Liberty Tree Online",
+    path: "./img/ad_large/ad_large_4.jpg",
+    page: "#"
+}];
