@@ -26,8 +26,8 @@ var AdCard = function (_React$Component) {
                     { className: "card" },
                     React.createElement(
                         "a",
-                        { href: this.props.page ? this.props.page : "#" },
-                        React.createElement("img", { href: "#", alt: "", className: "card-img-top", src: this.props.image })
+                        { href: this.props.page.route },
+                        React.createElement("img", { alt: this.props.page.name, className: "card-img-top", src: this.props.page.image })
                     )
                 )
             );

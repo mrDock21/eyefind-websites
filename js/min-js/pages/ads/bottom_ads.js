@@ -48,7 +48,7 @@ var BottomAds = function (_React$Component) {
 
             // set all bottom cards
             var cards = this.state.indexes.map(function (i) {
-                return React.createElement(AdCard, { image: _this2.state.images[i], key: i, classAttributes: "col-md-3" });
+                return React.createElement(AdCard, { page: _this2.state.images[i], key: i, classAttributes: "col-md-3" });
             });
 
             return React.createElement(

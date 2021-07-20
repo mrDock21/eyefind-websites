@@ -4,7 +4,7 @@ const NewsAd = () => {
 
     return(
         <a href={page.page} alt={page.name}>
-            <img className="img-fluid" src={page.path} />
+            <img className="img-fluid" src={page.image} />
         </a>
     );
 }

@@ -28,7 +28,7 @@ class BottomAds extends React.Component {
         // set all bottom cards
         const cards = this.state.indexes.map((i) => {
             return (
-                <AdCard image={this.state.images[i]} key={i} classAttributes="col-md-3"/>
+                <AdCard page={this.state.images[i]} key={i} classAttributes="col-md-3"/>
             );
         });
 

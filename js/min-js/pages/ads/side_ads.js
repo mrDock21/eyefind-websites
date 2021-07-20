@@ -5,7 +5,7 @@ var SideAd = function SideAd(_ref) {
 
     var index = Math.floor(Math.random() * (images.length - 1)) + 0;
 
-    return React.createElement(AdCard, { image: images[index], key: index, classAttributes: "", page: page ? page : "#" });
+    return React.createElement(AdCard, { page: images[index], key: index, classAttributes: '' });
 };
 
 // bottom ad
