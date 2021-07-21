@@ -3,7 +3,7 @@ const NewsAd = () => {
     console.log(page);
 
     return(
-        <a href={page.page} alt={page.name}>
+        <a href={page.route} alt={page.name}>
             <img className="img-fluid" src={page.image} />
         </a>
     );

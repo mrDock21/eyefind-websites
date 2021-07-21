@@ -1,0 +1,48 @@
+:root {
+    --shadow-transparency: rgba(0, 0, 0, 0.4);
+
+    --krapea-font: 'Source Sans Pro', sans-serif;
+    --krapea-green: green;
+    
+}
+
+p {
+    color: var(--krapea-green);
+    font-family: var(--krapea-font);
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.15;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+/** TITLE TEXT */
+div.page div#main-page div.row  p#title {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/** SPECIAL OFFERS TEXT */
+div.page div#main-page div.row  p#special-text {
+    font-size: 8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.25;
+}
+
+/** SPECIAL OFFERS ROW */
+div.page div#main-page div.row#offers-row {
+    margin-top: -75px;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+div.page div#main-page div.row#offers-row div.col{
+    display: table-cell;
+}

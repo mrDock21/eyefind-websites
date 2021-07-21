@@ -4,7 +4,7 @@ var NewsAd = function NewsAd() {
 
     return React.createElement(
         "a",
-        { href: page.page, alt: page.name },
+        { href: page.route, alt: page.name },
         React.createElement("img", { className: "img-fluid", src: page.image })
     );
 };
