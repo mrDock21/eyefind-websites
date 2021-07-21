@@ -5,15 +5,16 @@ const MainPage = ({updatePage}) => {
         <div>
             {/** MAIN CONTENT */}
             <div className="row mb-md-3" id="main-page">
-                <div className="col-md-12">
-                    <div className="row">
+                
+                    {/** FURNITURE IMAGE */}
+                    <div className="row d-flex justify-content-center">
                         <div className="col-md-12 text-center">
-                            <img src="../img/krapea/furniture_1.jpg" className="img-fluid mx-auto d-block" />
+                            <img src="../img/krapea/furniture_1.jpg" className="w-100" />
                         </div>
                     </div>
 
                     {/** TITLE */}
-                    <div className="row mt-3">
+                    <div className="row mt-3 d-flex justify-content-center">
                         <div className="col-md-6 mt-2">
                             <p id="title">
                                 Welcome to Krapea, america's number 1 swedish furniture company.
@@ -31,12 +32,12 @@ const MainPage = ({updatePage}) => {
                             This is why floor staff will glare at you like you just felt up their kids when you dare to ask them a question. You will wander for hours in a maze of post-modern doom past miles of veneered pressboard that, like a can of Sprunk or a banana down the trousers, looks like wood from a distance. You will think that you're getting a great deal when you find an MDF chest in leopard-skin veneer for $20, not realizing that the bottom of the drawers will buckle under the weight of a pair of socks within the first week. You put it together so don't blame us when it falls apart. How we laugh, and then we are melancholy. We are rich, but still there is no sun for 6 months.
                             </p>
                         </div>
-                        <div className="col-md-6 align-content-end">
-                            <a href="#" alt="Click here">
-                                <img src="../img/krapea/click_here_1.jpg" className="img-fluid d-block" />
+                        <div className="col-md-6 d-flex flex-column ">
+                            <a href="#" alt="Click here" className="d-flex justify-content-center justify-content-md-end w-100" >
+                                <img src="../img/krapea/click_here_1.jpg" />
                             </a>
-                            <a href="#" alt="Questions?">
-                                <img src="../img/krapea/questions.jpg" className="img-fluid d-block mt-3" />
+                            <a href="#" alt="Questions?" className="d-flex mt-3 justify-content-center justify-content-md-end w-100" >
+                                <img src="../img/krapea/questions.jpg" />
                             </a>
                         </div>
                     </div>
@@ -52,21 +53,20 @@ const MainPage = ({updatePage}) => {
 
                     {/** OFFERS */}
                     <div className="row" id="offers-row">
-                        <div className="col-md-4 px-0">
+                        <div className="col-md-12 z-index-1 d-flex justify-content-around flex-md-row flex-column">
                             <a href="#" alt="Click here">
-                                <img src="../img/krapea/offer_1.jpg" className="d-block" />
+                                <img src="../img/krapea/offer_1.jpg" className="w-100" />
                             </a>
-                        </div>
-                        <div className="col-md-7 px-0">
+                        
                             <a href="#" alt="Questions?">
-                                <img src="../img/krapea/offer_2.jpg" className="ml-3 d-block" />
+                                <img src="../img/krapea/offer_2.jpg" className="ml-3 w-100 " />
                             </a>
                         </div>
                     </div>
 
                      {/** MISION */}
                      <div className="row mt-3">
-                        <div className="col-md-12">
+                        <div className="col-12">
                             <p>
                                 Our mission at KRAPEA is to sell you low-quality home furnishings and to steal as many hours of your life as 
                                 possible in the process. We believe that the whole shopping experience should last longer than a transatlantic 
@@ -80,15 +80,16 @@ const MainPage = ({updatePage}) => {
                                 and missing the sun at the same time.
                             </p>
                         </div>
-                        <div className="col-md-12">
+                    </div>
+                    <div className="row mt-3">
+                        <div className="col-12">
                             <p>
                                 Nobody loves a homogenized corporate monoculture more than the Americans! Recent studies have shown that everyone in 
                                 the state of San Andreas now owns an identical laundry basket. KRAPEA is taking over the world. Congratulations, world!
                             </p>
                         </div>
-                    </div>
+                    </div> 
 
-                </div>
             </div>
         </div>
     );
@@ -195,7 +196,7 @@ class Krapea extends React.Component {
 
                 {/** FOOTER */}
                 <div className="row" id="footer">
-                    <div className="col-md-12 d-flex justify-content-center align-items-center">
+                    <div className="col-12 d-flex justify-content-center">
                         <img src="../img/krapea/footer.jpg" className="w-100" />
                     </div>
                 </div>

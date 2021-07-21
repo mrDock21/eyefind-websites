@@ -19,112 +19,108 @@ var MainPage = function MainPage(_ref) {
             { className: "row mb-md-3", id: "main-page" },
             React.createElement(
                 "div",
-                { className: "col-md-12" },
+                { className: "row d-flex justify-content-center" },
                 React.createElement(
                     "div",
-                    { className: "row" },
+                    { className: "col-md-12 text-center" },
+                    React.createElement("img", { src: "../img/krapea/furniture_1.jpg", className: "w-100" })
+                )
+            ),
+            React.createElement(
+                "div",
+                { className: "row mt-3 d-flex justify-content-center" },
+                React.createElement(
+                    "div",
+                    { className: "col-md-6 mt-2" },
                     React.createElement(
-                        "div",
-                        { className: "col-md-12 text-center" },
-                        React.createElement("img", { src: "../img/krapea/furniture_1.jpg", className: "img-fluid mx-auto d-block" })
+                        "p",
+                        { id: "title" },
+                        "Welcome to Krapea, america's number 1 swedish furniture company."
+                    )
+                ),
+                React.createElement("div", { className: "col-md-6" })
+            ),
+            React.createElement(
+                "div",
+                { className: "row mt-3" },
+                React.createElement(
+                    "div",
+                    { className: "col-md-6" },
+                    React.createElement(
+                        "p",
+                        null,
+                        "Imagine an inside city of furniture, no windows, and everything bathed in halogen! A visit to KRAPEA is a unique experience. Stores the size of a university campus. Quirky and amusing product names like Wonki, Plankfog, Higgyendraght, Slipshod, Douchenflegen, Flimsi, Totter and other names we've slipped in. If you only knew what you were saying in Swedish. When you ask for the Plankfog, little do you know you just asked for a violent rectal exam in Swedish. How we laugh, and then we are melancholy and we miss the sun for 6 months. This is why floor staff will glare at you like you just felt up their kids when you dare to ask them a question. You will wander for hours in a maze of post-modern doom past miles of veneered pressboard that, like a can of Sprunk or a banana down the trousers, looks like wood from a distance. You will think that you're getting a great deal when you find an MDF chest in leopard-skin veneer for $20, not realizing that the bottom of the drawers will buckle under the weight of a pair of socks within the first week. You put it together so don't blame us when it falls apart. How we laugh, and then we are melancholy. We are rich, but still there is no sun for 6 months."
                     )
                 ),
                 React.createElement(
                     "div",
-                    { className: "row mt-3" },
+                    { className: "col-md-6 d-flex flex-column " },
                     React.createElement(
-                        "div",
-                        { className: "col-md-6 mt-2" },
-                        React.createElement(
-                            "p",
-                            { id: "title" },
-                            "Welcome to Krapea, america's number 1 swedish furniture company."
-                        )
-                    ),
-                    React.createElement("div", { className: "col-md-6" })
-                ),
-                React.createElement(
-                    "div",
-                    { className: "row mt-3" },
-                    React.createElement(
-                        "div",
-                        { className: "col-md-6" },
-                        React.createElement(
-                            "p",
-                            null,
-                            "Imagine an inside city of furniture, no windows, and everything bathed in halogen! A visit to KRAPEA is a unique experience. Stores the size of a university campus. Quirky and amusing product names like Wonki, Plankfog, Higgyendraght, Slipshod, Douchenflegen, Flimsi, Totter and other names we've slipped in. If you only knew what you were saying in Swedish. When you ask for the Plankfog, little do you know you just asked for a violent rectal exam in Swedish. How we laugh, and then we are melancholy and we miss the sun for 6 months. This is why floor staff will glare at you like you just felt up their kids when you dare to ask them a question. You will wander for hours in a maze of post-modern doom past miles of veneered pressboard that, like a can of Sprunk or a banana down the trousers, looks like wood from a distance. You will think that you're getting a great deal when you find an MDF chest in leopard-skin veneer for $20, not realizing that the bottom of the drawers will buckle under the weight of a pair of socks within the first week. You put it together so don't blame us when it falls apart. How we laugh, and then we are melancholy. We are rich, but still there is no sun for 6 months."
-                        )
+                        "a",
+                        { href: "#", alt: "Click here", className: "d-flex justify-content-center justify-content-md-end w-100" },
+                        React.createElement("img", { src: "../img/krapea/click_here_1.jpg" })
                     ),
                     React.createElement(
-                        "div",
-                        { className: "col-md-6 align-content-end" },
-                        React.createElement(
-                            "a",
-                            { href: "#", alt: "Click here" },
-                            React.createElement("img", { src: "../img/krapea/click_here_1.jpg", className: "img-fluid d-block" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "#", alt: "Questions?" },
-                            React.createElement("img", { src: "../img/krapea/questions.jpg", className: "img-fluid d-block mt-3" })
-                        )
+                        "a",
+                        { href: "#", alt: "Questions?", className: "d-flex mt-3 justify-content-center justify-content-md-end w-100" },
+                        React.createElement("img", { src: "../img/krapea/questions.jpg" })
                     )
-                ),
+                )
+            ),
+            React.createElement(
+                "div",
+                { className: "row mt-3" },
                 React.createElement(
                     "div",
-                    { className: "row mt-3" },
+                    { className: "col-md-12" },
                     React.createElement(
-                        "div",
-                        { className: "col-md-12" },
-                        React.createElement(
-                            "p",
-                            { id: "special-text" },
-                            "Special offers"
-                        )
+                        "p",
+                        { id: "special-text" },
+                        "Special offers"
                     )
-                ),
+                )
+            ),
+            React.createElement(
+                "div",
+                { className: "row", id: "offers-row" },
                 React.createElement(
                     "div",
-                    { className: "row", id: "offers-row" },
+                    { className: "col-md-12 z-index-1 d-flex justify-content-around flex-md-row flex-column" },
                     React.createElement(
-                        "div",
-                        { className: "col-md-4 px-0" },
-                        React.createElement(
-                            "a",
-                            { href: "#", alt: "Click here" },
-                            React.createElement("img", { src: "../img/krapea/offer_1.jpg", className: "d-block" })
-                        )
+                        "a",
+                        { href: "#", alt: "Click here" },
+                        React.createElement("img", { src: "../img/krapea/offer_1.jpg", className: "w-100" })
                     ),
                     React.createElement(
-                        "div",
-                        { className: "col-md-7 px-0" },
-                        React.createElement(
-                            "a",
-                            { href: "#", alt: "Questions?" },
-                            React.createElement("img", { src: "../img/krapea/offer_2.jpg", className: "ml-3 d-block" })
-                        )
+                        "a",
+                        { href: "#", alt: "Questions?" },
+                        React.createElement("img", { src: "../img/krapea/offer_2.jpg", className: "ml-3 w-100 " })
                     )
-                ),
+                )
+            ),
+            React.createElement(
+                "div",
+                { className: "row mt-3" },
                 React.createElement(
                     "div",
-                    { className: "row mt-3" },
+                    { className: "col-12" },
                     React.createElement(
-                        "div",
-                        { className: "col-md-12" },
-                        React.createElement(
-                            "p",
-                            null,
-                            "Our mission at KRAPEA is to sell you low-quality home furnishings and to steal as many hours of your life as possible in the process. We believe that the whole shopping experience should last longer than a transatlantic flight. Which is why it's a maze! It is also melancholy, because that suits our temperament, even though we pretend to be cheerful. If you're going to steal our wooden pencils, we're going to make you work for your cut-price furniture. If you're going to leave your grandmother to quietly soil herself on our Wonki sofa for the entire day, we're going to mess with your mind a little. A visit to KRAPEA will take you to the extremes of physical and emotional endurance. Like a coke binge or a night at the in-laws, you'll swear that you'll never do it again but, for some inexplicable reason, you'll be back within a couple of months to fill up your car with shiny particle board. It's the sadomasochistic allure of self-assembly furniture. Flat-pack crack, all in a cheerful but melancholy package. We are laughing, and missing the sun at the same time."
-                        )
-                    ),
+                        "p",
+                        null,
+                        "Our mission at KRAPEA is to sell you low-quality home furnishings and to steal as many hours of your life as possible in the process. We believe that the whole shopping experience should last longer than a transatlantic flight. Which is why it's a maze! It is also melancholy, because that suits our temperament, even though we pretend to be cheerful. If you're going to steal our wooden pencils, we're going to make you work for your cut-price furniture. If you're going to leave your grandmother to quietly soil herself on our Wonki sofa for the entire day, we're going to mess with your mind a little. A visit to KRAPEA will take you to the extremes of physical and emotional endurance. Like a coke binge or a night at the in-laws, you'll swear that you'll never do it again but, for some inexplicable reason, you'll be back within a couple of months to fill up your car with shiny particle board. It's the sadomasochistic allure of self-assembly furniture. Flat-pack crack, all in a cheerful but melancholy package. We are laughing, and missing the sun at the same time."
+                    )
+                )
+            ),
+            React.createElement(
+                "div",
+                { className: "row mt-3" },
+                React.createElement(
+                    "div",
+                    { className: "col-12" },
                     React.createElement(
-                        "div",
-                        { className: "col-md-12" },
-                        React.createElement(
-                            "p",
-                            null,
-                            "Nobody loves a homogenized corporate monoculture more than the Americans! Recent studies have shown that everyone in the state of San Andreas now owns an identical laundry basket. KRAPEA is taking over the world. Congratulations, world!"
-                        )
+                        "p",
+                        null,
+                        "Nobody loves a homogenized corporate monoculture more than the Americans! Recent studies have shown that everyone in the state of San Andreas now owns an identical laundry basket. KRAPEA is taking over the world. Congratulations, world!"
                     )
                 )
             )
@@ -273,7 +269,7 @@ var Krapea = function (_React$Component) {
                     { className: "row", id: "footer" },
                     React.createElement(
                         "div",
-                        { className: "col-md-12 d-flex justify-content-center align-items-center" },
+                        { className: "col-12 d-flex justify-content-center" },
                         React.createElement("img", { src: "../img/krapea/footer.jpg", className: "w-100" })
                     )
                 )

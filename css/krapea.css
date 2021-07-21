@@ -18,6 +18,10 @@ p {
     font-weight: bold;
 }
 
+.z-index-1 {
+    z-index: 1;
+}
+
 /** TITLE TEXT */
 div.page div#main-page div.row  p#title {
     color: black;
@@ -39,10 +43,4 @@ div.page div#main-page div.row#offers-row {
     margin-top: -75px;
     display: flex;
     flex-wrap: wrap;
-
-    
-}
-
-div.page div#main-page div.row#offers-row div.col{
-    display: table-cell;
 }
