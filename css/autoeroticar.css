@@ -114,6 +114,16 @@ div.page div#trademarks-display div.d-flex.flex-row.col-right {
     padding-left: 0;
 }
 
+/*  FOOTER  */
+a.autoeroticar-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--red-light-color);
+}
+a.autoeroticar-link:hover {
+    color: var(--gray-color)
+}
+
 /*  General Classes */
 .text-red {
     color: var(--red-color);

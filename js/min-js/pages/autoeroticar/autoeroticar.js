@@ -18,13 +18,7 @@ var AutoEroticar = function (_React$Component) {
 
         _this2.state = {
             searchPageUrl: 'www.autoeroticar.net',
-            camX: -1.75,
-            camY: 1.6,
-            camZ: 5,
-            rotX: -12,
-            camZoom: 0.02,
-            camera: null,
-            carRotZ: -41
+            showControls: false
         };
 
         _this2.handleChange = _this2.handleChange.bind(_this2);
@@ -88,9 +82,9 @@ var AutoEroticar = function (_React$Component) {
                 //set the color in the object
                 light.color = colorObject;
             });
+
             lightFolder.open();
-            // initial position
-            //light.position.set( 0, 0, 0 );
+
             return light;
         }
     }, {
@@ -100,17 +94,15 @@ var AutoEroticar = function (_React$Component) {
             var scene = new THREE.Scene();
             var screenWidth = parentContainer.clientWidth * 0.75;
             var screenHeight = 400;
-            var state = Object.assign({}, this.state);
             // debug GUI
             var gui = new dat.GUI();
             // orthographic camera
             var camera = new THREE.OrthographicCamera(-5, 5, 3, -3, 1, 1000);
-            camera.zoom = this.state.camZoom;
-            camera.position.z = state.camZ;
-            camera.position.y = state.camY;
-            camera.position.x = state.camX;
-            camera.rotation.x = THREE.MathUtils.degToRad(state.rotX);
-            state.camera = camera;
+            camera.zoom = 0.02;
+            camera.position.z = 5;
+            camera.position.y = 1.6;
+            camera.position.x = -1.75;
+            camera.rotation.x = THREE.MathUtils.degToRad(-12);
 
             // generate Canvas and append it to parent
             var renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -147,7 +139,6 @@ var AutoEroticar = function (_React$Component) {
             loader.load('./../assets/car_gltf_v2.glb', function (gltf) {
                 // get the car
                 car3dModel = gltf.scene.children[0];
-                state.carRotZ = 0;
                 scene.add(car3dModel);
 
                 car3dModel.position.set(0, 0, 0);
@@ -183,67 +174,16 @@ var AutoEroticar = function (_React$Component) {
                     carReflection.rotation.y = THREE.MathUtils.degToRad(180);
                 }
 
-                renderer.render(scene, _this.state.camera);
+                renderer.render(scene, camera);
             };
 
-            this.setState(state);
+            if (!this.showControls) gui.destroy();
+
             animate();
-        }
-    }, {
-        key: 'onCamX',
-        value: function onCamX(event) {
-            var state = Object.assign({}, this.state);
-            state.camera.position.x = state.camX = event.target.value;
-
-            this.setState(state);
-        }
-    }, {
-        key: 'onCamY',
-        value: function onCamY(event) {
-            var state = Object.assign({}, this.state);
-            state.camera.position.y = state.camY = event.target.value;
-
-            this.setState(state);
-        }
-    }, {
-        key: 'onCamZ',
-        value: function onCamZ(event) {
-            var state = Object.assign({}, this.state);
-            state.camera.position.z = state.camZ = event.target.value;
-
-            this.setState(state);
-        }
-    }, {
-        key: 'onCamRotX',
-        value: function onCamRotX(event) {
-            var state = Object.assign({}, this.state);
-            state.rotX = event.target.value;
-            state.camera.rotation.x = THREE.MathUtils.degToRad(state.rotX);
-
-            this.setState(state);
-        }
-    }, {
-        key: 'onCarRot',
-        value: function onCarRot(event) {
-            var state = Object.assign({}, this.state);
-            state.carRotZ = event.target.value;
-
-            this.setState(state);
-        }
-    }, {
-        key: 'onCamZoom',
-        value: function onCamZoom(event) {
-            var state = Object.assign({}, this.state);
-            state.camera.zoom = state.camZoom = event.target.value;
-            state.camera.setViewOffset(-1 * state.camZoom, 1 * state.camZoom, 1 * state.camZoom, -1 * state.camZoom);
-
-            this.setState(state);
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
-
             return React.createElement(
                 'div',
                 { className: 'page' },
@@ -386,7 +326,7 @@ var AutoEroticar = function (_React$Component) {
                                 React.createElement(
                                     'p',
                                     null,
-                                    'We aim to satisty all your urges. You\'ll be going frorn 0 to Sexy in no time at all...'
+                                    'We aim to satisty all your urges. You\'ll be going from 0 to SEXY in no time at all...'
                                 )
                             )
                         )
@@ -444,95 +384,29 @@ var AutoEroticar = function (_React$Component) {
                 ),
                 React.createElement(
                     'div',
-                    { className: 'container' },
+                    { className: 'container row' },
+                    React.createElement('div', { className: 'col-4' }),
                     React.createElement(
-                        'p',
-                        null,
-                        'Footer'
-                    ),
-                    React.createElement(
-                        'a',
-                        { href: 'https://skfb.ly/o6JVZ' },
+                        'div',
+                        { className: 'col-8 d-flex flex-row' },
                         React.createElement(
                             'p',
                             null,
-                            '"Ferrari 458 Italia"'
-                        )
-                    ),
-                    React.createElement(
-                        'p',
-                        null,
-                        'by DatJones is licensed under',
-                        React.createElement(
-                            'a',
-                            { href: 'http://creativecommons.org/licenses/by/4.0/' },
-                            'Creative Commons Attribution'
+                            React.createElement(
+                                'a',
+                                { className: 'autoeroticar-link',
+                                    href: 'https://skfb.ly/o6JVZ' },
+                                'Ferrari 458 Italia'
+                            ),
+                            '\xA0by DatJones is licensed under\xA0',
+                            React.createElement(
+                                'a',
+                                { className: 'autoeroticar-link',
+                                    href: 'http://creativecommons.org/licenses/by/4.0/' },
+                                'Creative Commons Attribution'
+                            )
                         )
                     )
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'container' },
-                    React.createElement(
-                        'p',
-                        null,
-                        'Camera Zoom'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '0', max: '1', step: '0.05',
-                        value: this.state.camZoom, onChange: function onChange(e) {
-                            return _this3.onCamZoom(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'CamX'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-10', max: '10', step: '0.05',
-                        value: this.state.camX, onChange: function onChange(e) {
-                            return _this3.onCamX(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'CamY'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '0', max: '10', step: '0.05',
-                        value: this.state.camY, onChange: function onChange(e) {
-                            return _this3.onCamY(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'CamZ'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-5', max: '5', step: '0.05',
-                        value: this.state.camZ, onChange: function onChange(e) {
-                            return _this3.onCamZ(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'RotX'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-30', max: '30', step: '1',
-                        value: this.state.rotX, onChange: function onChange(e) {
-                            return _this3.onCamRotX(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'Rot Car'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-180', max: '180', step: '1',
-                        value: this.state.carRotZ, onChange: function onChange(e) {
-                            return _this3.onCarRot(e);
-                        }
-                    })
                 )
             );
         }
