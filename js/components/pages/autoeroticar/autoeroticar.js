@@ -206,10 +206,16 @@ class AutoEroticar extends React.Component {
                     <div className="row mb-2">
                         <div className="col-4">
                             <a>
-                                <img src="./../img/autoeroticar/autoeroticar_1.png"/>
+                                <SVGFile svgId={"svg-name-logo"}
+                                    svgPath={'./../img/autoeroticar/autoeroticar-name-logo.svg'}
+                                />
                             </a>
                         </div>
-                        <div className="col-4">Car LOGO</div>
+                        <div className="col-8 d-flex justify-content-end">
+                            <SVGFile svgId={"svg-car-logo"}
+                                svgPath={'./../img/autoeroticar/autoeroticar-car-logo.svg'}
+                            />
+                        </div>
                     </div>
 
                     {/** Nav */}
@@ -249,6 +255,7 @@ class AutoEroticar extends React.Component {
                     </div>
                 </div>
                 
+                {/** Trademarks display */}
                 <div className="container mb-5" id="trademarks-display">
                     <hr/>
 

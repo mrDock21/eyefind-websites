@@ -243,13 +243,17 @@ var AutoEroticar = function (_React$Component) {
                             React.createElement(
                                 'a',
                                 null,
-                                React.createElement('img', { src: './../img/autoeroticar/autoeroticar_1.png' })
+                                React.createElement(SVGFile, { svgId: "svg-name-logo",
+                                    svgPath: './../img/autoeroticar/autoeroticar-name-logo.svg'
+                                })
                             )
                         ),
                         React.createElement(
                             'div',
-                            { className: 'col-4' },
-                            'Car LOGO'
+                            { className: 'col-8 d-flex justify-content-end' },
+                            React.createElement(SVGFile, { svgId: "svg-car-logo",
+                                svgPath: './../img/autoeroticar/autoeroticar-car-logo.svg'
+                            })
                         )
                     ),
                     React.createElement(

@@ -36,8 +36,8 @@ div.page div#logo-header div.row:first-child {
     border-bottom: 0.5rem solid black;
 }
 
-div.page div#logo-header img {
-    width: 100%;
+div.page div#logo-header #svg-name-logo path {
+    fill: var(--gray-light-color);
 }
 
 div.page div#logo-header button.btn {
@@ -60,6 +60,11 @@ div.page div#logo-header button.btn:hover {
 
 div.page div#logo-header button.btn.active {
     background: var(--btn-selected-color);
+}
+
+div.page div#logo-header #svg-car-logo path {
+    fill: var(--gray-light-color);
+    filter: drop-shadow(-25px 0px 5px black);
 }
 
 /*  PRESENTATION SECTION    */
