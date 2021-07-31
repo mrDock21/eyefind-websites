@@ -99,7 +99,7 @@ class Krapea extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            currentPage: 'main',
+            currentPage: 'how to',
             searchPageUrl: 'www.krapea.com'
         };
 
@@ -140,6 +140,8 @@ class Krapea extends React.Component {
         switch(this.state.currentPage){
             case 'main':
                 return <MainPage updatePage={(page) => this.updatePage(page)} />;
+            case 'how to':
+                return <HowPage updatePage={(page) => this.updatePage(page)} />;
             default:
                 return <div></div>;
         }

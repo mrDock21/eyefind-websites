@@ -137,7 +137,7 @@ var Krapea = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Krapea.__proto__ || Object.getPrototypeOf(Krapea)).call(this, props));
 
         _this.state = {
-            currentPage: 'main',
+            currentPage: 'how to',
             searchPageUrl: 'www.krapea.com'
         };
 
@@ -192,6 +192,10 @@ var Krapea = function (_React$Component) {
             switch (this.state.currentPage) {
                 case 'main':
                     return React.createElement(MainPage, { updatePage: function updatePage(page) {
+                            return _this2.updatePage(page);
+                        } });
+                case 'how to':
+                    return React.createElement(HowPage, { updatePage: function updatePage(page) {
                             return _this2.updatePage(page);
                         } });
                 default:
