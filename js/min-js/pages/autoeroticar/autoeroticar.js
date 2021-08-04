@@ -14,338 +14,109 @@ var AutoEroticar = function (_React$Component) {
     function AutoEroticar(props) {
         _classCallCheck(this, AutoEroticar);
 
-        var _this2 = _possibleConstructorReturn(this, (AutoEroticar.__proto__ || Object.getPrototypeOf(AutoEroticar)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (AutoEroticar.__proto__ || Object.getPrototypeOf(AutoEroticar)).call(this, props));
 
-        _this2.state = {
-            searchPageUrl: 'www.autoeroticar.net',
-            camX: -2.25,
-            camY: 0.55,
-            camZ: 5,
-            rotX: -6,
-            camera: null,
-            carRotZ: 65
+        _this.state = {
+            currPage: 0
         };
-
-        _this2.handleChange = _this2.handleChange.bind(_this2);
-        _this2.handleSubmit = _this2.handleSubmit.bind(_this2);
-
-        var _this = _this2;
-        window.requestAnimationFrame(function () {
-            _this.create3dScene();
-        });
-        return _this2;
+        return _this;
     }
 
-    /**
-     * Updates URL text
-     */
-
-
     _createClass(AutoEroticar, [{
-        key: 'handleChange',
-        value: function handleChange(event) {
-            var state = Object.assign({}, this.state);
-            state.searchPageUrl = event.target.value;
-            this.setState(state);
-        }
-
-        /**
-         * Redirects to "GTA-URL" requested
-         */
-
-    }, {
-        key: 'handleSubmit',
-        value: function handleSubmit(event) {
-            alert('Requested search: ' + this.state.value);
-            event.preventDefault();
-        }
-    }, {
-        key: 'create3dScene',
-        value: function create3dScene() {
-            var parentContainer = document.getElementById("car3d-scene");
-            var scene = new THREE.Scene();
-            var screenWidth = parentContainer.clientWidth * 0.75;
-            var screenHeight = 400;
+        key: "onChangePage",
+        value: function onChangePage(index) {
             var state = Object.assign({}, this.state);
 
-            var camSettings = {
-                FOV: 75,
-                AspectRatio: screenWidth / screenHeight,
-                NearPlane: 0.1,
-                FarPlane: 1000
-            };
-            var camera = new THREE.PerspectiveCamera(camSettings.FOV, camSettings.AspectRatio, camSettings.NearPlane, camSettings.FarPlane);
-
-            // generate Canvas and append it to parent
-            var renderer = new THREE.WebGLRenderer({ alpha: true });
-            renderer.setClearColor(0x000000, 0); // the default
-            renderer.setSize(screenWidth, screenHeight);
-            renderer.domElement.className += " w-100 h-100";
-            parentContainer.appendChild(renderer.domElement);
-
-            var geometry = new THREE.BoxGeometry();
-            var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-            var cube = new THREE.Mesh(geometry, material);
-
-            scene.add(cube);
-
-            camera.position.z = state.camZ;
-            camera.position.y = state.camY;
-            camera.position.x = state.camX;
-            camera.rotation.x = THREE.MathUtils.degToRad(state.rotX);
-            state.camera = camera;
-
-            // quick light
-            var light = new THREE.PointLight(0xff0000, 1, 100);
-            light.position.set(0, 3, 0);
-            scene.add(light);
-            // ambient  soft white light
-            var ambient = new THREE.AmbientLight(0xFFFFFF);
-            scene.add(ambient);
-
-            // Instantiate a loader
-            var loader = new THREE.GLTFLoader();
-            var car3dModel = new THREE.Object3D();
-
-            loader.load('./../assets/car_gltf.glb', function (gltf) {
-                // get the car
-                car3dModel = gltf.scene.children[2];
-                state.carRotZ = 0;
-                scene.add(car3dModel);
-
-                for (var i = 0; i < gltf.scene.children.length; i++) {
-                    console.log('Model [' + i + ']=>' + gltf.scene.children[i].name);
-                }
-
-                car3dModel.position.set(0, 0, 0);
-                car3dModel.scale.set(car3dModel.scale.x * 1.45, car3dModel.scale.y * 1.45, car3dModel.scale.z * 1.45);
-            }, undefined, function (error) {
-
-                console.error(error);
-            });
-
-            var _this = this;
-            var animate = function animate() {
-                requestAnimationFrame(animate);
-
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-
-                //model.rotation.x += 0.01;
-                //model.rotation.y += 0.01;
-                car3dModel.rotation.z += 0.01;
-                //THREE.MathUtils.degToRad(_this.state.carRotZ);
-
-                renderer.render(scene, _this.state.camera);
-            };
-
-            this.setState(state);
-            animate();
-        }
-    }, {
-        key: 'onCamX',
-        value: function onCamX(event) {
-            var state = Object.assign({}, this.state);
-            state.camera.position.x = state.camX = event.target.value;
+            state.currPage = index;
 
             this.setState(state);
         }
     }, {
-        key: 'onCamY',
-        value: function onCamY(event) {
-            var state = Object.assign({}, this.state);
-            state.camera.position.y = state.camY = event.target.value;
-
-            this.setState(state);
+        key: "getPage",
+        value: function getPage() {
+            switch (this.state.currPage) {
+                case 0:
+                    return React.createElement(AutoEroticarHome, null);
+                case 1:
+                    return React.createElement(AutoEroticarCheckCars, null);
+                case 2:
+                    return React.createElement(AutoEroticarHome, null);
+                case 3:
+                    return React.createElement(AutoEroticarHome, null);
+            }
         }
     }, {
-        key: 'onCamZ',
-        value: function onCamZ(event) {
-            var state = Object.assign({}, this.state);
-            state.camera.position.z = state.camZ = event.target.value;
+        key: "getHeaderBtn",
+        value: function getHeaderBtn(index, text) {
+            var _this2 = this;
 
-            this.setState(state);
-        }
-    }, {
-        key: 'onCamRotX',
-        value: function onCamRotX(event) {
-            var state = Object.assign({}, this.state);
-            state.rotX = event.target.value;
-            state.camera.rotation.x = THREE.MathUtils.degToRad(state.rotX);
-
-            this.setState(state);
-        }
-    }, {
-        key: 'onCarRot',
-        value: function onCarRot(event) {
-            var state = Object.assign({}, this.state);
-            state.carRotZ = event.target.value;
-
-            this.setState(state);
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this3 = this;
-
+            var btnState = this.state.currPage === index ? "active" : "";
+            var isFirst = index === 0 ? "first" : "";
             return React.createElement(
-                'div',
-                { className: 'page' },
+                "button",
+                { className: "btn " + isFirst + " " + btnState,
+                    onClick: function onClick() {
+                        return _this2.onChangePage(index);
+                    } },
+                text
+            );
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
+                { className: "page" },
+                React.createElement(SearchHeader, { ownerUrl: 'www.autoeroticar.net' }),
                 React.createElement(
-                    'header',
-                    null,
+                    "div",
+                    { className: "container", id: "logo-header" },
                     React.createElement(
-                        'div',
-                        { className: 'split space-between' },
+                        "div",
+                        { className: "row mb-2" },
                         React.createElement(
-                            'div',
-                            null,
+                            "div",
+                            { className: "col-4" },
                             React.createElement(
-                                'form',
-                                { onSubmit: this.handleSubmit },
-                                React.createElement('input', { type: 'text',
-                                    name: 'page-search',
-                                    className: 'border-black',
-                                    placeholder: 'www.autoeroticar.net',
-                                    onChange: this.handleChange,
-                                    value: this.state.searchPageUrl })
-                            )
-                        ),
-                        React.createElement(
-                            'div',
-                            { id: 'btns-header' },
-                            React.createElement(
-                                'div',
-                                { className: 'border-black border-radius-10 btn-header' },
-                                React.createElement(
-                                    'a',
-                                    { id: 'email-btn', href: '#' },
-                                    React.createElement('img', { src: './../img/msg-img.png' })
-                                )
-                            ),
-                            React.createElement(
-                                'div',
-                                { className: 'border-black border-radius-10 btn-header' },
-                                React.createElement(
-                                    'a',
-                                    { id: 'home-btn', href: './../index.html' },
-                                    React.createElement('img', { src: './../img/home-img.png' })
-                                )
-                            )
-                        )
-                    )
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'container', id: 'logo-header' },
-                    React.createElement(
-                        'div',
-                        { className: 'row mb-2' },
-                        React.createElement(
-                            'div',
-                            { className: 'col-4' },
-                            React.createElement(
-                                'a',
+                                "a",
                                 null,
-                                React.createElement('img', { src: './../img/autoeroticar/autoeroticar_1.png' })
+                                React.createElement(SVGFile, { svgId: "svg-name-logo",
+                                    svgPath: './../img/autoeroticar/autoeroticar-name-logo.svg'
+                                })
                             )
                         ),
                         React.createElement(
-                            'div',
-                            { className: 'col-4' },
-                            'Car LOGO'
+                            "div",
+                            { className: "col-8 d-flex justify-content-end" },
+                            React.createElement(SVGFile, { svgId: "svg-car-logo",
+                                svgPath: './../img/autoeroticar/autoeroticar-car-logo.svg'
+                            })
                         )
                     ),
                     React.createElement(
-                        'div',
-                        { className: 'row', id: 'page-btns-header' },
+                        "div",
+                        { className: "row", id: "page-btns-header" },
                         React.createElement(
-                            'div',
-                            { className: 'col d-flex flex-row justify-content-center' },
-                            React.createElement(
-                                'button',
-                                { className: 'btn first active' },
-                                'Home'
-                            ),
-                            React.createElement(
-                                'button',
-                                { className: 'btn' },
-                                'Check cars'
-                            ),
-                            React.createElement(
-                                'button',
-                                { className: 'btn' },
-                                'About'
-                            ),
-                            React.createElement(
-                                'button',
-                                { className: 'btn' },
-                                'Contact'
-                            )
+                            "div",
+                            { className: "col d-flex flex-row justify-content-center" },
+                            this.getHeaderBtn(0, "Home"),
+                            this.getHeaderBtn(1, "Check cars"),
+                            this.getHeaderBtn(2, "About"),
+                            this.getHeaderBtn(3, "Contact")
                         )
                     )
                 ),
+                this.getPage(),
                 React.createElement(
-                    'div',
-                    { className: 'container pl-5', id: 'page-presentation' },
+                    "div",
+                    { className: "container mb-5", id: "trademarks-display" },
+                    React.createElement("hr", null),
                     React.createElement(
-                        'div',
-                        { className: 'row mt-5' },
+                        "div",
+                        { className: "row" },
                         React.createElement(
-                            'h1',
-                            { className: 'text-red' },
-                            'TIRED OF HOLDING YOUR BREATH WAITING FOR THE RIGHT CAR TO COME ALONG?'
-                        ),
-                        React.createElement(
-                            'h5',
-                            { className: 'font-weight-bold' },
-                            'Welcome to AutoEroticar - you\'ve made the right choice.'
-                        ),
-                        React.createElement(
-                            'p',
-                            null,
-                            'AutoEroticar vehicles aren\'t for just anyone. Our customers want the best of everything and need a ride with thrust, power, potency, style and class. Performance is everything'
-                        )
-                    ),
-                    React.createElement(
-                        'div',
-                        { className: 'row', id: 'presentation-3dcar' },
-                        React.createElement(
-                            'div',
-                            { className: 'col-12' },
-                            React.createElement('div', { id: 'car3d-scene' }),
-                            React.createElement(
-                                'div',
-                                { id: 'car3d-text' },
-                                React.createElement(
-                                    'p',
-                                    null,
-                                    'Feel free to cruise around the site and check out our taut bodies, run your eyes over our perfect curves and high-maintenance finish - We know you\'ll be begging to buy'
-                                ),
-                                React.createElement(
-                                    'p',
-                                    null,
-                                    'We assure customers that our automobiles have only the highest quality rim jobs, lube Jobs and waxes - there is absolutely no junk in our trunks'
-                                ),
-                                React.createElement(
-                                    'p',
-                                    null,
-                                    'We aim to satisty all your urges. You\'ll be going frorn 0 to Sexy in no time at all...'
-                                )
-                            )
-                        )
-                    )
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'container mb-5', id: 'trademarks-display' },
-                    React.createElement('hr', null),
-                    React.createElement(
-                        'div',
-                        { className: 'row' },
-                        React.createElement(
-                            'div',
-                            { className: 'col-md-6 d-flex flex-row col-left' },
+                            "div",
+                            { className: "col-md-6 d-flex flex-row col-left" },
                             React.createElement(SVGFile, { svgId: "svg-file-1",
                                 classes: "trademark-logo",
                                 svgPath: './../img/autoeroticar/autoeroticar_logo_1.svg'
@@ -364,8 +135,8 @@ var AutoEroticar = function (_React$Component) {
                             })
                         ),
                         React.createElement(
-                            'div',
-                            { className: 'col-md-6 d-flex flex-row col-right' },
+                            "div",
+                            { className: "col-md-6 d-flex flex-row col-right" },
                             React.createElement(SVGFile, { svgId: "svg-file-5",
                                 classes: "trademark-logo",
                                 svgPath: './../img/autoeroticar/autoeroticar_logo_5.svg'
@@ -384,89 +155,33 @@ var AutoEroticar = function (_React$Component) {
                             })
                         )
                     ),
-                    React.createElement('hr', null)
+                    React.createElement("hr", null)
                 ),
                 React.createElement(
-                    'div',
-                    { className: 'container' },
+                    "div",
+                    { className: "container row" },
+                    React.createElement("div", { className: "col-4" }),
                     React.createElement(
-                        'p',
-                        null,
-                        'Footer'
-                    ),
-                    React.createElement(
-                        'a',
-                        { href: 'https://skfb.ly/o6JVZ' },
+                        "div",
+                        { className: "col-8 d-flex flex-row" },
                         React.createElement(
-                            'p',
+                            "p",
                             null,
-                            '"Ferrari 458 Italia"'
-                        )
-                    ),
-                    React.createElement(
-                        'p',
-                        null,
-                        'by DatJones is licensed under',
-                        React.createElement(
-                            'a',
-                            { href: 'http://creativecommons.org/licenses/by/4.0/' },
-                            'Creative Commons Attribution'
+                            React.createElement(
+                                "a",
+                                { className: "autoeroticar-link",
+                                    href: "https://skfb.ly/o6JVZ" },
+                                "Ferrari 458 Italia"
+                            ),
+                            "\xA0by DatJones is licensed under\xA0",
+                            React.createElement(
+                                "a",
+                                { className: "autoeroticar-link",
+                                    href: "http://creativecommons.org/licenses/by/4.0/" },
+                                "Creative Commons Attribution"
+                            )
                         )
                     )
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'container' },
-                    React.createElement(
-                        'p',
-                        null,
-                        'CamX'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-10', max: '10', step: '0.05',
-                        value: this.state.camX, onChange: function onChange(e) {
-                            return _this3.onCamX(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'CamY'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '0', max: '10', step: '0.05',
-                        value: this.state.camY, onChange: function onChange(e) {
-                            return _this3.onCamY(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'CamZ'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-5', max: '5', step: '0.05',
-                        value: this.state.camZ, onChange: function onChange(e) {
-                            return _this3.onCamZ(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'RotX'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-30', max: '30', step: '1',
-                        value: this.state.rotX, onChange: function onChange(e) {
-                            return _this3.onCamRotX(e);
-                        }
-                    }),
-                    React.createElement(
-                        'p',
-                        null,
-                        'Rot Car'
-                    ),
-                    React.createElement('input', { id: '', type: 'range', min: '-180', max: '180', step: '1',
-                        value: this.state.carRotZ, onChange: function onChange(e) {
-                            return _this3.onCarRot(e);
-                        }
-                    })
                 )
             );
         }
