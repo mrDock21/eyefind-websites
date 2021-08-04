@@ -1,0 +1,69 @@
+:root {
+    --bmc-white: #f3f0ec;
+
+    --brown-light: #fef2d7;
+    --brown-neutral: #b5904a;
+    --brown-dark: #483318;
+
+    --pink-neutral: #f8c3e1;
+
+    --eyefind-font: 'Source Sans Pro', sans-serif;
+    --bean-machine-font: 'Anton', sans-serif;
+}
+
+body div.page {
+    background: linear-gradient(var(--brown-light), var(--brown-neutral) 40%);
+    font-family: var(--eyefind-font);
+}
+
+/*  PAGE HEADER  */
+button.bmc-header-btn {
+    background: transparent;
+    border: none;
+    color: var(--brown-dark);
+    font-weight: bold;
+    text-align: left;
+}
+button.bmc-header-btn:hover {
+    text-decoration: underline;
+}
+div.page div#bmc-slogan-label {
+    position: absolute;
+    top: 4rem;
+}
+
+/*  GENERAL CLASSES */
+.p-relative{
+    position: relative;
+}
+
+.bmc-bg-dark {
+    background-color: var(--brown-dark);
+}
+.bmc-bg-white {
+    background-color: var(--bmc-white);
+}
+.bmc-bg-pink {
+    background-color: var(--pink-neutral);
+}
+.bmc-text-white {
+    color: var(--bmc-white);
+}
+.bmc-text-dark {
+    color: var(--brown-dark);
+}
+.bmc-font {
+    font-family: var(--bean-machine-font)
+}
+.bmc-text-right {
+    text-align: end;
+}
+.z-index-1 {
+    z-index: 1;
+}
+.bmc-border-top-dark {
+    border-top: 0.5rem solid var(--brown-dark);
+}
+.bmc-border-top-pink {
+    border-top: 0.5rem solid var(--pink-neutral);
+}
