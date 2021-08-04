@@ -56,7 +56,7 @@ const IMAGES = [
     {
         name:  "Bean Machine Coffe",
         image: "./img/ad_small/ad_small_10.png",
-        route: "#"
+        route: "./pages/bean_machine_coffee.html"
     },
     {
         //verify this page name

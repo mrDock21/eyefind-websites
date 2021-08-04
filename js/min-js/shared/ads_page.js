@@ -45,7 +45,7 @@ var IMAGES = [{
 }, {
     name: "Bean Machine Coffe",
     image: "./../img/ad_small/ad_small_10.png",
-    route: "#"
+    route: "./../pages/autoeroticar.html"
 }, {
     //verify this page name
     name: "Our Own Reality",
