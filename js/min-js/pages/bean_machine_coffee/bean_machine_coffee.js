@@ -58,8 +58,14 @@ var BeanMachineCoffee = function (_React$Component) {
                             { className: "col-md-4 d-flex flex-column" },
                             React.createElement(
                                 "div",
-                                { className: "z-index-1" },
-                                React.createElement("img", { className: "w-100 h-100", src: this.getAsset("img/bean-machine-coffee/bmc_logo.png") })
+                                { className: "z-index-1 p-relative" },
+                                React.createElement("img", { id: "bmc-logo-background",
+                                    className: "w-100 h-100",
+                                    src: this.getAsset("img/bean-machine-coffee/bmc_logo-background.png") }),
+                                React.createElement("img", { id: "bmc-logo-foreground",
+                                    className: "w-100 h-100",
+                                    src: this.getAsset("img/bean-machine-coffee/bmc_logo-foreground.png")
+                                })
                             ),
                             React.createElement(
                                 "div",
@@ -247,7 +253,7 @@ var BeanMachineCoffee = function (_React$Component) {
                         ),
                         React.createElement(
                             "div",
-                            { className: "col-md-8 p-0" },
+                            { className: "col-md-8 p-0 mb-3" },
                             React.createElement(
                                 "div",
                                 { className: "bmc-bg-dark p-2 bmc-border-top-pink" },
@@ -269,6 +275,15 @@ var BeanMachineCoffee = function (_React$Component) {
                                     "p",
                                     { className: "text-bold" },
                                     "No experience required. Bean Machine is always looking for unskilled, part-time workers, primarily because all our staff turns over every three weeks. We prefer to use the term 'friends' rather than 'employees' and 'protectors' rather than 'managers'. We find that this helps to foster the illusion of a warm, fuzzy working environment and masks the exploitation at the core of our business model. We are not going to insult you with training. This is coffee, not rocket science. Don't worry: you'll soon learn the art of looking down your nose when someone orders a regular coffee. Join the biggest company in the world! We will hire anyone, so long as they look young. If you listen to emo music and have great tits, that's a plus, but a tattoo or facial piercing is preferred to give us that \"edge.\""
+                                ),
+                                React.createElement(
+                                    "button",
+                                    { className: "bmc-btn-dark py-3 bmc-font w-100" },
+                                    React.createElement(
+                                        "h2",
+                                        null,
+                                        " Apply Now! "
+                                    )
                                 )
                             )
                         )

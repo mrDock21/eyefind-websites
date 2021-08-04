@@ -27,9 +27,39 @@ button.bmc-header-btn {
 button.bmc-header-btn:hover {
     text-decoration: underline;
 }
+
+/*  Logo anim   */ 
+div.page img#bmc-logo-background {
+    animation: logo-animation 10s infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+@keyframes logo-animation {
+    0% { transform: rotate(0deg); }
+    100% {transform: rotate(360deg);}
+}
+div.page img#bmc-logo-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 div.page div#bmc-slogan-label {
     position: absolute;
     top: 4rem;
+}
+
+button.bmc-btn-dark {
+    background-color: var(--brown-dark);
+    color: var(--brown-light);
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: transparent;
+}
+button.bmc-btn-dark:hover {
+    background-color: var(--brown-light);
+    color: var(--brown-dark);
+    border-color: var(--brown-dark);
 }
 
 /*  GENERAL CLASSES */

@@ -32,16 +32,36 @@ class BeanMachineCoffee extends React.Component {
                     {/** Navigation Header */}
                     <div className="row px-5">
                         <div className="col-md-4 d-flex flex-column">
-                            <div className="z-index-1">
-                                <img className="w-100 h-100" src={this.getAsset("img/bean-machine-coffee/bmc_logo.png")}/>
+                            <div className="z-index-1 p-relative">
+                                <img id="bmc-logo-background" 
+                                    className="w-100 h-100" 
+                                    src={this.getAsset("img/bean-machine-coffee/bmc_logo-background.png")}/>
+                                <img id="bmc-logo-foreground" 
+                                    className="w-100 h-100" 
+                                    src={this.getAsset("img/bean-machine-coffee/bmc_logo-foreground.png")}
+                                />
                             </div>
-                            <div><button className="bmc-header-btn text-brown">Specials</button></div>
-                            <div><button className="bmc-header-btn text-brown">Cup Sizes</button></div>
-                            <div><button className="bmc-header-btn text-brown">Franchising Opportunities</button></div>
-                            <div><button className="bmc-header-btn text-brown">Buy Our Coffees</button></div>
-                            <div><button className="bmc-header-btn text-brown">Caffeine Is Not a Drug</button></div>
-                            <div><button className="bmc-header-btn text-brown">Become a Rep</button></div>
-                            <div><button className="bmc-header-btn text-brown">10 Reasons To Boycott Your Local Coffeehouse</button></div>
+                            <div>
+                                <button className="bmc-header-btn text-brown">Specials</button>
+                            </div>
+                            <div>
+                                <button className="bmc-header-btn text-brown">Cup Sizes</button>
+                            </div>
+                            <div>
+                                <button className="bmc-header-btn text-brown">Franchising Opportunities</button>
+                            </div>
+                            <div>
+                                <button className="bmc-header-btn text-brown">Buy Our Coffees</button>
+                            </div>
+                            <div>
+                                <button className="bmc-header-btn text-brown">Caffeine Is Not a Drug</button>
+                            </div>
+                            <div>
+                                <button className="bmc-header-btn text-brown">Become a Rep</button>
+                            </div>
+                            <div>
+                                <button className="bmc-header-btn text-brown">10 Reasons To Boycott Your Local Coffeehouse</button>
+                            </div>
                         </div>
                         <div className="col-md-8">
                             <img className="w-100 h-100" 
@@ -139,7 +159,7 @@ class BeanMachineCoffee extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-8 p-0">
+                        <div className="col-md-8 p-0 mb-3">
                             <div className="bmc-bg-dark p-2 bmc-border-top-pink">
                                 <h3 className="bmc-text-white bmc-font">
                                     WORK FOR BEAN MACHINE COFFEE
@@ -165,6 +185,11 @@ class BeanMachineCoffee extends React.Component {
                                     great tits, that's a plus, but a tattoo or facial piercing is preferred
                                     to give us that "edge."
                                 </p>
+
+                                <button className="bmc-btn-dark py-3 bmc-font w-100">
+                                    <h2> Apply Now! </h2>
+                                </button>
+
                             </div>
                         </div>
                     </div>
