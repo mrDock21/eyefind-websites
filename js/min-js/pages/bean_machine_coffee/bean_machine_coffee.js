@@ -25,7 +25,7 @@ var BeanMachineCoffee = function (_React$Component) {
     _createClass(BeanMachineCoffee, [{
         key: "getAsset",
         value: function getAsset(rootPath) {
-            return "./../../../../" + rootPath;
+            return "./../" + rootPath;
         }
     }, {
         key: "render",

@@ -9,7 +9,7 @@ class BeanMachineCoffee extends React.Component {
     }
 
     getAsset(rootPath) {
-        return "./../../../../" + rootPath;
+        return "./../" + rootPath;
     }
 
     render() {
