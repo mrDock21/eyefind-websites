@@ -4,9 +4,36 @@ class AutoEroticar extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            searchPageUrl: 'www.autoeroticar.net',
-            showControls: false
+            currPage: 0,
         };
+    }
+
+    onChangePage(index) {
+        const state = {...this.state};
+
+        state.currPage = index;
+
+        this.setState(state);
+    }
+
+    getPage() {
+        switch (this.state.currPage) {
+            case 0: return <AutoEroticarHome/>;
+            case 1: return <AutoEroticarCheckCars/>;
+            case 2: return <AutoEroticarHome/>;
+            case 3: return <AutoEroticarHome/>;
+        }
+    }
+
+    getHeaderBtn(index, text) {
+        var btnState = (this.state.currPage === index) ? "active" : "";
+        var isFirst = (index === 0) ? "first" : "";
+        return (
+            <button className={`btn ${isFirst} ${btnState}`}
+                    onClick={() => this.onChangePage(index)}>
+                {text}
+            </button>
+        );
     }
 
     render() {
@@ -36,16 +63,16 @@ class AutoEroticar extends React.Component {
                     {/** Nav */}
                     <div className="row" id="page-btns-header">
                         <div className="col d-flex flex-row justify-content-center">
-                            <button className="btn first active">Home</button>
-                            <button className="btn">Check cars</button>
-                            <button className="btn">About</button>
-                            <button className="btn">Contact</button>
+                            { this.getHeaderBtn(0, "Home")          }
+                            { this.getHeaderBtn(1, "Check cars")    }
+                            { this.getHeaderBtn(2, "About")         }
+                            { this.getHeaderBtn(3, "Contact")       }
                         </div>
                     </div>
                 </div>
 
                 {/** Main content */}
-                <AutoEroticarHome/>
+                { this.getPage() }
                 
                 {/** Trademarks display */}
                 <div className="container mb-5" id="trademarks-display">

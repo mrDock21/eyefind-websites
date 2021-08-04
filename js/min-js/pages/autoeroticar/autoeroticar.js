@@ -17,30 +17,68 @@ var AutoEroticar = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (AutoEroticar.__proto__ || Object.getPrototypeOf(AutoEroticar)).call(this, props));
 
         _this.state = {
-            searchPageUrl: 'www.autoeroticar.net',
-            showControls: false
+            currPage: 0
         };
         return _this;
     }
 
     _createClass(AutoEroticar, [{
-        key: 'render',
+        key: "onChangePage",
+        value: function onChangePage(index) {
+            var state = Object.assign({}, this.state);
+
+            state.currPage = index;
+
+            this.setState(state);
+        }
+    }, {
+        key: "getPage",
+        value: function getPage() {
+            switch (this.state.currPage) {
+                case 0:
+                    return React.createElement(AutoEroticarHome, null);
+                case 1:
+                    return React.createElement(AutoEroticarCheckCars, null);
+                case 2:
+                    return React.createElement(AutoEroticarHome, null);
+                case 3:
+                    return React.createElement(AutoEroticarHome, null);
+            }
+        }
+    }, {
+        key: "getHeaderBtn",
+        value: function getHeaderBtn(index, text) {
+            var _this2 = this;
+
+            var btnState = this.state.currPage === index ? "active" : "";
+            var isFirst = index === 0 ? "first" : "";
+            return React.createElement(
+                "button",
+                { className: "btn " + isFirst + " " + btnState,
+                    onClick: function onClick() {
+                        return _this2.onChangePage(index);
+                    } },
+                text
+            );
+        }
+    }, {
+        key: "render",
         value: function render() {
             return React.createElement(
-                'div',
-                { className: 'page' },
+                "div",
+                { className: "page" },
                 React.createElement(SearchHeader, { ownerUrl: 'www.autoeroticar.net' }),
                 React.createElement(
-                    'div',
-                    { className: 'container', id: 'logo-header' },
+                    "div",
+                    { className: "container", id: "logo-header" },
                     React.createElement(
-                        'div',
-                        { className: 'row mb-2' },
+                        "div",
+                        { className: "row mb-2" },
                         React.createElement(
-                            'div',
-                            { className: 'col-4' },
+                            "div",
+                            { className: "col-4" },
                             React.createElement(
-                                'a',
+                                "a",
                                 null,
                                 React.createElement(SVGFile, { svgId: "svg-name-logo",
                                     svgPath: './../img/autoeroticar/autoeroticar-name-logo.svg'
@@ -48,53 +86,37 @@ var AutoEroticar = function (_React$Component) {
                             )
                         ),
                         React.createElement(
-                            'div',
-                            { className: 'col-8 d-flex justify-content-end' },
+                            "div",
+                            { className: "col-8 d-flex justify-content-end" },
                             React.createElement(SVGFile, { svgId: "svg-car-logo",
                                 svgPath: './../img/autoeroticar/autoeroticar-car-logo.svg'
                             })
                         )
                     ),
                     React.createElement(
-                        'div',
-                        { className: 'row', id: 'page-btns-header' },
+                        "div",
+                        { className: "row", id: "page-btns-header" },
                         React.createElement(
-                            'div',
-                            { className: 'col d-flex flex-row justify-content-center' },
-                            React.createElement(
-                                'button',
-                                { className: 'btn first active' },
-                                'Home'
-                            ),
-                            React.createElement(
-                                'button',
-                                { className: 'btn' },
-                                'Check cars'
-                            ),
-                            React.createElement(
-                                'button',
-                                { className: 'btn' },
-                                'About'
-                            ),
-                            React.createElement(
-                                'button',
-                                { className: 'btn' },
-                                'Contact'
-                            )
+                            "div",
+                            { className: "col d-flex flex-row justify-content-center" },
+                            this.getHeaderBtn(0, "Home"),
+                            this.getHeaderBtn(1, "Check cars"),
+                            this.getHeaderBtn(2, "About"),
+                            this.getHeaderBtn(3, "Contact")
                         )
                     )
                 ),
-                React.createElement(AutoEroticarHome, null),
+                this.getPage(),
                 React.createElement(
-                    'div',
-                    { className: 'container mb-5', id: 'trademarks-display' },
-                    React.createElement('hr', null),
+                    "div",
+                    { className: "container mb-5", id: "trademarks-display" },
+                    React.createElement("hr", null),
                     React.createElement(
-                        'div',
-                        { className: 'row' },
+                        "div",
+                        { className: "row" },
                         React.createElement(
-                            'div',
-                            { className: 'col-md-6 d-flex flex-row col-left' },
+                            "div",
+                            { className: "col-md-6 d-flex flex-row col-left" },
                             React.createElement(SVGFile, { svgId: "svg-file-1",
                                 classes: "trademark-logo",
                                 svgPath: './../img/autoeroticar/autoeroticar_logo_1.svg'
@@ -113,8 +135,8 @@ var AutoEroticar = function (_React$Component) {
                             })
                         ),
                         React.createElement(
-                            'div',
-                            { className: 'col-md-6 d-flex flex-row col-right' },
+                            "div",
+                            { className: "col-md-6 d-flex flex-row col-right" },
                             React.createElement(SVGFile, { svgId: "svg-file-5",
                                 classes: "trademark-logo",
                                 svgPath: './../img/autoeroticar/autoeroticar_logo_5.svg'
@@ -133,30 +155,30 @@ var AutoEroticar = function (_React$Component) {
                             })
                         )
                     ),
-                    React.createElement('hr', null)
+                    React.createElement("hr", null)
                 ),
                 React.createElement(
-                    'div',
-                    { className: 'container row' },
-                    React.createElement('div', { className: 'col-4' }),
+                    "div",
+                    { className: "container row" },
+                    React.createElement("div", { className: "col-4" }),
                     React.createElement(
-                        'div',
-                        { className: 'col-8 d-flex flex-row' },
+                        "div",
+                        { className: "col-8 d-flex flex-row" },
                         React.createElement(
-                            'p',
+                            "p",
                             null,
                             React.createElement(
-                                'a',
-                                { className: 'autoeroticar-link',
-                                    href: 'https://skfb.ly/o6JVZ' },
-                                'Ferrari 458 Italia'
+                                "a",
+                                { className: "autoeroticar-link",
+                                    href: "https://skfb.ly/o6JVZ" },
+                                "Ferrari 458 Italia"
                             ),
-                            '\xA0by DatJones is licensed under\xA0',
+                            "\xA0by DatJones is licensed under\xA0",
                             React.createElement(
-                                'a',
-                                { className: 'autoeroticar-link',
-                                    href: 'http://creativecommons.org/licenses/by/4.0/' },
-                                'Creative Commons Attribution'
+                                "a",
+                                { className: "autoeroticar-link",
+                                    href: "http://creativecommons.org/licenses/by/4.0/" },
+                                "Creative Commons Attribution"
                             )
                         )
                     )
