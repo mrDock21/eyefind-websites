@@ -153,32 +153,7 @@ class Krapea extends React.Component {
         return (
             <div className="page">
                 {/** GRAY HEADER */}
-                <header>
-                    <div className="split space-between">
-                        <div>
-                            <form onSubmit={this.handleSubmit}>
-                                <input type="text" 
-                                    name="page-search" 
-                                    className="border-black" 
-                                    placeholder="www.love-meet.net"
-                                    onChange={this.handleChange}
-                                    value={ this.state.searchPageUrl }/>
-                            </form>
-                        </div>
-                        <div id="btns-header">
-                            <div className="border-black border-radius-10 btn-header">
-                                <a id="email-btn" href="#">
-                                    <img src="./../img/msg-img.png"/>
-                                </a>
-                            </div>
-                            <div className="border-black border-radius-10 btn-header">
-                                <a id="home-btn" href="./../index.html">
-                                    <img src="./../img/home-img.png"/>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </header>
+                <SearchHeader ownerUrl={'www.krapea.com'}/>
 
                 {/** BACKGROUND */}
                 

@@ -210,50 +210,7 @@ var Krapea = function (_React$Component) {
             return React.createElement(
                 "div",
                 { className: "page" },
-                React.createElement(
-                    "header",
-                    null,
-                    React.createElement(
-                        "div",
-                        { className: "split space-between" },
-                        React.createElement(
-                            "div",
-                            null,
-                            React.createElement(
-                                "form",
-                                { onSubmit: this.handleSubmit },
-                                React.createElement("input", { type: "text",
-                                    name: "page-search",
-                                    className: "border-black",
-                                    placeholder: "www.love-meet.net",
-                                    onChange: this.handleChange,
-                                    value: this.state.searchPageUrl })
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { id: "btns-header" },
-                            React.createElement(
-                                "div",
-                                { className: "border-black border-radius-10 btn-header" },
-                                React.createElement(
-                                    "a",
-                                    { id: "email-btn", href: "#" },
-                                    React.createElement("img", { src: "./../img/msg-img.png" })
-                                )
-                            ),
-                            React.createElement(
-                                "div",
-                                { className: "border-black border-radius-10 btn-header" },
-                                React.createElement(
-                                    "a",
-                                    { id: "home-btn", href: "./../index.html" },
-                                    React.createElement("img", { src: "./../img/home-img.png" })
-                                )
-                            )
-                        )
-                    )
-                ),
+                React.createElement(SearchHeader, { ownerUrl: 'www.krapea.com' }),
                 React.createElement(
                     "div",
                     { className: "row" },
