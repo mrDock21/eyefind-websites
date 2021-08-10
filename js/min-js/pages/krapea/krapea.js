@@ -137,7 +137,7 @@ var Krapea = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Krapea.__proto__ || Object.getPrototypeOf(Krapea)).call(this, props));
 
         _this.state = {
-            currentPage: 'how to',
+            currentPage: 'main',
             searchPageUrl: 'www.krapea.com'
         };
 

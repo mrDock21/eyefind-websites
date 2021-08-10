@@ -32,6 +32,7 @@ var HowPage = function HowPage(_ref) {
                         null,
                         "We locate all our stores in places that are really difficult to get to, preferably with access routes that are particularly prone to heavy congestion. Just keep your eye out for a windowless metal box the size of an airport. If you enjoy the third-world experience of traveling with 200 people on a 40-seater bus, some cities also offer a shuttle service. We recommend that you bring a change of clothing. You will be away from home for a couple of days. It will make you melancholy for many reasons."
                     ),
+                    React.createElement("hr", { className: "w-50", id: "separator" }),
                     React.createElement(
                         "p",
                         { className: "mb-0", id: "title" },
@@ -79,6 +80,7 @@ var HowPage = function HowPage(_ref) {
                         null,
                         "All our products have a huge label with 10 different, meaningless codes. One of these is the product code. Pick one, write it down and hope for the best. If you manage to crack our code, we will give you a free table made of real wood. Each item in a furniture range has a slightly different shade of wood stain. We brainwash you with clever advertising into obsessing about color coordination in the home and then torment you by offering things that ALMOST match. Ingenious.."
                     ),
+                    React.createElement("hr", { className: "w-50", id: "separator" }),
                     React.createElement(
                         "p",
                         { className: "mb-0", id: "title" },
@@ -99,19 +101,15 @@ var HowPage = function HowPage(_ref) {
                     { className: "col-md-12" },
                     React.createElement(
                         "div",
-                        { className: "card mb-3" },
+                        { className: "card mb-3", id: "large-card" },
                         React.createElement("img", { className: "card-img-top", src: "../img/krapea/vending_machine.jpg", alt: "Card image cap" }),
                         React.createElement(
                             "div",
-                            { className: "card-body" },
+                            { className: "card-body p-0" },
                             React.createElement(
                                 "p",
-                                { className: "card-text" },
-                                React.createElement(
-                                    "small",
-                                    { "class": "text-muted" },
-                                    "Coming to a downtown area near you! We are in the process of evicting young families and turning their houses into massive vending machines. Soon you will be able to buy a flat-packed kitchen in the same way that you would buy a Meteorite Bar."
-                                )
+                                { className: "card-text", id: "bottom-text" },
+                                "Coming to a downtown area near you! We are in the process of evicting young families and turning their houses into massive vending machines. Soon you will be able to buy a flat-packed kitchen in the same way that you would buy a Meteorite Bar."
                             )
                         )
                     )
@@ -123,6 +121,7 @@ var HowPage = function HowPage(_ref) {
                 React.createElement(
                     "div",
                     { className: "col-md-12 mt-2" },
+                    React.createElement("hr", { className: "w-50", id: "separator" }),
                     React.createElement(
                         "p",
                         { className: "mb-0", id: "title" },
@@ -133,6 +132,7 @@ var HowPage = function HowPage(_ref) {
                         null,
                         "As you leave the restaurant, you are hit with the horrifying realization that you still have another floor to negotiate before we will even consider allowing you a sniff of fresh air. Snarl at your partner, grit your teeth and prepare for home furnishing hell. This is where we bamboozle you into buying stuff that you don't need. Metal toilet seats, floating tea-lights, luminous cocktail shakers, plastic toaster racks, polyester wardrobe space-savers, butt plugs that light up. square lamps made of concertinaed paper, tacky posters in picture frames... after traversing a few acres of novelty Nordic knick-knacks, you will notice a sudden shift in behavior. Women start to panic, sweeping spatulas, scented candles and shoe racks into complimentary mesh shopping bags. Men are found discussing the pros and cons of throw cushions, finally stripped of the last vestiges of masculinity. You begin to understand now why the Scandinavians drink so much. Time to get out."
                     ),
+                    React.createElement("hr", { className: "w-50", id: "separator" }),
                     React.createElement(
                         "p",
                         { className: "mb-0", id: "title" },
@@ -142,6 +142,19 @@ var HowPage = function HowPage(_ref) {
                         "p",
                         null,
                         "Or is it...? You run for the exit, kicking feral brats out of your way, only to emerge into a cavernous warehouse. Now it finally dawns on you that we are going to steal your soul. Welcome to the flat-pack jungle. Here you discover that you need to be a professional weightlifter to actually move any of the packages off the shelves. All around you are the skeletons of people who underestimated the power of the pressboard. And don't expect any help from us. If you want a wardrobe for $50, you're going to carry it yourself. There's unnier than an 80lb pensioner trying to wrestle down a garden bench from the rafters of an aircraft hangar. We could release a DVD of our CCTV footage on a daily basis. In the unlikely event that you succeed in balancing your bedroom furniture on top of a supermarket cart, it's time to take on the checkout."
+                    )
+                )
+            ),
+            React.createElement(
+                "div",
+                { className: "row mt-3" },
+                React.createElement(
+                    "div",
+                    { className: "col-md-12 mt-2" },
+                    React.createElement(
+                        "a",
+                        { href: "#", alt: "More...", className: "d-flex justify-content-center justify-content-md-end w-100" },
+                        React.createElement("img", { src: "../img/krapea/more.jpg" })
                     )
                 )
             )

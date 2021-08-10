@@ -99,7 +99,7 @@ class Krapea extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            currentPage: 'how to',
+            currentPage: 'main',
             searchPageUrl: 'www.krapea.com'
         };
 

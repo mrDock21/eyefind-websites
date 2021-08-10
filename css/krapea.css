@@ -3,7 +3,8 @@
 
     --krapea-font: 'Source Sans Pro', sans-serif;
     --krapea-green: green;
-    
+    --krapea-green-dark: rgba(64,77,56,1);
+    --krapea-gray: rgb(165, 165, 165);
 }
 
 p {
@@ -43,4 +44,24 @@ div.page div#main-page div.row#offers-row {
     margin-top: -75px;
     display: flex;
     flex-wrap: wrap;
+}
+
+/** LARGE AD CARD */
+div.page div.row#main-page div.row div#large-card {
+    border: none;
+}
+
+/** LARGE AD CARD BOTTOM TEXT*/
+div.page div.row#main-page div.row div#large-card p#bottom-text{
+    color: var(--krapea-green-dark);
+    font-weight: 900;
+    font-size: 1.9rem;
+    line-height: 1;
+}
+
+hr#separator {
+    color: var(--krapea-gray);
+    height: 5px;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }

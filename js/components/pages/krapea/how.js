@@ -25,6 +25,8 @@ const HowPage = ({updatePage}) => {
                                 from home for a couple of days. It will make you melancholy for many reasons.
                             </p>
 
+                            <hr className="w-50" id="separator"/>
+
                             <p className="mb-0" id="title">
                                 SHOWROOM
                             </p>
@@ -79,6 +81,9 @@ const HowPage = ({updatePage}) => {
                                 advertising into obsessing about color coordination in the home and then torment you by offering things that 
                                 ALMOST match. Ingenious..
                             </p>
+
+                            <hr className="w-50" id="separator"/>
+
                             <p className="mb-0" id="title">
                                 RESTAURANT
                             </p>
@@ -95,13 +100,13 @@ const HowPage = ({updatePage}) => {
                     {/** VENDING MACHINE */}
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-12">
-                            <div className="card mb-3">
+                            <div className="card mb-3" id="large-card">
                                 <img className="card-img-top" src="../img/krapea/vending_machine.jpg" alt="Card image cap" />
-                                <div className="card-body">
-                                    <p className="card-text"><small class="text-muted">
+                                <div className="card-body p-0">
+                                    <p className="card-text" id="bottom-text">
                                     Coming to a downtown area near you! We are in the process of evicting young families and turning their houses into massive vending machines. 
                                     Soon you will be able to buy a flat-packed kitchen in the same way that you would buy a Meteorite Bar.
-                                    </small></p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -111,34 +116,46 @@ const HowPage = ({updatePage}) => {
                     <div className="row mt-3">
                         <div className="col-md-12 mt-2">
 
-                        <p className="mb-0" id="title">
-                            HOUSEHOLD ITEMS
-                        </p>
-                        <p>
-                            As you leave the restaurant, you are hit with the horrifying realization that you still have another floor to negotiate before we will even consider 
-                            allowing you a sniff of fresh air. Snarl at your partner, grit your teeth and prepare for home furnishing hell. This is where we bamboozle you into 
-                            buying stuff that you don't need. Metal toilet seats, floating tea-lights, luminous cocktail shakers, plastic toaster racks, polyester wardrobe 
-                            space-savers, butt plugs that light up. square lamps made of concertinaed paper, tacky posters in picture frames... after traversing a few acres of 
-                            novelty Nordic knick-knacks, you will notice a sudden shift in behavior. Women start to panic, sweeping spatulas, scented candles and shoe racks into 
-                            complimentary mesh shopping bags. Men are found discussing the pros and cons of throw cushions, finally stripped of the last vestiges of masculinity. 
-                            You begin to understand now why the Scandinavians drink so much. Time to get out.
-                        </p>
+                            <hr className="w-50" id="separator"/>
 
-                        <p className="mb-0" id="title">
-                            WAREHOUSE
-                        </p>
-                        <p>
-                            Or is it...? You run for the exit, kicking feral brats out of your way, only to emerge into a cavernous warehouse. Now it finally dawns on you that we 
-                            are going to steal your soul. Welcome to the flat-pack jungle. Here you discover that you need to be a professional weightlifter to actually move any 
-                            of the packages off the shelves. All around you are the skeletons of people who underestimated the power of the pressboard. And don't expect any help 
-                            from us. If you want a wardrobe for $50, you're going to carry it yourself. There's unnier than an 80lb pensioner trying to wrestle down a garden bench 
-                            from the rafters of an aircraft hangar. We could release a DVD of our CCTV footage on a daily basis. In the unlikely event that you succeed in balancing 
-                            your bedroom furniture on top of a supermarket cart, it's time to take on the checkout.
-                        </p>
+                            <p className="mb-0" id="title">
+                                HOUSEHOLD ITEMS
+                            </p>
+                            <p>
+                                As you leave the restaurant, you are hit with the horrifying realization that you still have another floor to negotiate before we will even consider 
+                                allowing you a sniff of fresh air. Snarl at your partner, grit your teeth and prepare for home furnishing hell. This is where we bamboozle you into 
+                                buying stuff that you don't need. Metal toilet seats, floating tea-lights, luminous cocktail shakers, plastic toaster racks, polyester wardrobe 
+                                space-savers, butt plugs that light up. square lamps made of concertinaed paper, tacky posters in picture frames... after traversing a few acres of 
+                                novelty Nordic knick-knacks, you will notice a sudden shift in behavior. Women start to panic, sweeping spatulas, scented candles and shoe racks into 
+                                complimentary mesh shopping bags. Men are found discussing the pros and cons of throw cushions, finally stripped of the last vestiges of masculinity. 
+                                You begin to understand now why the Scandinavians drink so much. Time to get out.
+                            </p>
+
+                            <hr className="w-50" id="separator"/>
+
+                            <p className="mb-0" id="title">
+                                WAREHOUSE
+                            </p>
+                            <p>
+                                Or is it...? You run for the exit, kicking feral brats out of your way, only to emerge into a cavernous warehouse. Now it finally dawns on you that we 
+                                are going to steal your soul. Welcome to the flat-pack jungle. Here you discover that you need to be a professional weightlifter to actually move any 
+                                of the packages off the shelves. All around you are the skeletons of people who underestimated the power of the pressboard. And don't expect any help 
+                                from us. If you want a wardrobe for $50, you're going to carry it yourself. There's unnier than an 80lb pensioner trying to wrestle down a garden bench 
+                                from the rafters of an aircraft hangar. We could release a DVD of our CCTV footage on a daily basis. In the unlikely event that you succeed in balancing 
+                                your bedroom furniture on top of a supermarket cart, it's time to take on the checkout.
+                            </p>
                            
                         </div>
                     </div>
 
+                    {/** LAST DESCRIPTION */}
+                    <div className="row mt-3">
+                        <div className="col-md-12 mt-2">
+                            <a href="#" alt="More..." className="d-flex justify-content-center justify-content-md-end w-100" >
+                                <img src="../img/krapea/more.jpg" />
+                            </a>
+                        </div>
+                    </div>
             </div>
         </div>
     );
