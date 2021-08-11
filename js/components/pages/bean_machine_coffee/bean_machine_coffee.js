@@ -5,14 +5,71 @@ class BeanMachineCoffee extends React.Component {
         super(props);
         this.state = { 
             currPage: 0,
+            wndSize: window.innerWidth,
+            showingBtns: false,
         };
+
+        window.addEventListener('resize', () => this.setWndSize(window.innerWidth));
     }
 
     getAsset(rootPath) {
         return "./../" + rootPath;
     }
 
+    onPageChange(index) {
+        var state = {...this.state};
+        state.currPage = index;
+        this.setState(state);
+    }
+
+    setWndSize(width) {
+        var state = {...this.state};
+        state.wndSize = width;
+        this.setState(state);
+    }
+
+    toggleHeaderBtns() {
+        const state = {...this.state};
+        state.showingBtns = !state.showingBtns;
+        console.log("[DEBUG]    Toggle buttons");
+        this.setState(state);
+    }
+
+    getBtnState(index) {
+        return (index === this.state.currPage) ? "bmc-header-btn-active" : "";
+    }
+
     render() {
+        var isMobile = this.state.wndSize < 768;
+        var showingHamburgerBtns = this.state.showingBtns;
+        var headerTittles = [
+            "Home", "Specials", "Cup Sizes", "Franchising Opportunities",
+            "Buy Our Coffees", "Caffeine Is Not a Drug", "Become a Rep",
+            "10 Reasons To Boycott Your Local Coffeehouse"
+        ];
+        var headerBtns = headerTittles.map((val, index) =>
+            <div key={index}>
+                <button onClick={ () => this.onPageChange(index) }
+                    className={`bmc-header-btn text-brown ${this.getBtnState(index)}`}>
+                    {val}
+                </button>
+            </div>
+        );
+        var hamburgerBtns = null;
+        var hamburgerIcon = null;
+        if (isMobile) {
+            hamburgerBtns = headerBtns;
+            headerBtns = null;
+            hamburgerIcon = (
+                <div className={`bmc-hamburger ${((showingHamburgerBtns) ? "bmc-hamburger-selected":"")}`}>
+                    <img onClick={ () => this.toggleHeaderBtns() } 
+                        className="w-100" 
+                        src={this.getAsset("img/hamburger-button-icon.png")}
+                    />
+                </div>
+            );
+        }
+
         return (
             <div className="page">
                 
@@ -21,17 +78,26 @@ class BeanMachineCoffee extends React.Component {
                 
                 {/** Page slogan (here to set absolute pos) */}
                 <div className="p-relative">
-                    <div className="px-5 py-2 bmc-bg-white w-100" id="bmc-slogan-label">
-                        <h3 className="bmc-text-dark bmc-font bmc-text-right">
-                            TASTES LIKE FUEL, KICKS LIKE A MUEL
-                        </h3>
+                    <div className="px-1 py-2 bmc-bg-white w-100 bmc-border-top-pink" 
+                        id="bmc-slogan-label">
+                        <div className="d-flex flex-row justify-content-between justify-content-md-end">
+                            { hamburgerIcon }
+                            <div>
+                                <h3 className="bmc-text-dark bmc-font bmc-text-right">
+                                    TASTES LIKE FUEL, KICKS LIKE A MUEL
+                                </h3>
+                            </div>
+                        </div>
+                        <div className={`bmc-hamburger-btns ${((showingHamburgerBtns) ? "bmc-hamburger-btns-show" : "")}` }>
+                            { hamburgerBtns }
+                        </div>
                     </div>
                 </div>
 
                 <div className="container">
                     {/** Navigation Header */}
-                    <div className="row px-5">
-                        <div className="col-md-4 d-flex flex-column">
+                    <div className="row px-md-5">
+                        <div className="col-4 d-flex flex-column">
                             <div className="z-index-1 p-relative">
                                 <img id="bmc-logo-background" 
                                     className="w-100 h-100" 
@@ -41,29 +107,9 @@ class BeanMachineCoffee extends React.Component {
                                     src={this.getAsset("img/bean-machine-coffee/bmc_logo-foreground.png")}
                                 />
                             </div>
-                            <div>
-                                <button className="bmc-header-btn text-brown">Specials</button>
-                            </div>
-                            <div>
-                                <button className="bmc-header-btn text-brown">Cup Sizes</button>
-                            </div>
-                            <div>
-                                <button className="bmc-header-btn text-brown">Franchising Opportunities</button>
-                            </div>
-                            <div>
-                                <button className="bmc-header-btn text-brown">Buy Our Coffees</button>
-                            </div>
-                            <div>
-                                <button className="bmc-header-btn text-brown">Caffeine Is Not a Drug</button>
-                            </div>
-                            <div>
-                                <button className="bmc-header-btn text-brown">Become a Rep</button>
-                            </div>
-                            <div>
-                                <button className="bmc-header-btn text-brown">10 Reasons To Boycott Your Local Coffeehouse</button>
-                            </div>
+                            { headerBtns }
                         </div>
-                        <div className="col-md-8">
+                        <div className="col-8">
                             <img className="w-100 h-100" 
                                  src={this.getAsset("img/bean-machine-coffee/bmc_public-store.PNG")}/>
                         </div>
@@ -71,7 +117,7 @@ class BeanMachineCoffee extends React.Component {
 
                     {/** About section */}
                     <div className="row">
-                        <div className="container px-5 py-2 bmc-bg-dark">
+                        <div className="container px-5 py-2 bmc-bg-dark bmc-border-top-pink">
                             <h3 className="bmc-text-white bmc-font">ABOUT BEAN MACHINE</h3>
                         </div>
                         <div className="container px-5 text-bold">

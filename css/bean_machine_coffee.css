@@ -24,6 +24,10 @@ button.bmc-header-btn {
     font-weight: bold;
     text-align: left;
 }
+button.bmc-header-btn-active {
+    text-decoration: underline;
+    color: var(--brown-neutral);
+}
 button.bmc-header-btn:hover {
     text-decoration: underline;
 }
@@ -43,12 +47,15 @@ div.page img#bmc-logo-foreground {
     top: 0;
     left: 0;
 }
-
-div.page div#bmc-slogan-label {
-    position: absolute;
-    top: 4rem;
+/*  Slogan */
+@media screen and (min-width: 768px) {
+    div.page div#bmc-slogan-label {
+        position: absolute;
+        top: 4rem;
+    }
 }
 
+/*  Header btns */
 button.bmc-btn-dark {
     background-color: var(--brown-dark);
     color: var(--brown-light);
@@ -96,4 +103,28 @@ button.bmc-btn-dark:hover {
 }
 .bmc-border-top-pink {
     border-top: 0.5rem solid var(--pink-neutral);
+}
+
+.h-0 {
+    height: 0;
+}
+
+
+.bmc-hamburger {
+    width: 30%;
+}
+.bmc-hamburger img {
+    transition: transform 0.5s linear;
+}
+.bmc-hamburger-selected img {
+    transform: rotate(90deg) scale(0.5);
+}
+.bmc-hamburger-btns {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.3s linear, opacity 0.1s linear;
+}
+.bmc-hamburger-btns-show {
+    max-height: 13rem;
+    opacity: 1;
 }
