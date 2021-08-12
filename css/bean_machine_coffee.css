@@ -12,7 +12,10 @@
 }
 
 body div.page {
-    background: linear-gradient(var(--brown-light), var(--brown-neutral) 40%);
+    background: 
+        url('./../img/bean-machine-coffee/bean-pattern.png'),
+        linear-gradient(var(--brown-light), var(--brown-neutral) 40%);
+    
     font-family: var(--eyefind-font);
 }
 
@@ -26,7 +29,7 @@ button.bmc-header-btn {
 }
 button.bmc-header-btn-active {
     text-decoration: underline;
-    color: var(--brown-neutral);
+    color: var(--bmc-white);
 }
 button.bmc-header-btn:hover {
     text-decoration: underline;
@@ -55,7 +58,7 @@ div.page img#bmc-logo-foreground {
     }
 }
 
-/*  Header btns */
+/*  General button */
 button.bmc-btn-dark {
     background-color: var(--brown-dark);
     color: var(--brown-light);
@@ -67,6 +70,26 @@ button.bmc-btn-dark:hover {
     background-color: var(--brown-light);
     color: var(--brown-dark);
     border-color: var(--brown-dark);
+}
+
+/*  Hamburger buttons   */
+.bmc-hamburger {
+    width: 30%;
+}
+.bmc-hamburger img {
+    transition: transform 0.5s linear;
+}
+.bmc-hamburger-selected img {
+    transform: rotate(90deg) scale(0.5);
+}
+.bmc-hamburger-btns {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.3s linear, opacity 0.1s linear;
+}
+.bmc-hamburger-btns-show {
+    max-height: 13rem;
+    opacity: 1;
 }
 
 /*  GENERAL CLASSES */
@@ -107,24 +130,4 @@ button.bmc-btn-dark:hover {
 
 .h-0 {
     height: 0;
-}
-
-
-.bmc-hamburger {
-    width: 30%;
-}
-.bmc-hamburger img {
-    transition: transform 0.5s linear;
-}
-.bmc-hamburger-selected img {
-    transform: rotate(90deg) scale(0.5);
-}
-.bmc-hamburger-btns {
-    opacity: 0;
-    max-height: 0;
-    transition: max-height 0.3s linear, opacity 0.1s linear;
-}
-.bmc-hamburger-btns-show {
-    max-height: 13rem;
-    opacity: 1;
 }
