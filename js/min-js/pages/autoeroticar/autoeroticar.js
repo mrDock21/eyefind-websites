@@ -40,9 +40,9 @@ var AutoEroticar = function (_React$Component) {
                 case 1:
                     return React.createElement(AutoEroticarCheckCars, null);
                 case 2:
-                    return React.createElement(AutoEroticarHome, null);
+                    return React.createElement(AutoEroticarAbout, null);
                 case 3:
-                    return React.createElement(AutoEroticarHome, null);
+                    return React.createElement(AutoEroticarContact, null);
             }
         }
     }, {
