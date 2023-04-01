@@ -1,0 +1,40 @@
+:root {
+    --bela-black: black;
+    --beal-highlight-orange: #e0521f;
+
+    --bela-btns-font: 'Oswald', sans-serif;
+}
+
+div.page {
+    background-color: var(--bela-black);
+}
+
+/*  HEADING */
+div.page div#heading-imgs {
+    position: relative;
+}
+
+div.page div#heading-imgs img#bela-logo {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+button.bela-header-btn {
+    width: 30%;
+    font-family: var(--bela-btns-font);
+    color: white;
+    
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+}
+button.bela-header-btn.active {
+    color: var(--beal-highlight-orange);
+}
+button.bela-header-btn:hover {
+    color: gray;
+    box-shadow: none;
+    text-decoration: underline;
+}
