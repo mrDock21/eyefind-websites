@@ -12,7 +12,10 @@
 }
 
 body div.page {
-    background: linear-gradient(var(--brown-light), var(--brown-neutral) 40%);
+    background: 
+        url('./../img/bean-machine-coffee/bean-pattern.png'),
+        linear-gradient(var(--brown-light), var(--brown-neutral) 40%);
+    
     font-family: var(--eyefind-font);
 }
 
@@ -23,6 +26,10 @@ button.bmc-header-btn {
     color: var(--brown-dark);
     font-weight: bold;
     text-align: left;
+}
+button.bmc-header-btn-active {
+    text-decoration: underline;
+    color: var(--bmc-white);
 }
 button.bmc-header-btn:hover {
     text-decoration: underline;
@@ -43,12 +50,15 @@ div.page img#bmc-logo-foreground {
     top: 0;
     left: 0;
 }
-
-div.page div#bmc-slogan-label {
-    position: absolute;
-    top: 4rem;
+/*  Slogan */
+@media screen and (min-width: 768px) {
+    div.page div#bmc-slogan-label {
+        position: absolute;
+        top: 4rem;
+    }
 }
 
+/*  General button */
 button.bmc-btn-dark {
     background-color: var(--brown-dark);
     color: var(--brown-light);
@@ -60,6 +70,26 @@ button.bmc-btn-dark:hover {
     background-color: var(--brown-light);
     color: var(--brown-dark);
     border-color: var(--brown-dark);
+}
+
+/*  Hamburger buttons   */
+.bmc-hamburger {
+    width: 30%;
+}
+.bmc-hamburger img {
+    transition: transform 0.5s linear;
+}
+.bmc-hamburger-selected img {
+    transform: rotate(90deg) scale(0.5);
+}
+.bmc-hamburger-btns {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.3s linear, opacity 0.1s linear;
+}
+.bmc-hamburger-btns-show {
+    max-height: 13rem;
+    opacity: 1;
 }
 
 /*  GENERAL CLASSES */
@@ -96,4 +126,8 @@ button.bmc-btn-dark:hover {
 }
 .bmc-border-top-pink {
     border-top: 0.5rem solid var(--pink-neutral);
+}
+
+.h-0 {
+    height: 0;
 }

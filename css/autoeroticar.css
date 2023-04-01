@@ -212,3 +212,10 @@ a.autoeroticar-link:hover {
 .car-adv button.red-btn:focus {
     box-shadow: none;
 }
+
+/*  General classes */
+.ae-border-red {
+    border-style: solid;
+    border-width: 0.5rem;
+    border-color: var(--red-light-color);
+}

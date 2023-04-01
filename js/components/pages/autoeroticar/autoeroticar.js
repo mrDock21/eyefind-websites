@@ -20,8 +20,8 @@ class AutoEroticar extends React.Component {
         switch (this.state.currPage) {
             case 0: return <AutoEroticarHome/>;
             case 1: return <AutoEroticarCheckCars/>;
-            case 2: return <AutoEroticarHome/>;
-            case 3: return <AutoEroticarHome/>;
+            case 2: return <AutoEroticarAbout/>;
+            case 3: return <AutoEroticarContact/>;
         }
     }
 
