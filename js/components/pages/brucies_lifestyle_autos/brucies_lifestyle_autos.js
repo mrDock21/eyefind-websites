@@ -18,16 +18,29 @@ class LifestyleAutos extends React.Component {
 
     getPage() {
         switch (this.state.currPage) {
-            case 0: return <AutoEroticarHome/>;
+            case 0: return <LifestyleAutosHome/>;
         }
+    }
+
+    getFooterAd(){
+        if (Math.random() > 0.5) {
+            return (
+                <img alt="ad" src="./../img/brucies_ela/b-ad-4.jpg"/>
+            );
+        }
+        return (
+            <img alt="ad" src="./../img/brucies_ela/b-ad-5.jpg"/>
+        );
     }
 
     getHeaderBtn(index, text) {
         var btnState = (this.state.currPage === index) ? "active" : "";
         return (
-            <button className={`btn bela-header-btn ml-3 ${btnState}`}
-                    onClick={() => this.onChangePage(index)}>
-                <p className="h5">{text}</p>
+            <button className={`btn my-0 py-0 bela-header-btn ml-3 mr-1 ${btnState}`}
+                    onClick={() => this.onChangePage(index)}
+                    type="button"
+                    key={index}>
+                <p className="h4 my-0">{text}</p>
             </button>
         );
     }
@@ -51,16 +64,38 @@ class LifestyleAutos extends React.Component {
                 <div className="container">
 
                     <div className="row" id="heading-imgs">
-                        <img id="bela-logo" src="./../img/brucies_ela/logo.png"/>
-                        <img src="./../img/brucies_ela/heading-brucie.png"/>
+                        <img src="./../img/brucies_ela/bmain-header.jpg"/>
+                    </div>
+
+                    <div className="row mb-5">
+                        <div className="col-md-8 pl-5 pr-1">
+                            <div className="row">
+                                { header_btns_ui }
+                            </div>
+                            <div className="row">
+                                { this.getPage() }
+                            </div>
+                        </div>
+
+                        <div className="col-md-4">
+                            <LifestyleAutosSideAds/>
+                        </div>
                     </div>
 
                     <div className="row">
-                        <div className="col-md-9 px-5">
-                            { header_btns_ui }
+                        { this.getFooterAd() }
+                    </div>
+
+                    <div className="row mt-5 py-5">
+                        <div className="col">
+                            <img alt="logo" src="./../img/brucies_ela/blogo.jpg"/>
                         </div>
-                        <div className="col-md-3">
-                            <img className="w-100" src="https://wpquads.com/wp-content/uploads/2016/10/Skyscraper-160x600.png"/>
+                        <div className="col">
+                            <p className="text-end text-bold text-white">
+                                Brucie Executive Lifestyle Autos.® <br/>
+                                2008 All rights reserved <br/>
+                                P.D. Andrew Tate is a Bitch
+                            </p>
                         </div>
                     </div>
 

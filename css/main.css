@@ -60,6 +60,10 @@ div.encapsulator header div.split div:first-child {
     width: 60%;
 }
 
+input.page-search-bar {
+    font-weight: 500;
+}
+
 div.encapsulator header div.split div:first-child input {
     width: 100%;
 }

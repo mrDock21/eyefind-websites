@@ -1,8 +1,8 @@
 :root {
     --bela-black: black;
-    --beal-highlight-orange: #e0521f;
+    --beal-highlight-orange: #d75f1e;
 
-    --bela-btns-font: 'Oswald', sans-serif;
+    --bela-btns-font: 'Bebas Neue', cursive;
 }
 
 div.page {
@@ -24,17 +24,36 @@ div.page div#heading-imgs img#bela-logo {
 button.bela-header-btn {
     width: 30%;
     font-family: var(--bela-btns-font);
-    color: white;
+    color: #d2d1d2;
     
     text-transform: uppercase;
     text-align: left;
     font-weight: bold;
+    text-decoration: none;
 }
-button.bela-header-btn.active {
+button.bela-header-btn.active, button.bela-header-btn.pressed {
     color: var(--beal-highlight-orange);
+    box-shadow: none;
 }
 button.bela-header-btn:hover {
-    color: gray;
+    color: #9e4616;
     box-shadow: none;
-    text-decoration: underline;
+}
+
+.article-title {
+    font-family: var(--bela-btns-font);
+    color: var(--beal-highlight-orange);
+    margin-bottom: 1rem;
+}
+
+.article-body p {
+    color: #fefefe;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+p.important-word {
+    display: inline;
+    text-transform: uppercase;
+    color: var(--beal-highlight-orange);
 }

@@ -36,8 +36,16 @@ var LifestyleAutos = function (_React$Component) {
         value: function getPage() {
             switch (this.state.currPage) {
                 case 0:
-                    return React.createElement(AutoEroticarHome, null);
+                    return React.createElement(LifestyleAutosHome, null);
             }
+        }
+    }, {
+        key: "getFooterAd",
+        value: function getFooterAd() {
+            if (Math.random() > 0.5) {
+                return React.createElement("img", { alt: "ad", src: "./../img/brucies_ela/b-ad-4.jpg" });
+            }
+            return React.createElement("img", { alt: "ad", src: "./../img/brucies_ela/b-ad-5.jpg" });
         }
     }, {
         key: "getHeaderBtn",
@@ -47,13 +55,15 @@ var LifestyleAutos = function (_React$Component) {
             var btnState = this.state.currPage === index ? "active" : "";
             return React.createElement(
                 "button",
-                { className: "btn bela-header-btn ml-3 " + btnState,
+                { className: "btn my-0 py-0 bela-header-btn ml-3 mr-1 " + btnState,
                     onClick: function onClick() {
                         return _this2.onChangePage(index);
-                    } },
+                    },
+                    type: "button",
+                    key: index },
                 React.createElement(
                     "p",
-                    { className: "h5" },
+                    { className: "h4 my-0" },
                     text
                 )
             );
@@ -78,21 +88,56 @@ var LifestyleAutos = function (_React$Component) {
                     React.createElement(
                         "div",
                         { className: "row", id: "heading-imgs" },
-                        React.createElement("img", { id: "bela-logo", src: "./../img/brucies_ela/logo.png" }),
-                        React.createElement("img", { src: "./../img/brucies_ela/heading-brucie.png" })
+                        React.createElement("img", { src: "./../img/brucies_ela/bmain-header.jpg" })
+                    ),
+                    React.createElement(
+                        "div",
+                        { className: "row mb-5" },
+                        React.createElement(
+                            "div",
+                            { className: "col-md-8 pl-5 pr-1" },
+                            React.createElement(
+                                "div",
+                                { className: "row" },
+                                header_btns_ui
+                            ),
+                            React.createElement(
+                                "div",
+                                { className: "row" },
+                                this.getPage()
+                            )
+                        ),
+                        React.createElement(
+                            "div",
+                            { className: "col-md-4" },
+                            React.createElement(LifestyleAutosSideAds, null)
+                        )
                     ),
                     React.createElement(
                         "div",
                         { className: "row" },
+                        this.getFooterAd()
+                    ),
+                    React.createElement(
+                        "div",
+                        { className: "row mt-5 py-5" },
                         React.createElement(
                             "div",
-                            { className: "col-md-9 px-5" },
-                            header_btns_ui
+                            { className: "col" },
+                            React.createElement("img", { alt: "logo", src: "./../img/brucies_ela/blogo.jpg" })
                         ),
                         React.createElement(
                             "div",
-                            { className: "col-md-3" },
-                            React.createElement("img", { className: "w-100", src: "https://wpquads.com/wp-content/uploads/2016/10/Skyscraper-160x600.png" })
+                            { className: "col" },
+                            React.createElement(
+                                "p",
+                                { className: "text-end text-bold text-white" },
+                                "Brucie Executive Lifestyle Autos.\xAE ",
+                                React.createElement("br", null),
+                                "2008 All rights reserved ",
+                                React.createElement("br", null),
+                                "P.D. Andrew Tate is a Bitch"
+                            )
                         )
                     )
                 )

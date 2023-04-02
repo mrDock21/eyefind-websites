@@ -38,7 +38,7 @@ class SearchHeader extends React.Component {
                         <form onSubmit={this.handleSubmit}>
                             <input type="text" 
                                 name="page-search" 
-                                className="border-black" 
+                                className="border-black page-search-bar" 
                                 placeholder="www.eyefind-url.net"
                                 onChange={this.handleChange}
                                 value={ this.state.searchPageUrl }/>
