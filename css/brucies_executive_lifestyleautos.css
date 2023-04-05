@@ -40,11 +40,77 @@ button.bela-header-btn:hover {
     box-shadow: none;
 }
 
+/* Spark effect */
+div#svg-star {
+    position: absolute;
+    /* This doesnt affect the SVG... Just to get the event */
+    width: 0;
+    height: 0;
+    animation: 3s infinite alternate dummy;
+}
+
+@keyframes dummy {
+    from { background: transparent; }
+    to { background: transparent; }
+}
+
+#svg-star svg {
+    width: 1.1rem;
+    height: 1.1rem;
+
+    transform-origin: center;
+
+    animation: 3s infinite alternate scale_svg;
+}
+
+@keyframes scale_svg {
+    from {
+        transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+    }
+    to {
+        transform: scale(0.0);
+    }
+}
+
+#svg-star svg path {
+    transform-origin: center;
+    
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        fill: transparent;
+        stroke: transparent;
+        transform: rotate(0deg);
+    }
+  
+    50% {
+        fill: white;
+        stroke: gray;
+    }
+  
+    to {
+        fill: transparent;
+        stroke: transparent;
+        transform: rotate(360deg);
+    }
+}
+
+/* Articles styles */
+
 .article-title {
     font-family: var(--bela-btns-font);
     color: var(--beal-highlight-orange);
     margin-bottom: 1rem;
 }
+
 
 .article-body p {
     color: #fefefe;
@@ -56,4 +122,9 @@ p.important-word {
     display: inline;
     text-transform: uppercase;
     color: var(--beal-highlight-orange);
+}
+
+/* General classes */
+.letter-space-3 {
+    letter-spacing: 3px;
 }

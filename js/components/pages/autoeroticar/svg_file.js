@@ -16,7 +16,10 @@ class SVGFile extends React.Component {
     }
     render() {
         return (
-            <div id={this.props.svgId} className={this.props.classes}>
+            <div id={this.props.svgId} 
+                className={this.props.classes}
+                onAnimationEnd={() => this.props.onAnimEnd()}
+            >
                 {/** Data inserted at response callback */}
             </div>
         );

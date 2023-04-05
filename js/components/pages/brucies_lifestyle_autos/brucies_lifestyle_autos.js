@@ -6,6 +6,15 @@ class LifestyleAutos extends React.Component {
         this.state = { 
             currPage: 0,
         };
+        var _updateShinePos = () => this.updateShinePos();
+        var loop = function() {
+            setTimeout(function() {
+                _updateShinePos();
+                loop(); 
+            }, 3000);
+        };
+        // start anim
+        loop();
     }
 
     onChangePage(index) {
@@ -19,6 +28,8 @@ class LifestyleAutos extends React.Component {
     getPage() {
         switch (this.state.currPage) {
             case 0: return <LifestyleAutosHome/>;
+            case 3: return <LifestyleAutosSupplements/>;
+            case 6: return <LifestyleAutosEmotionalSupport/>;
         }
     }
 
@@ -45,6 +56,20 @@ class LifestyleAutos extends React.Component {
         );
     }
 
+    updateShinePos() {
+        var star = document.getElementById("svg-star"),
+            header = document.getElementById("heading-imgs");
+        var positionInfo = header.getBoundingClientRect();
+
+        var height = positionInfo.height;
+        var width = positionInfo.width;
+
+        star.style.left = `${Math.round( Math.random() * width )}px`;
+        star.style.top  = `${Math.round( Math.random() * height )}px`;
+
+        console.log("END ANIM =>");
+    }
+
     render() {
         const btns = [
             "Home", "Style", "Motivation", "Supplements",
@@ -65,6 +90,9 @@ class LifestyleAutos extends React.Component {
 
                     <div className="row" id="heading-imgs">
                         <img src="./../img/brucies_ela/bmain-header.jpg"/>
+                        <SVGFile svgId={"svg-star"}
+                                svgPath={'./../img/brucies_ela/star-shine.svg'}
+                        />
                     </div>
 
                     <div className="row mb-5">

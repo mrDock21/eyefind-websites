@@ -33,7 +33,14 @@ var SVGFile = function (_React$Component) {
     _createClass(SVGFile, [{
         key: 'render',
         value: function render() {
-            return React.createElement('div', { id: this.props.svgId, className: this.props.classes });
+            var _this2 = this;
+
+            return React.createElement('div', { id: this.props.svgId,
+                className: this.props.classes,
+                onAnimationEnd: function onAnimationEnd() {
+                    return _this2.props.onAnimEnd();
+                }
+            });
         }
     }, {
         key: 'onSvgResponse',

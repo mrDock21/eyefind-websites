@@ -19,6 +19,17 @@ var LifestyleAutos = function (_React$Component) {
         _this.state = {
             currPage: 0
         };
+        var _updateShinePos = function _updateShinePos() {
+            return _this.updateShinePos();
+        };
+        var loop = function loop() {
+            setTimeout(function () {
+                _updateShinePos();
+                loop();
+            }, 3000);
+        };
+        // start anim
+        loop();
         return _this;
     }
 
@@ -37,6 +48,10 @@ var LifestyleAutos = function (_React$Component) {
             switch (this.state.currPage) {
                 case 0:
                     return React.createElement(LifestyleAutosHome, null);
+                case 3:
+                    return React.createElement(LifestyleAutosSupplements, null);
+                case 6:
+                    return React.createElement(LifestyleAutosEmotionalSupport, null);
             }
         }
     }, {
@@ -69,6 +84,21 @@ var LifestyleAutos = function (_React$Component) {
             );
         }
     }, {
+        key: "updateShinePos",
+        value: function updateShinePos() {
+            var star = document.getElementById("svg-star"),
+                header = document.getElementById("heading-imgs");
+            var positionInfo = header.getBoundingClientRect();
+
+            var height = positionInfo.height;
+            var width = positionInfo.width;
+
+            star.style.left = Math.round(Math.random() * width) + "px";
+            star.style.top = Math.round(Math.random() * height) + "px";
+
+            console.log("END ANIM =>");
+        }
+    }, {
         key: "render",
         value: function render() {
             var _this3 = this;
@@ -88,7 +118,10 @@ var LifestyleAutos = function (_React$Component) {
                     React.createElement(
                         "div",
                         { className: "row", id: "heading-imgs" },
-                        React.createElement("img", { src: "./../img/brucies_ela/bmain-header.jpg" })
+                        React.createElement("img", { src: "./../img/brucies_ela/bmain-header.jpg" }),
+                        React.createElement(SVGFile, { svgId: "svg-star",
+                            svgPath: './../img/brucies_ela/star-shine.svg'
+                        })
                     ),
                     React.createElement(
                         "div",
