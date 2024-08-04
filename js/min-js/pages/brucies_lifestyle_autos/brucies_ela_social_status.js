@@ -8,16 +8,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LifestyleAutosEmotionalSupport = function (_React$Component) {
-    _inherits(LifestyleAutosEmotionalSupport, _React$Component);
+var LifestyleAutosSocialStatus = function (_React$Component) {
+    _inherits(LifestyleAutosSocialStatus, _React$Component);
 
-    function LifestyleAutosEmotionalSupport(props) {
-        _classCallCheck(this, LifestyleAutosEmotionalSupport);
+    function LifestyleAutosSocialStatus(props) {
+        _classCallCheck(this, LifestyleAutosSocialStatus);
 
-        return _possibleConstructorReturn(this, (LifestyleAutosEmotionalSupport.__proto__ || Object.getPrototypeOf(LifestyleAutosEmotionalSupport)).call(this, props));
+        return _possibleConstructorReturn(this, (LifestyleAutosSocialStatus.__proto__ || Object.getPrototypeOf(LifestyleAutosSocialStatus)).call(this, props));
     }
 
-    _createClass(LifestyleAutosEmotionalSupport, [{
+    _createClass(LifestyleAutosSocialStatus, [{
         key: "render",
         value: function render() {
             return React.createElement(
@@ -26,7 +26,7 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                 React.createElement(
                     "h2",
                     { className: "article-title letter-space-3" },
-                    "EMOTIONAL SUPPORT"
+                    "SOCIAL STATUS"
                 ),
                 React.createElement(
                     "article",
@@ -34,33 +34,22 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                     React.createElement(
                         "p",
                         null,
-                        "Yeah, right!! Don't come to me with your feeble insecurities and petty neuroses. I will laugh in your face and crack open a low carb beer and a high protein snack. I'm a real man."
+                        "Come on! Scrape yourself off the bottom of the Z-list barrel. Life is all about status. Everyone on the scene in Liberty City knows Brucie. I'm the ultimate VIP, a promoter's wet dream."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "I don't want to talk about feelings and emotion. Power ballads get no play. I'm talking seriously misogynistic hip hop, I'm talking lap dancers. I'm talking blood sports and kung fu movies. Don't pay a therapist thousands of dollars to dredge up the painful events of your miserable past. Spend it on a fat spoiler and a night on the town with Brucie instead!!"
+                        "People want me in their clubs because I attract attention. Flashing the cash is essential. Spend, spend, spend! Ever seen that guy who walks to the front of every line, gets ushered to a private table, drinks Chateau de Buff and spends the whole night surrounded by porn stars? That's me. That could be you."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Forget about the past - this is your future. Grab it by the balls until it winces in pain. I don't care if you were beaten as a child. I don't want to hear about your desperation, loneliness, drunk uncle, rage and fear. I just want to know that you're ready to step up to the plate and get PUMPED!! WIN! WIN! WIN!"
-                    ),
-                    React.createElement(
-                        "p",
-                        null,
-                        "Be ",
-                        React.createElement(
-                            "span",
-                            { className: "important-word" },
-                            "GENETICALLY DIFFERENT"
-                        ),
-                        "."
+                        "Let Brucie show you how a big player rolls."
                     )
                 )
             );
         }
     }]);
 
-    return LifestyleAutosEmotionalSupport;
+    return LifestyleAutosSocialStatus;
 }(React.Component);

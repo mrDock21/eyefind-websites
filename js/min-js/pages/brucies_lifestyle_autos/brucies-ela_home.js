@@ -46,7 +46,7 @@ var LifestyleAutosHome = function (_React$Component) {
                         null,
                         "If you want to roll VIP style with the big players, you need to step up to the plate and be recognized. And the best way to roll is in a car. Not a hybrid. It's a fight for visibility out there. I'm talking carbon emissions. I'm talking high grade bezels set in platinum on the chain. Survival of the slickest. Brucie's Executive Lifestyle Autos is your one-stop-shop for car customization, for",
                         React.createElement(
-                            "p",
+                            "span",
                             { className: "important-word" },
                             "\xA0REMASCULATION"
                         ),
@@ -59,7 +59,7 @@ var LifestyleAutosHome = function (_React$Component) {
                         React.createElement("br", null),
                         "Be different - ",
                         React.createElement(
-                            "p",
+                            "span",
                             { className: "important-word" },
                             "GENETICALLY DIFFERENT"
                         ),
@@ -76,7 +76,7 @@ var LifestyleAutosHome = function (_React$Component) {
                         "I can promise you - you will enjoy the view. 110% isn't good enough. I give 1010% every minute of every day because that's what it takes to be the ultimate male specimen. And I will expect the same from you. ",
                         React.createElement("br", null),
                         React.createElement(
-                            "p",
+                            "span",
                             { className: "important-word" },
                             "GENETICALLY DIFFERENT"
                         ),
@@ -97,7 +97,7 @@ var LifestyleAutosHome = function (_React$Component) {
                         null,
                         "Become a better human being, become ",
                         React.createElement(
-                            "p",
+                            "span",
                             { className: "important-word" },
                             "GENETICALLY DIFFERENT"
                         ),

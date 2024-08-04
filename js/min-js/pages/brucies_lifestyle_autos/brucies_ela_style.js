@@ -8,16 +8,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LifestyleAutosEmotionalSupport = function (_React$Component) {
-    _inherits(LifestyleAutosEmotionalSupport, _React$Component);
+var LifestyleAutosStyle = function (_React$Component) {
+    _inherits(LifestyleAutosStyle, _React$Component);
 
-    function LifestyleAutosEmotionalSupport(props) {
-        _classCallCheck(this, LifestyleAutosEmotionalSupport);
+    function LifestyleAutosStyle(props) {
+        _classCallCheck(this, LifestyleAutosStyle);
 
-        return _possibleConstructorReturn(this, (LifestyleAutosEmotionalSupport.__proto__ || Object.getPrototypeOf(LifestyleAutosEmotionalSupport)).call(this, props));
+        return _possibleConstructorReturn(this, (LifestyleAutosStyle.__proto__ || Object.getPrototypeOf(LifestyleAutosStyle)).call(this, props));
     }
 
-    _createClass(LifestyleAutosEmotionalSupport, [{
+    _createClass(LifestyleAutosStyle, [{
         key: "render",
         value: function render() {
             return React.createElement(
@@ -26,7 +26,7 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                 React.createElement(
                     "h2",
                     { className: "article-title letter-space-3" },
-                    "EMOTIONAL SUPPORT"
+                    "STYLE"
                 ),
                 React.createElement(
                     "article",
@@ -34,33 +34,37 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                     React.createElement(
                         "p",
                         null,
-                        "Yeah, right!! Don't come to me with your feeble insecurities and petty neuroses. I will laugh in your face and crack open a low carb beer and a high protein snack. I'm a real man."
+                        "It's life, not a dress rehearsal. Dress to impress, not to distress. I think nothing of dropping $200 on a pair of silk boxer shorts."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "I don't want to talk about feelings and emotion. Power ballads get no play. I'm talking seriously misogynistic hip hop, I'm talking lap dancers. I'm talking blood sports and kung fu movies. Don't pay a therapist thousands of dollars to dredge up the painful events of your miserable past. Spend it on a fat spoiler and a night on the town with Brucie instead!!"
+                        "When I head out in the evening, I go with a pair of Gutter & Blood trousers, a Derriere shirt, Didier Sachs loafers and a Crowex watch. All black, all very tight. It has to be tight. You need to show off the body. Oil it up and get out there. Sometimes I mix things up with some fitted Unleaded jeans and a leisure blazer. Or some Hinterland camo pants, a low-cut white tanktop and sandals (work that pedicure!). I'm urban as fuck! I'm street style, but I'm also VIP. I invented hip hop."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Forget about the past - this is your future. Grab it by the balls until it winces in pain. I don't care if you were beaten as a child. I don't want to hear about your desperation, loneliness, drunk uncle, rage and fear. I just want to know that you're ready to step up to the plate and get PUMPED!! WIN! WIN! WIN!"
+                        "Most importantly... Accessorize! Never forget the bling. Women love jewelry on a man just as much as they love the spinning rims on your pimped-out ride. Jewelry says - I've arrived', 'I am the fucking man'."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Be ",
-                        React.createElement(
-                            "span",
-                            { className: "important-word" },
-                            "GENETICALLY DIFFERENT"
-                        ),
-                        "."
+                        "Don't be afraid of pink, especially salmon pink."
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "Remember - you're metromacho now! I couldn't be any more heterosexual but I certainly don't mind being a gay icon. If guys want to watch me take my post-workout shower, I'm not going to draw the curtain. The only cock I love is my own, but I don't mind showing it off."
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "Get ready for the Brucie makeover!!"
                     )
                 )
             );
         }
     }]);
 
-    return LifestyleAutosEmotionalSupport;
+    return LifestyleAutosStyle;
 }(React.Component);

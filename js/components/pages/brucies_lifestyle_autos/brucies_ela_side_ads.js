@@ -2,7 +2,8 @@
 
 const BELA_AD = [
     "./../img/brucies_ela/b-ad-1.jpg",
-    "./../img/brucies_ela/b-ad-2.jpg" 
+    "./../img/brucies_ela/b-ad-2.jpg", 
+    "./../img/brucies_ela/b-ad-6.jpg" 
 ];
 
 class LifestyleAutosSideAds extends React.Component {
@@ -25,7 +26,7 @@ class LifestyleAutosSideAds extends React.Component {
         // since there are only two...
         return (
             <img alt="ad" className="w-100" 
-                 src={ BELA_AD[Math.round(Math.random())] }
+                 src={ BELA_AD[Math.round(Math.random() * 2)] }
             />
         );
     }

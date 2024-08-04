@@ -8,7 +8,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var BELA_AD = ["./../img/brucies_ela/b-ad-1.jpg", "./../img/brucies_ela/b-ad-2.jpg"];
+var BELA_AD = ["./../img/brucies_ela/b-ad-1.jpg", "./../img/brucies_ela/b-ad-2.jpg", "./../img/brucies_ela/b-ad-6.jpg"];
 
 var LifestyleAutosSideAds = function (_React$Component) {
     _inherits(LifestyleAutosSideAds, _React$Component);
@@ -34,7 +34,7 @@ var LifestyleAutosSideAds = function (_React$Component) {
         value: function getSideAd() {
             // since there are only two...
             return React.createElement("img", { alt: "ad", className: "w-100",
-                src: BELA_AD[Math.round(Math.random())]
+                src: BELA_AD[Math.round(Math.random() * 2)]
             });
         }
     }, {

@@ -48,10 +48,26 @@ var LifestyleAutos = function (_React$Component) {
             switch (this.state.currPage) {
                 case 0:
                     return React.createElement(LifestyleAutosHome, null);
+                case 1:
+                    return React.createElement(LifestyleAutosStyle, null);
+                case 2:
+                    return React.createElement(LifestyleAutosMotivation, null);
                 case 3:
                     return React.createElement(LifestyleAutosSupplements, null);
+                case 4:
+                    return React.createElement(LifestyleAutosCosmeticSurgery, null);
+                case 5:
+                    return React.createElement(LifestyleAutosRelationships, null);
                 case 6:
                     return React.createElement(LifestyleAutosEmotionalSupport, null);
+                case 7:
+                    return React.createElement(LifestyleAutosFitnessBodyShaping, null);
+                case 8:
+                    return React.createElement(LifestyleAutosSocialStatus, null);
+                case 9:
+                    return React.createElement(LifestyleAutosNutrition, null);
+                case 10:
+                    return React.createElement(LifestyleAutosPersonalGrooming, null);
             }
         }
     }, {
@@ -103,7 +119,7 @@ var LifestyleAutos = function (_React$Component) {
         value: function render() {
             var _this3 = this;
 
-            var btns = ["Home", "Style", "Motivation", "Supplements", "Cosmetic surgery", "Relantionships", "Emotional support", "Fitness/Body", "Special Status", "Nutrition", "Personal Grow"];
+            var btns = ["Home", "Style", "Motivation", "Supplements", "Cosmetic surgery", "Relantionships", "Emotional support", "Fitness/Body", "Social Status", "Nutrition", "Personal Grooming"];
             var header_btns_ui = btns.map(function (val, i) {
                 return _this3.getHeaderBtn(i, val);
             });

@@ -8,16 +8,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LifestyleAutosEmotionalSupport = function (_React$Component) {
-    _inherits(LifestyleAutosEmotionalSupport, _React$Component);
+var LifestyleAutosCosmeticSurgery = function (_React$Component) {
+    _inherits(LifestyleAutosCosmeticSurgery, _React$Component);
 
-    function LifestyleAutosEmotionalSupport(props) {
-        _classCallCheck(this, LifestyleAutosEmotionalSupport);
+    function LifestyleAutosCosmeticSurgery(props) {
+        _classCallCheck(this, LifestyleAutosCosmeticSurgery);
 
-        return _possibleConstructorReturn(this, (LifestyleAutosEmotionalSupport.__proto__ || Object.getPrototypeOf(LifestyleAutosEmotionalSupport)).call(this, props));
+        return _possibleConstructorReturn(this, (LifestyleAutosCosmeticSurgery.__proto__ || Object.getPrototypeOf(LifestyleAutosCosmeticSurgery)).call(this, props));
     }
 
-    _createClass(LifestyleAutosEmotionalSupport, [{
+    _createClass(LifestyleAutosCosmeticSurgery, [{
         key: "render",
         value: function render() {
             return React.createElement(
@@ -26,7 +26,7 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                 React.createElement(
                     "h2",
                     { className: "article-title letter-space-3" },
-                    "EMOTIONAL SUPPORT"
+                    "COSMETIC SURGERY"
                 ),
                 React.createElement(
                     "article",
@@ -34,33 +34,32 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                     React.createElement(
                         "p",
                         null,
-                        "Yeah, right!! Don't come to me with your feeble insecurities and petty neuroses. I will laugh in your face and crack open a low carb beer and a high protein snack. I'm a real man."
+                        "Is your hairline receding as quickly as your waistline is expanding? These days there are no excuses for being ugly. Last year, I spent over $100,000 on calf implants, a hair transplant and a set of veneers made from imported Chinese porcelain. I think that the results speak for themselves. My cock-job was the best $20,000 I ever spent. Remember - girth and mirth rhyme for a reason."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "I don't want to talk about feelings and emotion. Power ballads get no play. I'm talking seriously misogynistic hip hop, I'm talking lap dancers. I'm talking blood sports and kung fu movies. Don't pay a therapist thousands of dollars to dredge up the painful events of your miserable past. Spend it on a fat spoiler and a night on the town with Brucie instead!!"
+                        "Cosmetic surgery allows you to be anyone you want."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Forget about the past - this is your future. Grab it by the balls until it winces in pain. I don't care if you were beaten as a child. I don't want to hear about your desperation, loneliness, drunk uncle, rage and fear. I just want to know that you're ready to step up to the plate and get PUMPED!! WIN! WIN! WIN!"
+                        "Think of it like auto modification, a new tricked-out body kit for an aging ride. Whether you want a chrome grill or nose reshaping, a racing spoiler or butt implants, Brucie can hook you up."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Be ",
-                        React.createElement(
-                            "span",
-                            { className: "important-word" },
-                            "GENETICALLY DIFFERENT"
-                        ),
-                        "."
+                        "Don't be part of the cosmetic underclass."
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "Call Brucie's Executive Lifestyle Autos today."
                     )
                 )
             );
         }
     }]);
 
-    return LifestyleAutosEmotionalSupport;
+    return LifestyleAutosCosmeticSurgery;
 }(React.Component);

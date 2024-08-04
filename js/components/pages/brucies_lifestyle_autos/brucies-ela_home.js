@@ -20,11 +20,11 @@ class LifestyleAutosHome extends React.Component {
                     </p>
                     <p>
                         If you want to roll VIP style with the big players, you need to step up to the plate and be recognized. And the best way to roll is in a car. Not a hybrid. It's a fight for visibility out there. I'm talking carbon emissions. I'm talking high grade bezels set in platinum on the chain. Survival of the slickest. Brucie's Executive Lifestyle Autos is your one-stop-shop for car customization, for 
-                        <p className="important-word">&nbsp;REMASCULATION</p>.
+                        <span className="important-word">&nbsp;REMASCULATION</span>.
                     </p>
                     <p>
                         Nothing makes you feel more like a man than neon lights under your car and a 42 inch plasma screen in your trunk. Nothing screams that you've made it like a velour dash trim kit and bass that makes your tits bleed. Nothing makes you stand out from the crowd like a sports exhaust and racing stripes and a quality fake tan. Never accept mediocrity. Don't be ordinary.<br/> 
-                        Be different - <p className="important-word">GENETICALLY DIFFERENT</p>.
+                        Be different - <span className="important-word">GENETICALLY DIFFERENT</span>.
                     </p>
                     <p>
                         Rims, grills, skirts, wings, spoilers, alloys, subwoofers, water beds, ejector seats, lava lamps and drilldos... Brucie's Executive Lifestyle Autos can give you it all and so much more. I can give you a LIFESTYLE 
@@ -32,7 +32,7 @@ class LifestyleAutosHome extends React.Component {
                     </p>
                     <p>
                         I can promise you - you will enjoy the view. 110% isn't good enough. I give 1010% every minute of every day because that's what it takes to be the ultimate male specimen. And I will expect the same from you. <br/>
-                        <p className="important-word">GENETICALLY DIFFERENT</p> isn't a promise: it's a threat.
+                        <span className="important-word">GENETICALLY DIFFERENT</span> isn't a promise: it's a threat.
                     </p>
                     <p>
                         Don't let your life sputter in the slow lane. Time to shift through the gears! Trick out your car, tune up your life.
@@ -41,7 +41,7 @@ class LifestyleAutosHome extends React.Component {
                         Are you ready for the new you? Come down to Brucie's Executive Lifestyle Autos today (look for the big portrait of me on the side).
                     </p>
                     <p>
-                        Become a better human being, become <p className="important-word">GENETICALLY DIFFERENT</p>.
+                        Become a better human being, become <span className="important-word">GENETICALLY DIFFERENT</span>.
                     </p>
                 </article>
             </article>

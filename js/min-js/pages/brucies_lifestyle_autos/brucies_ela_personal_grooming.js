@@ -8,16 +8,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LifestyleAutosEmotionalSupport = function (_React$Component) {
-    _inherits(LifestyleAutosEmotionalSupport, _React$Component);
+var LifestyleAutosPersonalGrooming = function (_React$Component) {
+    _inherits(LifestyleAutosPersonalGrooming, _React$Component);
 
-    function LifestyleAutosEmotionalSupport(props) {
-        _classCallCheck(this, LifestyleAutosEmotionalSupport);
+    function LifestyleAutosPersonalGrooming(props) {
+        _classCallCheck(this, LifestyleAutosPersonalGrooming);
 
-        return _possibleConstructorReturn(this, (LifestyleAutosEmotionalSupport.__proto__ || Object.getPrototypeOf(LifestyleAutosEmotionalSupport)).call(this, props));
+        return _possibleConstructorReturn(this, (LifestyleAutosPersonalGrooming.__proto__ || Object.getPrototypeOf(LifestyleAutosPersonalGrooming)).call(this, props));
     }
 
-    _createClass(LifestyleAutosEmotionalSupport, [{
+    _createClass(LifestyleAutosPersonalGrooming, [{
         key: "render",
         value: function render() {
             return React.createElement(
@@ -26,7 +26,7 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                 React.createElement(
                     "h2",
                     { className: "article-title letter-space-3" },
-                    "EMOTIONAL SUPPORT"
+                    "PERSONAL GROOMING"
                 ),
                 React.createElement(
                     "article",
@@ -34,33 +34,48 @@ var LifestyleAutosEmotionalSupport = function (_React$Component) {
                     React.createElement(
                         "p",
                         null,
-                        "Yeah, right!! Don't come to me with your feeble insecurities and petty neuroses. I will laugh in your face and crack open a low carb beer and a high protein snack. I'm a real man."
+                        "Ever noticed how those people who claim that beauty is only skin-deep are the ones not getting laid?!!"
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "I don't want to talk about feelings and emotion. Power ballads get no play. I'm talking seriously misogynistic hip hop, I'm talking lap dancers. I'm talking blood sports and kung fu movies. Don't pay a therapist thousands of dollars to dredge up the painful events of your miserable past. Spend it on a fat spoiler and a night on the town with Brucie instead!!"
+                        "Image is everything. There are no second chances at first impressions. Hair frosting, eyebrow plucking, MANicures, pedicures, facials... in order to be a player, you have to look like a player. I don't have a single hair on my body and I tan twice a day."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Forget about the past - this is your future. Grab it by the balls until it winces in pain. I don't care if you were beaten as a child. I don't want to hear about your desperation, loneliness, drunk uncle, rage and fear. I just want to know that you're ready to step up to the plate and get PUMPED!! WIN! WIN! WIN!"
+                        "I heard a girl say to her mother last week - \"Look that man's made of mahogany!\" I was so flattered that I gave her a pair of my signed workout briefs. It takes work and dedication to look this good. I have to combine three different moisturizers to get the right results. It's all about products. Products, products, products."
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Be ",
+                        "Check out the Max Renda for Men line. Because you work it!"
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "Because you're \xA0",
                         React.createElement(
                             "span",
                             { className: "important-word" },
                             "GENETICALLY DIFFERENT"
                         ),
                         "."
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "My aesthetician told me that she feels like Michelangelo working on the statue of David when she is waxing my back. I looked at a picture of that statue. He's got good definition but I'm so much more pumped. He also has a tiny cock. Unlike me. Mine is massive. That bitch will never work in the beauty industry again."
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "Let Brucie show you how to step up your game."
                     )
                 )
             );
         }
     }]);
 
-    return LifestyleAutosEmotionalSupport;
+    return LifestyleAutosPersonalGrooming;
 }(React.Component);

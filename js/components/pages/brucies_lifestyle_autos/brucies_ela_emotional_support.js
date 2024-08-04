@@ -22,7 +22,7 @@ class LifestyleAutosEmotionalSupport extends React.Component {
                         Forget about the past - this is your future. Grab it by the balls until it winces in pain. I don't care if you were beaten as a child. I don't want to hear about your desperation, loneliness, drunk uncle, rage and fear. I just want to know that you're ready to step up to the plate and get PUMPED!! WIN! WIN! WIN!
                     </p>
                     <p>
-                        Be <p className="important-word">GENETICALLY DIFFERENT</p>.
+                        Be <span className="important-word">GENETICALLY DIFFERENT</span>.
                     </p>
                 </article>
             </article>

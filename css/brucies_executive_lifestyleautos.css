@@ -118,13 +118,25 @@ div#svg-star {
     font-weight: 500;
 }
 
-p.important-word {
+.important-word {
     display: inline;
     text-transform: uppercase;
+    color: var(--beal-highlight-orange);
+}
+
+.text-highlight-orange {
     color: var(--beal-highlight-orange);
 }
 
 /* General classes */
 .letter-space-3 {
     letter-spacing: 3px;
+}
+
+ul.blist {
+    list-style-type: none;
+}
+
+ul.blist li p {
+    margin-bottom: 0;
 }

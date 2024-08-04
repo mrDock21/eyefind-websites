@@ -28,8 +28,16 @@ class LifestyleAutos extends React.Component {
     getPage() {
         switch (this.state.currPage) {
             case 0: return <LifestyleAutosHome/>;
+            case 1: return <LifestyleAutosStyle/>;
+            case 2: return <LifestyleAutosMotivation/>;
             case 3: return <LifestyleAutosSupplements/>;
+            case 4: return <LifestyleAutosCosmeticSurgery/>;
+            case 5: return <LifestyleAutosRelationships/>;
             case 6: return <LifestyleAutosEmotionalSupport/>;
+            case 7: return <LifestyleAutosFitnessBodyShaping/>;
+            case 8: return <LifestyleAutosSocialStatus/>;
+            case 9: return <LifestyleAutosNutrition/>;
+            case 10: return <LifestyleAutosPersonalGrooming/>;
         }
     }
 
@@ -74,7 +82,7 @@ class LifestyleAutos extends React.Component {
         const btns = [
             "Home", "Style", "Motivation", "Supplements",
             "Cosmetic surgery", "Relantionships", "Emotional support",
-            "Fitness/Body", "Special Status", "Nutrition", "Personal Grow"
+            "Fitness/Body", "Social Status", "Nutrition", "Personal Grooming"
         ];
         const header_btns_ui = btns.map((val, i) =>
             this.getHeaderBtn(i, val)
