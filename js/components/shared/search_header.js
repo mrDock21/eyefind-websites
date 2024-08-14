@@ -32,7 +32,7 @@ class SearchHeader extends React.Component {
     render() {
         // GRAY HEADER
         return (
-            <header>
+            <header className="main-search-header">
                 <div className="split space-between">
                     <div>
                         <form onSubmit={this.handleSubmit}>
@@ -46,12 +46,12 @@ class SearchHeader extends React.Component {
                     </div>
                     <div id="btns-header">
                         <div className="border-black border-radius-10 btn-header">
-                            <a id="email-btn" href="#">
+                            <a id="email-btn" href="./eyefind_emails.html">
                                 <img src="./../img/msg-img.png"/>
                             </a>
                         </div>
                         <div className="border-black border-radius-10 btn-header">
-                            <a id="home-btn" href="./../index.html">
+                            <a id="home-btn" href="./eyefind_home.html">
                                 <img src="./../img/home-img.png"/>
                             </a>
                         </div>

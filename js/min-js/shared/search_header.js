@@ -55,7 +55,7 @@ var SearchHeader = function (_React$Component) {
             // GRAY HEADER
             return React.createElement(
                 'header',
-                null,
+                { className: 'main-search-header' },
                 React.createElement(
                     'div',
                     { className: 'split space-between' },
@@ -81,7 +81,7 @@ var SearchHeader = function (_React$Component) {
                             { className: 'border-black border-radius-10 btn-header' },
                             React.createElement(
                                 'a',
-                                { id: 'email-btn', href: '#' },
+                                { id: 'email-btn', href: './eyefind_emails.html' },
                                 React.createElement('img', { src: './../img/msg-img.png' })
                             )
                         ),
@@ -90,7 +90,7 @@ var SearchHeader = function (_React$Component) {
                             { className: 'border-black border-radius-10 btn-header' },
                             React.createElement(
                                 'a',
-                                { id: 'home-btn', href: './../index.html' },
+                                { id: 'home-btn', href: './index.html' },
                                 React.createElement('img', { src: './../img/home-img.png' })
                             )
                         )
