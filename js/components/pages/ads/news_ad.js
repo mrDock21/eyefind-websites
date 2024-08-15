@@ -8,6 +8,3 @@ const NewsAd = () => {
         </a>
     );
 }
-
-let domContainer = document.querySelector('#news_ad');
-ReactDOM.render(<NewsAd />, domContainer);

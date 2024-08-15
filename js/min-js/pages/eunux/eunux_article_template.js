@@ -37,7 +37,9 @@ var EunuxArticleTemplate = function (_React$Component) {
                 React.createElement(
                     "section",
                     { className: "ads-section" },
-                    React.createElement("img", { className: "ad-eunux-mascot", src: "./../img/eunux/mascot-eunux-article.png" })
+                    React.createElement("img", { className: "ad-eunux-mascot", src: "./../img/eunux/mascot-eunux-article.png" }),
+                    React.createElement(RandomAd, null),
+                    React.createElement(RandomAd, null)
                 ),
                 React.createElement(
                     "section",

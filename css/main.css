@@ -145,6 +145,10 @@ div.btn-header a img {
     color: #eeee;
 }
 
+div.card.gta-ad-card {
+    border: none;
+}
+
 
 /*  Tablet and below    */
 @media screen and (max-width: 46.8rem) {

@@ -18,8 +18,12 @@ class EunuxArticleTemplate extends React.Component {
         return (
             <div className="page-content article-page">
                 <section className="ads-section">
-                    {/* Ads section */}
+                    {/* mascot image */}
                     <img className="ad-eunux-mascot" src="./../img/eunux/mascot-eunux-article.png"/>
+                
+                    {/* Ads section */}
+                    <RandomAd/>
+                    <RandomAd/>
                 </section>
                 <section>
                     {/* Website's header */}

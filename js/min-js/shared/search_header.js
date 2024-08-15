@@ -90,7 +90,7 @@ var SearchHeader = function (_React$Component) {
                             { className: 'border-black border-radius-10 btn-header' },
                             React.createElement(
                                 'a',
-                                { id: 'home-btn', href: './index.html' },
+                                { id: 'home-btn', href: './eyefind_home.html' },
                                 React.createElement('img', { src: './../img/home-img.png' })
                             )
                         )

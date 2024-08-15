@@ -23,7 +23,7 @@ var AdCard = function (_React$Component) {
                 { className: this.props.classAttributes },
                 React.createElement(
                     "div",
-                    { className: "card" },
+                    { className: "card gta-ad-card" },
                     React.createElement(
                         "a",
                         { href: this.props.page.route },

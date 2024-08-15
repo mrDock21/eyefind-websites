@@ -8,56 +8,26 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var BottomAds = function (_React$Component) {
-    _inherits(BottomAds, _React$Component);
+var RandomAd = function (_React$Component) {
+    _inherits(RandomAd, _React$Component);
 
-    function BottomAds(props) {
-        _classCallCheck(this, BottomAds);
+    function RandomAd() {
+        _classCallCheck(this, RandomAd);
 
-        var _this = _possibleConstructorReturn(this, (BottomAds.__proto__ || Object.getPrototypeOf(BottomAds)).call(this, props));
-
-        _this.state = {
-            images: IMAGES,
-            indexes: _this.randomNum()
-        };
-        return _this;
+        return _possibleConstructorReturn(this, (RandomAd.__proto__ || Object.getPrototypeOf(RandomAd)).apply(this, arguments));
     }
 
-    /**
-     * Generate 4 random numbers which will represent the image index
-     * on the image array
-     *
-     * @returns array with 4 index
-     */
-
-
-    _createClass(BottomAds, [{
-        key: "randomNum",
-        value: function randomNum() {
-            var set = new Set();
-
-            while (set.size < 4) {
-                set.add(Math.floor(Math.random() * (IMAGES.length - 1)) + 0);
-            }
-            return Array.from(set);
-        }
-    }, {
+    _createClass(RandomAd, [{
         key: "render",
         value: function render() {
-            var _this2 = this;
+            var index = Math.floor(Math.random() * (IMAGES.length - 1)) + 0;
+            var style = "";
 
-            // set all bottom cards
-            var cards = this.state.indexes.map(function (i) {
-                return React.createElement(AdCard, { page: _this2.state.images[i], key: i, classAttributes: "col-md-3" });
-            });
+            if (this.props.classAttributes != null) style = this.props.classAttributes;
 
-            return React.createElement(
-                "div",
-                { className: "row mt-3" },
-                cards
-            );
+            return React.createElement(AdCard, { page: IMAGES[index], classAttributes: style });
         }
     }]);
 
-    return BottomAds;
+    return RandomAd;
 }(React.Component);

@@ -39,8 +39,3 @@ class BottomAds extends React.Component {
         );
     }
 }
-
-let domContainer = document.querySelector('#bottom-ads-container');
-{/** REMOVE THIS LATER :D */}
-if (domContainer)
-    ReactDOM.render(<BottomAds />, domContainer);
